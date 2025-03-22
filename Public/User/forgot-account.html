@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="./Assets/style.css">
+  <link rel="stylesheet" href="../Guest User/Styles/Bootstrap/bootstrap.min.css">
+</head>
+<body>
+  <header>
+    <h1>Recover Account</h1>
+    <div id="errorMessage" class="text-danger"></div>
+    <div id="successMessage" class="text-warning"></div>
+    <div id="loader" class="collapse">
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="spinner-border text-danger spinner-border-lg" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="mt-5 pt-4">
+    <form id="loginForm" class="mt-5">
+      <h4>Recover Your Account</h4>
+      <div class="form-group">
+        <label for="mobile number" class="form-label">Enter Mobile number</label>
+        <div class="d-flex align-items-center justify-content-center border rounded-pill">
+          <span class="text-secondary rounded-end-0 rounded-start-1 dropdown-toggle code-btn px-1">+256 </span>
+          <input type="tel" name="mobileNumber" id="mobile_code" class="form-control bg-transparent border-0" placeholder="Mobile number"  minlength="10" maxlength="15">
+        </div>
+        <span id="mobileError" class="text-danger my-1"></span>
+      </div>
+    <div class="form-group d-flex align-items-center submit-form-btn justify-content-end">
+      <input type="submit" class="submit-recover-btn d-inline-block w-100" value="Recover Account" />
+    </div>
+    <div class="text-center w-100">
+        <p>I have an account? <a href="./login.html" class="px-1">Login Instead</a></p>
+      </div>
+  </form>
+  </main>
+  <script src="./Js/main.js"></script>
+</body>
+</html>
+

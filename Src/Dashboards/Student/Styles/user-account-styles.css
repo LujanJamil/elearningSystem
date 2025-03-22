@@ -1,0 +1,747 @@
+
+.account-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url('../Assets/customs/chat-bg.webp') center/cover no-repeat;
+ background-attachment: fixed;
+ min-height: 100vh;
+ padding-bottom: 20%;
+}
+
+.account-section .payment-history-section{
+ min-height: 100vh;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+.account-container .heading, .payment-history-container .heading{
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ background-color: transparent;
+ text-align: center;
+ font-size: 20px;
+ z-index: 12;
+ color: aliceblue;
+ padding-block: 20px;
+ background-color: rgb(1, 23, 50);
+ box-shadow: 0 0 30px rgba(0, 24, 44, 0.5);
+}
+
+.account-container .heading{
+ padding: 14px;
+}
+
+.user-profile-info {
+   display: flex;
+   align-items: stretch;
+   justify-content: stretch;
+   flex-direction: column;
+   flex-wrap: wrap;
+   width: 100%;
+   color: antiquewhite;
+}
+
+.user-profile-info .card {
+   margin-bottom: 20px;
+   background: rgb(0, 21, 49);
+   border-radius: 20px;
+}
+
+.user-content {
+   background: rgb(0, 21, 49);
+   display: flex;
+   align-items: start;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.user-profile-info .user-content > div{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   width: 100%;
+   padding: 15px;
+}
+
+.user-profile-info .user-content > div > div{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-direction: row;
+   flex-wrap: nowrap;
+}
+
+.user-profile-info .user-content > div > div .user-img{
+   width: 75px;
+   height: 75px;
+   background-position: center;
+   background-size: cover;
+   object-fit: cover;
+   border-radius: 100px;
+   border: 2px solid rgb(45, 172, 245);
+   padding: 3px;
+}
+
+.user-profile-info .user-content .edit-btn {
+   color: rgb(87, 135, 147);
+   width: 50px;
+   height: 50px;
+   background: rgb(1, 56, 103);
+   border-radius: 50px;
+   font-size: 24px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 3px solid rgb(0, 89, 14);
+   cursor: pointer;
+   text-align: center;
+   padding: 2px;
+}
+
+.user-profile-info .user-content .user-details {
+   margin-left: 10px;
+   display:flex;
+   align-items: start;
+   justify-content: center;
+   flex-direction: column;
+   margin-top: -20px;
+   color: #fff;
+}
+
+.user-profile-info .user-content .user-details .user-name {
+   font-size: 22px;
+   text-overflow: clip;
+   font-weight: 400;
+}
+
+.user-profile-info .user-content .user-details .user-enrolled-courses {
+   color: bisque;
+   font-size: 12px;
+}
+
+.user-profile-info .user-content .manage-account-settings {
+ margin-top: 10px;
+ width: 100%;
+ box-shadow: none;
+ border: none;
+ outline: none;
+ background: transparent;
+ text-align: start;
+ border-top: 1px solid grey;
+ border-radius: 0;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding-right: 3px;
+ padding-block: 10px;
+ padding: 15px;
+ border-radius:  0 0 20px 20px;
+}
+
+.user-profile-info .user-content .manage-account-settings:hover {
+   background-color: rgb(4, 27, 57);
+}
+
+.user-profile-info .quick-user-choices {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   flex-direction: row;
+   overflow-x: auto;
+   flex-wrap: nowrap;
+   text-align: center;
+}
+
+.user-profile-info .user-quick-choices .nav-item, .user-quick-choices .nav-link{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   flex-wrap: nowrap;
+   color: aliceblue !important;
+}
+
+.user-profile-info .user-quick-choices .nav-item .quick-icons{
+   width: 30px;
+   height: 30px;
+   margin-block: 10px;
+ }
+
+ .quick-user-choices li:hover {
+   transition: all .1000ms ease-in-out;
+   background-color: rgb(0, 27, 63);
+   transform: scale(.96);
+   border-radius: 10px;
+ }
+ .user-profile-info .card li:hover {
+   cursor: pointer;
+ }
+
+ .user-profile-info .custom li:hover:first-child{
+   transition: all 100ms ease-in-out;
+   background-color: rgb(0, 27, 63);
+   border-radius: 20px 20px 0 0;
+ }
+
+ .user-profile-info .custom li:hover:last-child{
+   transition: all 100ms ease-in-out;
+   background-color: rgb(0, 27, 63);
+   border-radius: 0 0 20px 20px ;
+ }
+
+ .user-profile-info .custom li:hover:nth-child(2){
+   transition: all 100ms ease-in-out;
+   background-color: rgb(0, 27, 63);
+   border-radius: unset;
+ }
+ 
+ .user-profile-info .custom:last-child li:hover:nth-child(2){
+   transition: all 100ms ease-in-out;
+   background-color: rgb(0, 27, 63);
+   border-radius: 0 0 20px 20px;
+ }
+
+ .user-profile-info .card li:hover > span{
+   transition: all 100ms ease-in-out;
+   transform: scale(.95);
+ } 
+ 
+/* 
+ .user-profile-info .user-quick-choices .nav-item .nav-link:hover{
+   transform: scale(.9);
+   transition: all .100ms ease-in-out;
+ }
+
+ .user-profile-info .custom li:nth-child(1):hover{
+   transition: all .100ms ease-in-out;
+   background-color: rgb(0, 27, 63);
+   border-radius: 20px 20px 0 0;
+ }
+ .custom a:nth-child(2):hover {
+   border-radius:  unset;
+ }
+ .user-profile-info .custom li:nth-last-child(1):hover{
+   transition: all .100ms ease-in-out;
+   background-color: rgb(18, 92, 188);
+   border-radius:  0 0 20px 20px;
+ }
+
+ .user-profile-info .custom li:nth-child(2):hover, .custom a:nth-child(2):hover{
+   border-radius: unset;
+   background-color: rgb(0, 27, 63);
+ }
+
+ .user-profile-info .card li:hover > span{
+   transition: all .100ms ease-in-out;
+   transform: scale(.9);
+ } */
+
+.user-profile-info .user-course-settings  li, .account-preference li, .support-box li, .offcanvas-body .container  li{
+   width: 100%;
+   background: transparent;
+   text-align: start;
+   color: beige;
+   padding: 15px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-bottom: 1px solid rgb(0, 43, 70);
+}
+.user-profile-info .user-course-settings  li:last-child, .account-preference li:last-child, .support-box li:last-child{
+   border-bottom:none;
+}
+
+.user-profile-info .user-course-settings  li span, .account-preference li span, .support-box li span{
+   width: 100%;
+   margin-left: 10px;
+   display: flex;
+   align-items:center;
+   justify-content: space-between;
+   font-size: large;
+}
+
+.user-profile-info .user-course-settings  li i, .account-preference li i, .support-box li span, .offcanvas-body .container  li span{
+   font-size: 20px;
+}
+
+.user-profile-info .user-course-settings  li span i,  .account-preference  li span i, .support-box li span i, .offcanvas-body .container  li span i{
+   font-size: 22px;
+}
+
+.account-tab-container {
+ background: rgb(0, 14, 31);
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ display: flex;
+ align-items: start;
+ justify-content: start;
+ flex-wrap: nowrap;
+ flex-direction: column;
+ z-index: 1000;
+ width: 100%;
+ height: 100vh;
+ overflow-y: scroll;
+ padding-inline: 3%;
+}
+
+.account-tab-container .card-wrap {
+ background-color: rgb(0, 27, 62);
+
+}
+
+
+.user-notification-card, .user-delete-card, .user-help-box{
+ background: rgb(0, 14, 31);
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ display: flex;
+ align-items: start;
+ justify-content: start;
+ flex-wrap: nowrap;
+ flex-direction: column;
+ z-index: 1000;
+ width: 100%;
+ height: 100vh;
+ overflow-y: scroll;
+ padding-inline: 3%;
+}
+
+.user-notification-card, .user-delete-card, .user-change-card{
+ background: linear-gradient(rgb(1, 23, 50), rgb(1, 23, 50)),
+}
+
+.user-settings-card .heading, .user-notification-card .heading, .user-delete-card .heading, .user-change-card, .user-help-box .heading{
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ background-color: transparent;
+ font-size: 20px;
+ z-index: 12;
+ color: aliceblue;
+ padding-block: 12px;
+ background-color: rgb(0, 28, 59);
+ box-shadow: 0 0 10px rgba(0, 25, 51, 0.94);
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ flex-direction: row;
+ padding-inline: 30px;
+ text-align: center;
+}
+
+
+.card-wrap {
+    margin-bottom: 20px;
+    background-color: rgb(1, 18, 40);
+   border-radius: 20px;
+   padding: 15px;
+   font-weight: lighter !important;
+}
+
+.user-settings-card .change-passw-btn {
+ margin-bottom: 20px;
+}
+
+.user-settings-card .card-wrap input{
+ box-shadow: none;
+ border-radius: 10px !important;
+ padding-left: 20px !important;
+ color: rgb(167, 188, 2);
+ margin-bottom: 16px;
+ /* border: thin solid grey; */
+ border: none;
+ background-color: rgb(0, 16, 36);
+}
+
+.user-settings-card .card-wrap input::placeholder{
+ color: rgb(2, 169, 188);
+}
+
+.user-settings-card .form-select {
+ box-shadow: none;
+ font-weight: 300 !important;
+ box-shadow: none;
+ background: transparent;
+ border-radius: 10px;
+ padding-left: 20px !important;
+ color: rgb(167, 188, 2);
+ margin-block: 16px;
+}
+
+.user-settings-card form label{
+ color: #fff !important;
+}
+
+.card-wrap .save-btn {
+   border: none;
+   border-radius: 50px;
+   background: #013a65;
+   color: #fff;
+   font-weight: 400;
+   width: 100%;
+   cursor: pointer;
+}
+
+.wait-changes {
+ display: block !important;
+}
+
+.input-group-text {
+ box-shadow: none;
+ border-radius: 10px 0 10px 0 0  !important;
+ color: rgb(167, 188, 2);
+ border: thin solid grey;
+ height: 36px;
+ background-color: rgb(1, 35, 80);
+ border: none;
+ border-right : 1px solid currentColor;
+}
+
+.user-settings-card .card-wrap .tel {
+ border-top-left-radius: 0 !important;
+ border-bottom-left-radius: 0 !important;
+}
+
+.account-settings-header, .help-center-header {
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ background-color: transparent;
+ font-size: 20px;
+ z-index: 12;
+ color: aliceblue;
+ padding-block: 15px;
+ background-color: rgb(1, 30, 66);
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding-inline: 20px;
+}
+
+
+.account-setings, .help-center {
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: rgb(0, 21, 49);
+ width: 100%;
+ overflow-y: scroll;
+ z-index: 100;
+}
+
+.offcanvas-body .container  li span{
+ width: 100%;
+ display: flex;
+ align-items:center;
+ justify-content: space-between;
+ font-size: 20px;
+ color: #fff;
+}
+
+.card-notify{
+ background-color: rgb(1, 18, 40);
+border-radius: 20px;
+padding: 15px;
+font-weight: lighter !important;
+color: #fff;
+}
+
+.form-card {
+ width: 100%;
+ align-items: center;
+ justify-content: space-between;
+ flex-direction: row;
+ padding-inline: 14px !important;
+}
+
+.user-delete-card li{
+   color: #fff;
+   font-size: 18px;
+   margin-block: 10px;
+}
+
+.user-delete-card .warn-heading {
+ color: white;
+ font-weight: bolder;
+ font-size: 20px;
+}
+
+
+.form-check label{
+ margin-block: 10px;
+ font-size: 24px;
+ margin-left: 20px !important;
+}
+
+.save-lang {
+ border: none;
+   border-radius: 50px;
+   color: #fff;
+   font-weight: 400;
+   width: 100%;
+   cursor: pointer;
+}
+
+.payment-history-container {
+ min-height: 100vh;
+ padding-block: 25%;
+ background: rgb(0, 14, 31) !important;
+ padding-inline: 2%;
+}
+
+.payment-history-container .card-wrap {
+ background-color: #001c30;
+ transform: scale(.9);
+}
+
+.card-wrap .card-header {
+ font-size: 28px;
+ font-weight: 900;
+ margin-block: 10px;
+ color: #fff;
+ letter-spacing: 1.5px;
+ border-bottom: thin solid;
+ padding-block: 5px;
+}
+
+.payment-history-section .nav .nav-link .title{
+ font-size: 25px;
+ font-weight: 100;
+ color: rgb(84, 99, 133);
+}
+
+.payment-history-section .nav .nav-link .history{
+ font-size: 25px;
+ color: burlywood;
+ padding-left: 5px;
+}
+
+.course-amount-paid {
+ font-weight: 900 ;
+ color: rgba(1, 95, 129, 0.748)!important;
+}
+
+
+.payment-history-container .heading {
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+}
+
+.help-center-logo {
+ width: 400px;
+ height: 400px;
+ background-position: center;
+ background-size: cover;
+ object-fit: cover;
+}
+
+@media (max-width: 550px) {
+.help-center-logo {
+ width: 200px;
+}
+}
+
+.help-center .card-wrap {
+ background: rgb(0, 28, 64);
+}
+
+.help-center .offcanvas-body-container li  {
+ margin-block: 10px;
+ border-bottom: thin solid;
+ width: 100%;
+
+}
+
+.help-center .offcanvas-body-container li span {
+ margin-left: 0;
+ color: #02b951;
+ font-size: 20px;
+ margin-left: 5px;
+}
+
+.help-center .offcanvas-body-container .container  li span{
+ display: flex;
+ align-items:center;
+ justify-content: space-between;
+}
+
+.offcanvas-body-container .help-main-box {
+ display: flex;
+ align-items: start;
+ justify-content: center;
+ gap: 20px;
+}
+
+.offcanvas-body-container .help-main-box textarea {
+ border-radius: 10px;
+ background: rgb(55, 57, 60);
+ padding: 10px ;
+ color: rgb(2, 150, 177) !important;
+ border: none;
+ outline: none;
+ font-size: 17px;
+ max-height: 300px;
+}
+
+.offcanvas-body-container .help-main-box textarea::placeholder {
+ color: rgb(153, 153, 153) !important;
+}
+
+.offcanvas-body-container .help-main-box .send-help-btn{
+ box-shadow: none;
+ background: rgb(49, 75, 89) !important;
+ /* background: rgb(2, 74, 114) !important; */
+ border: none;
+ width: 100%;
+}
+
+.offcanvas-body-container .help-main-box textarea:active ~ .send-help-btn{
+ background: rgb(2, 74, 114) !important;
+}
+
+.student_progress_container {
+ min-height: 100vh;
+ width: 100%;
+ position: fixed;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ overflow-y: auto;
+ padding-block: 10%;
+ background-color: rgb(0, 21, 60);
+ display: flex;
+ align-items: start;
+ justify-content: center;
+ padding-inline: 20px;
+ z-index: 1000;
+}
+
+.student_progress_container .progress-header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   font-size: 20px;
+   z-index: 12;
+   color: aliceblue;
+   padding: 4% 3%;
+   background-color: rgb(0, 20, 43);
+   box-shadow: 0 0 30px rgba(0, 24, 44, 0.5);
+}
+
+
+.progress-container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+}
+.card-progress {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  box-shadow: 0 0 10px rgba(0, 31, 99, 0.9);
+  background-color: rgb(254, 252, 250);
+  border-radius: 10px;
+  min-width: 300px;
+  margin: 30px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.card-progress .progress-text-img {
+  min-width: 30%;
+  align-self: stretch;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  padding: 20px 30px;
+  background: linear-gradient(-200deg,#096c9d 20%,#44107a 47%,#ff1361 57%,#7a7606 100%);
+  font-size: 26px;
+  border-radius: 10px 0 0 10px;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+
+}
+.card-progress .progress-details {
+  align-self: flex-start;
+  padding-inline: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+
+}
+.card-progress .progress-details .class-course {
+  font-weight: bolder;
+  font-size: 16px;
+}
+.card-progress .progress-details .duration-wrapper {
+  font-size: 12px;
+  color: grey;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+}   
+.card-progress .progress-details .duration-wrapper > div{
+  font-size: 12px;
+  color: grey;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+}   
+.card-progress .progress-details .duration-wrapper > div i{
+  color: rgba(8, 196, 17, 0.946);
+}   
+
+.progress-indicator {
+  justify-self: baseline;
+  width: 100%;
+  display: block;
+  margin-block: 10px;
+}
+
+.progress-indicator .progress {
+  width: 100%;
+}
+
+.logout-box {
+  background: rgb(0, 21, 60);
+  z-index: 1000;
+}
+
+.modal {
+  z-index: 1000;
+}
+
+.modal-backdrop.show {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 100;
+}

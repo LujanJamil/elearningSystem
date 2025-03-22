@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="./Assets/style.css">
+  <link rel="stylesheet" href="../Guest User/Styles/Bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../Guest User/Assets/Icons/Fontawesomeicons/css/all.css">
+</head>
+<body>
+  <header>
+    <h1>Student Registration</h1>
+    <div id="errorMessage" class="text-danger"></div>
+    <div id="successMessage" class="text-warning"></div>
+    <div id="loader" class="collapse">
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="spinner-border text-danger spinner-border-lg" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="my-5 py-5">
+    <div class="text-center w-100">
+      <p><a href="../Guest User/Pages/Home/home.html">Back to home page</a></p>
+    </div>
+    <div class="card">
+      <div class="logo-header">
+        <img src="./Assets/Imgs/logo.png" class="img-fluid form-logo" alt="" sizes="" srcset="">
+        <span>Sama Islamic College</span>
+      </div>
+    </div>
+
+    <div class="form-group d-flex flex-column align-items-center">
+    <form id="registrationForm">
+      <div class="form-wrapper container">
+
+      <div id="firstRegistration" class="first-step-registration">
+        <h4 class="text-info">Register</h4>
+          <h5>Take a Profile Photo</h5>
+             <!-- <input type="file" name="profileImage" id="studentProfile" class="form-control" accept="image/*"> -->
+          <div id="studentProfileImg" class="student-img">
+          <img id="photo" class="img-fluid" src="../Guest User/Assets/Images/Testimonials/customer01.jpg" alt="Photo">
+          </div>
+
+        <div class="form-group">
+          <label for="mobile number" class="form-label">Mobile number</label>
+          <div class="d-flex align-items-center justify-content-center border rounded-pill">
+            <span class="text-secondary rounded-end-0 rounded-start-1 dropdown-toggle code-btn px-1">+256 </span>
+            <input type="tel" name="mobileNumber" id="mobile_code" class="form-control bg-transparent border-0" placeholder="Mobile number"  minlength="10" maxlength="15">
+          </div>
+          <span id="mobileError" class="text-danger my-1"></span>
+        </div>
+
+        <div class="form-group d-flex align-items-center submit-form-btn justify-content-end">
+          <button id="completeRegistrationBtn" type="button" class="next-step-btn w-100 bg-secondary" disabled>Complete Registration</button>
+        </div>
+
+        <div class="text-center w-100">
+          <p>Already have an account? <a href="./login.html">Login</a></p>
+        </div>
+
+      </div>
+
+      <div  id="lastRegistration" class="last-step-registration hide">
+        <div class="container back">
+          <button class="btn btn-sm" id="backBtn" type="button"><i class="fa fa-arrow-left px-2" aria-hidden="true"></i> Back</button>
+          <h4 class="text-info pt-5">Complete Registration</h4>
+        </div>
+        <div class="wrapper-inputs">
+      <div class="form-group">
+        <label for="surname" class="form-label">Surname</label>
+        <input type="text" name="surname" id="studentSurname" class="form-control" placeholder="Surname" required>
+       </div>
+
+      <div class="form-group">
+      <label for="otherNames">Other Names:</label>
+      <input type="text" name="otherNames" id="studentOtherNames" class="form-control" placeholder="Other names (optional)">
+      </div>
+
+      <div class="form-group">
+      <label for="givenName">Given Name:</label>
+      <input type="text" name="givenName" id="studentGivenName" class="form-control" placeholder="Give name">
+      </div>
+
+      <div class="form-group">
+        <label for="country" class="form-label">Select Your Country</label>
+        <select class="form-select" name="country" id="selectCountry">
+            <option class="hidden form-select"  selected disabled>Choose  Country/region  </option>
+            <option>Uganda</option>
+            <option> Kenya</option>
+            <option> Tanzania</option>
+        </select>
+    </div>
+
+      <div class="form-group gender-form">
+        <label for="gender" class="form-label">Gender</label>
+        <div class="maxl d-flex align-items-center justify-content-around">
+            <label class="radio inline text-dark"> 
+            <input type="radio" name="gender" id="sexMale" value="Male" checked>
+                <span>Male</span> 
+            </label>
+            <label class="radio inline text-dark"> 
+              <input type="radio" name="gender" id="sexFemale" value="Female" >
+              <span>Female</span> 
+            </label>
+            <label class="radio inline text-dark"> 
+              <input type="radio" name="gender" id="sexCustom" value="Custom">
+              <span>Custom</span> 
+          </label>
+      </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" name="email" id="studentEmail" class="form-control" placeholder="Email">
+      </div>
+        <div class="form-group">
+          <label for="password" class="form-label">Create Password</label>
+          <input type="password" name="password" id="studentPassword" class="form-control" placeholder="Create Password">
+       </div> 
+
+      <div class="form-group">
+        <label for="password" class="form-label">Confirm Password</label>
+        <input type="password" name="confirmPassword" id="studentconfirmPassword" class="form-control" placeholder="Confirm Password">
+      </div>
+
+    </div>
+
+      <div class="form-group d-flex align-items-center submit-form-btn justify-content-end">
+        <input type="submit" class="submit-registration-btn d-inline-block w-100" value="Sign Up" />
+      </div>
+
+      <p class="text-dark">By signing up you agree to the Sama Islamic Digital College
+         <a href="">Terms of services and Privacy Policy</a>
+      and you acknowledege that Sama can process your Personal data in accordance with it's Privacy Policy.
+      </p>
+
+        <div class="text-center w-100">
+          <p class="text-warning-emphasis">Already have an account? <a href="./login.html" class="nav-item text-primary"> LogIn</a></p>
+        </div>
+
+      </div>
+
+
+    </div>
+    </div>
+  </form>
+  </main>
+  <script src="./Js/authService.js"></script>
+  <script src="../Guest User/Assets/Icons/Fontawesomeicons/js/all.js"></script>
+</body>
+</html>

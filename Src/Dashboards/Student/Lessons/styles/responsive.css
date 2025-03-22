@@ -1,0 +1,201 @@
+@media (max-width: 800px) {
+
+        .links-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: rgb(1, 13, 74);
+            z-index: 100;
+            padding: 7px 10px;
+        }
+
+        .links-container .nav {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .links-container .nav .nav-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .links-container a {
+            color: unset !important;
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .links-container .nav .nav-item span{
+            font-size: 12px;
+        }
+
+        .links-container .nav .nav-item .icon{
+            font-size: 20px !important;
+            color: #02a4ac;
+        }
+
+    .main-content .lesson-content{
+        display: flex;
+        justify-content: stretch;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    
+.header ul > .nav-item:last-child {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(215, 244, 246);
+    flex: 1;
+    margin-top: 10px;
+}
+
+#classTopic {
+    color: rgb(255, 132, 0);
+    font-weight: lighter !important;
+    }
+
+
+    .topic-wrap {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 100px;
+        display: inline-flex !important;
+    }
+    .lesson-name {
+        /* padding-left: 1px; */
+        font-size: 18px !important;
+    }
+    .lesson-info {
+        display: none !important;
+        visibility: hidden;
+    }
+    #video-player-container {
+        width: 100%;
+        /* position: fixed; */
+        z-index: 1000 !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        border: unset !important;
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        flex-direction: column;
+        display: none;
+    }
+    #video-player-container video{
+        /* display: none; */
+        width: 100%;
+        height: 50vh;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.specific-course {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+
+@media (min-width: 800px) {
+    .about-lesson{
+        padding-inline: 15px;
+    }
+    .lesson-player-list-lesson-container {
+       display: flex;
+       flex-wrap: nowrap;
+       align-items: stretch;
+       justify-content: stretch;
+       width: 100%;
+    }
+
+    .about-lesson {
+        min-width: 60%;
+    }
+
+    .lesson-list-container {
+        min-width: 40%;
+    }
+
+    
+ .subject-listed-topics {
+    width: 100%;
+}
+.subject-listed-topics .nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    padding-block: 5px !important;
+}
+
+ .subject-listed-topics .nav .nav-item{
+    width: 100%;
+    margin: 10px 5px;
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 5px;
+    background: rgb(193, 223, 216);
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    cursor: pointer;
+    transition: all .1s ease;
+
+}
+
+.subject-listed-topics .nav .nav-item:hover{
+    transform: scale(1.01);
+    font-weight: bold;
+}
+
+.subject-listed-topics .nav .nav-item .icons{
+    font-size: larger;
+    margin-right: 10px;
+    padding-bottom: 15px;
+    color: #f2fa04;
+}
+
+.subject-listed-topics .nav .nav-item span:nth-child(even){
+    font-size: 19px;
+    white-space: nowrap;
+    padding-inline: 6px;
+    padding-bottom: 15px;
+    color: #00383b;
+}
+
+.subject-listed-topics .nav .nav-item span:nth-child(odd){
+    position: absolute;
+    bottom: 3%;
+    right: 5%;
+    color: #797878;
+}
+
+input {
+    border: 1px solid #4169e173 !important;
+    border-radius: 4px !important;
+}
+
+.header {
+    display: none !important;
+}
+
+}

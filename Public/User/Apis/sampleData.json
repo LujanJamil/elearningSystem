@@ -1,0 +1,35 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "username": "guest_user",
+        "email": "guest@example.com",
+        "password": "password123" 
+      },
+      {
+        "id": 2,
+        "username": "student_user",
+        "email": "student@example.com",
+        "password": "studentPass" 
+      }
+    ],
+    "lessons": [
+      {
+        "id": 1,
+        "title": "Introduction to JavaScript",
+        "description": "Learn the basics of JavaScript, including variables, functions, and events.",
+        "attachments": ["lesson1.pdf", "lesson1-slides.pptx"],
+        "resources": ["https://developer.mozilla.org/en-US/docs/Web/JavaScript"],
+        "video": "intro-to-js.mp4"
+      },
+      {
+        "id": 2,
+        "title": "HTML Fundamentals",
+        "description": "Understand the structure of web pages using HTML tags and attributes.",
+        "attachments": ["lesson2.pdf", "lesson2-slides.pptx"],
+        "resources": ["https://developer.mozilla.org/en-US/docs/Web/HTML"],
+        "video": "html-fundamentals.mp4"
+      }
+    ]
+  }
+  

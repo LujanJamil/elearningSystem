@@ -1,0 +1,371 @@
+a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'custom-fonts';
+    src: url('../Assets/Fonts/Open_Sans/OpenSans-Regular.ttf');
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: 'custom-fonts';
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('../Assets/customs/chat-bg.webp') center/cover no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.student-dashboard-wrapper header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 10, 35);
+    z-index: 100;
+    padding-block: 10px;
+}
+
+
+.student-dashboard-wrapper .links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.student-dashboard-wrapper .links-container ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-wrapper {
+    padding-inline: 10px;
+}
+
+.links-container ul li {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.links-container ul li span {
+    font-size: 13px;
+    color: aliceblue;
+    font-weight: lighter;
+}
+
+.icon {
+    font-size: 23px;
+    margin-bottom: 3px !important;
+    text-align: center;
+    color: rgb(3, 183, 254);
+}
+
+.links-container ul li a {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+
+.class-dashboard-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 15px;
+    background-color: rgb(1, 18, 40);
+}
+
+.class-dashboard-header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: aliceblue;
+}
+
+.student-dasboard main>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 65vh;
+}
+
+.quick-student-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.quick-student-options .card {
+    width: 150px;
+    height: 150px;
+    gap: 10px;
+    margin: 10px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(0, 48, 50);
+    cursor: pointer;
+}
+
+
+.quick-student-options .card:hover {
+    border: 1px solid royalblue;
+    transform: scale(1.1);
+    transition: all .3s ease;
+    font-weight: bold;
+    font-family: 'custom-fonts';
+}
+
+.quick-student-options .card .card-body {
+    display: inherit;
+    align-items: inherit;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.quick-student-options .card .card-body .card-icons {
+    font-size: 35px;
+    color: aqua;
+}
+
+.quick-student-options .card .card-body span {
+    /* color: #fff;
+    font-size: 21px;
+    white-space: nowrap;
+    text-overflow: ellipsis !important;
+    overflow: hidden;
+    max-width: 150px; */
+    color: #fff;
+    font-size: 18px;
+}
+
+
+
+
+
+.assignment-container {
+    position: fixed;
+    min-height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0%;
+    bottom: 0;
+    height: 100vh;
+    z-index: 50;
+    overflow: hidden !important;
+    background-color: rgb(0, 22, 37);
+}
+
+.assigment-header a {
+    color: #fff;
+}
+
+#assignments {
+    z-index: 100;
+}
+
+.assigment-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 100;
+    background: rgb(0, 24, 66);
+    color: aliceblue !important;
+}
+
+.assigment-header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: aliceblue !important;
+
+}
+
+.listed-assigments {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100% !important;
+}
+
+.listed-assigments ul {
+    display: flex !important;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row !important;
+    width: 100% !important;
+}
+
+.listed-assigments ul .list-group-item:last-child {
+    align-self: center !important;
+    margin-left: 24px;
+    justify-self: center !important;
+}
+
+.listed-assigments ul .list-group-item {
+    width: unset;
+    border-radius: unset;
+    border-radius: 50px !important;
+    padding: 0;
+    margin: 0;
+    padding: 5px 10px;
+    border: unset;
+    background: rgb(0, 67, 67);
+    color: aliceblue;
+}
+
+.listed-assigments ul .list-group-item.active {
+    background: rgb(0, 57, 13);
+    border: 1px solid rgb(255, 225, 0) !important;
+}
+
+
+.assigment-list li {
+    margin: 10px 2px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+    background: rgb(253, 253, 253);
+}
+
+.assigment-list li:hover {
+    background: rgb(0, 135, 140);
+    color: #e3ea03;
+}
+
+
+/* notifications */
+
+.notification-container .heading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 12;
+    color: aliceblue;
+}
+
+
+
+.notification-container .heading span {
+    padding: 10px 25px;
+    background-color: rgb(0, 50, 112);
+    border-radius: 0 0 10px 10px;
+    font-size: 18px;
+    box-shadow: 0 0 10px rgba(0, 13, 42, 0.9);
+}
+
+
+
+.notification-section {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-inline: 4%;
+}
+
+.notification-header-list {
+    background-color: rgb(1, 23, 50);
+    box-shadow: 0 0 5px rgba(0, 31, 99, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 20px 10px;
+    overflow-x: auto;
+    width: 100%;
+    padding-top: 60px;
+}
+
+
+.notification-section ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.notification-section ul .list-group-item-action {
+    width: unset;
+}
+
+.notification-header-list .list-group-item {
+    color: rgb(35, 190, 188);
+    border-radius: 5px;
+    border: thin solid rgb(1, 23, 50);
+    background: unset !important;
+    border: unset;
+    padding: 4px 10px !important;
+}
+
+.notification-header-list .list-group-item.active {
+    background-color: rgb(0, 17, 38);
+    border: thin solid burlywood;
+    box-shadow: 0 0 20px rgba(6, 51, 107, 0.8);
+
+}
+
+.notification-header-list li {
+    padding-inline: 5px;
+    color: rgb(35, 190, 188);
+}
+
+.notify-logo-content {
+    color: rgb(110, 129, 154) !important;
+}
+
+.notification-header-list li:hover {
+    border-radius: 5px;
+    color: burlywood;
+    border: thin solid;
+    font-weight: bolder;
+}
+
+.notification-header {
+    font-size: 14px;
+}
+
+.notification-body {
+    background: rgb(1, 23, 50) !important;
+    color: aliceblue;
+}
+
+.notify-content {
+    padding: 5px 10px;
+}
+
+.notification-action-center button {
+    margin-inline: 10px;
+}
+
+.payment-duration-details {
+    font-size: 10px;
+    color: rgb(6, 155, 3);
+}
+
+.notification-body-wrapper {
+    background-color: rgba(0, 0, 0, 0.7);
+}

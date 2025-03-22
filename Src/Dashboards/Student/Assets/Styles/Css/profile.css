@@ -1,0 +1,499 @@
+  .teacher-profile-info {
+      display: flex;
+      align-items: stretch;
+      justify-content: stretch;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+      color: antiquewhite;
+      z-index: 10;
+  }
+
+  .modal {
+    z-index: 100;
+  }
+  
+  .teacher-profile-info .card {
+      margin-bottom: 20px;
+      background: rgb(0, 29, 66);
+      border-radius: 20px;
+  }
+  
+  .teacher-content {
+      background: rgb(0, 21, 49);
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      flex-direction: column;
+  }
+  
+  .teacher-profile-info .teacher-content > div{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      width: 100%;
+      padding: 15px;
+  }
+
+  .teacher-email-box {
+    margin-top: 10px;
+    width: 100%;
+    text-align: start;
+    border-top: 1px solid grey;
+    padding-right: 3px;
+    padding-block: 10px;
+    color: #b3cfff;
+    border-radius:  0 0 20px 20px;
+  }
+  
+  .teacher-profile-info .teacher-content > div > div{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: nowrap;
+  }
+  
+  .teacher-profile-info .teacher-content > div > div .teacher-img{
+      width: 75px;
+      height: 75px;
+      background-position: center;
+      background-size: cover;
+      object-fit: cover;
+      border-radius: 100px;
+      border: 2px solid rgb(45, 172, 245);
+      padding: 3px;
+  }
+  
+  .teacher-profile-info .teacher-content .edit-btn {
+      color: rgb(87, 135, 147);
+      width: 50px;
+      height: 50px;
+      background: rgb(1, 56, 103);
+      border-radius: 50px;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid rgb(0, 89, 14);
+      cursor: pointer;
+      text-align: center;
+      padding: 2px;
+  }
+  
+  .teacher-profile-info .teacher-content .teacher-details {
+      margin-left: 10px;
+      display:flex;
+      align-items: start;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: -20px;
+      color: #fff;
+  }
+  
+  .teacher-profile-info .teacher-content .teacher-details .teacher-name {
+      font-size: 22px;
+      text-overflow: clip;
+      font-weight: 400;
+  }
+  
+   
+  .teacher-profile-info .teacher-course-settings  li, .account-preference li, .support-box li, .offcanvas-body .container  li{
+      width: 100%;
+      background: transparent;
+      text-align: start;
+      color: beige;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid rgb(0, 43, 70);
+  }
+  .teacher-profile-info .teacher-course-settings  li:last-child, .account-preference li:last-child, .support-box li:last-child{
+      border-bottom:none;
+  }
+  
+  .teacher-profile-info .teacher-course-settings  li span, .account-preference li span, .support-box li span{
+      width: 100%;
+      margin-left: 10px;
+      display: flex;
+      align-items:center;
+      justify-content: space-between;
+      font-size: large;
+  }
+  
+  .teacher-profile-info .teacher-course-settings  li i, .account-preference li i, .support-box li span, .offcanvas-body .container  li span{
+      font-size: 20px;
+  }
+  
+  .teacher-profile-info .teacher-course-settings  li span i,  .account-preference  li span i, .support-box li span i, .offcanvas-body .container  li span i{
+      font-size: 22px;
+  }
+  
+   
+
+  .teacher-help-box .help-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  font-size: 20px;
+  z-index: 12;
+  color: aliceblue;
+  padding-block: 20px;
+  background-color: rgb(1, 33, 72);
+  box-shadow: 0 0 10px rgba(0, 18, 79, 0.762);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-inline: 30px;
+  text-align: center;
+  }
+ 
+  .teacher-delete-card {
+  background: linear-gradient(rgb(1, 23, 50), rgb(1, 23, 50));
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  padding-inline: 3%;
+  }
+
+  
+  .teacher-delete-card .delete-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 10px;
+    width: 100%;
+    background: rgb(1, 35, 80);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-inline: 7%;
+  }
+
+  .modal-content {
+    z-index: 100 !important;
+    opacity: 1 !important;
+  }
+
+  .modal-backdrop.show {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .account-preference .nav-item:hover, .support-box .nav-item:hover{
+    background-color: rgb(1, 56, 103) !important;
+    cursor: pointer;
+  }
+
+  .account-preference .nav-item:last-child:hover, .support-box .nav-item:last-child:hover {
+    border-radius: 0 0 20px 20px;
+  }
+
+  .account-preference .nav-item:first-child:hover, .support-box .nav-item:first-child:hover{
+    border-radius: 20px 20px 0 0;
+  }
+
+  .account-preference .nav-item:hover > span, .support-box .nav-item:hover > span{
+    transition: all .10s ease-in-out;
+    transform: scale(.9);
+  }
+
+  .teacher-delete-card .warn-heading {
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+  }
+  
+  .card-wrap {
+       margin-bottom: 20px;
+       background: rgb(0, 29, 66);
+      border-radius: 20px;
+      padding: 15px;
+      font-weight: lighter !important;
+  }
+
+  .card-wrap li:hover {
+    cursor: pointer;
+  }
+  
+   .change-passw-btn {
+    margin-bottom: 20px;
+  }
+  
+   .card-wrap input{
+    box-shadow: none;
+    border-radius: 10px !important;
+    padding-left: 20px !important;
+    color: rgb(167, 188, 2) !important;
+    margin-bottom: 16px;
+    border: none;
+    background-color: rgb(1, 18, 42) !important;
+    box-shadow: none !important;
+    border: none !important;
+
+  }
+  
+  .card-wrap input::placeholder{
+    color: rgb(2, 169, 188);
+  }
+
+  .card-wrap input:hover{
+    color: rgb(182, 182, 182) !important;
+    background: #013a65 !important;
+  }
+
+  .form-select {
+    box-shadow: none;
+    font-weight: 300 !important;
+    box-shadow: none;
+    background: transparent;
+    border-radius: 10px;
+    padding-left: 20px !important;
+    color: rgb(167, 188, 2);
+    margin-bottom: 10px;
+  }
+  
+  form label{
+    color: #fff !important;
+   padding-bottom: 10px; 
+  }
+  
+   .card-wrap .save-btn {
+      border: none;
+      border-radius: 50px;
+      background: #013a65;
+      color: #fff;
+      font-weight: 400;
+      width: 100%;
+      cursor: pointer;
+     display: none;
+  }
+  
+  .wait-changes {
+    display: block !important;
+  }
+  
+  .input-group-text {
+    box-shadow: none;
+    border-radius: 10px 0 10px 0 0  !important;
+    color: rgb(167, 188, 2);
+    border: thin solid grey;
+    height: 36px;
+    background-color: rgb(1, 35, 80);
+    border: none;
+    border-right : 1px solid currentColor;
+  }
+  
+   .card-wrap .tel {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+
+  .teacher-help-box{
+    background: linear-gradient(rgb(0, 14, 30), rgb(0, 14, 43));
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    padding-inline: 3%;
+  }
+  
+    .help-center-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    font-size: 20px;
+    z-index: 100;
+    color: aliceblue;
+    padding-block: 20px;
+    background-color: rgb(1, 39, 86);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 20px;
+  }
+  
+  .teacher-course-card {
+    color: antiquewhite;
+  }
+  .teacher-course-card li{
+    list-style-type: circle;
+  }
+    .help-center {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 21, 49);
+    width: 100%;
+    height: 100vh;
+    z-index:100;
+  }
+  
+  .card-notify{
+    background-color: rgb(1, 18, 40);
+   border-radius: 20px;
+   padding: 15px;
+   font-weight: lighter !important;
+   color: #fff;
+  }
+  
+  .form-card {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-inline: 14px !important;
+  }
+  
+  .logo-container-img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  
+  .help-center-logo {
+    width: 300px;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+  }
+  
+  .help-center .card-wrap {
+    background: rgb(0, 28, 64);
+  }
+
+  
+.help-center .offcanvas-body-container li  {
+  margin-block: 10px;
+  border-bottom: thin solid;
+  width: 100%;
+
+}
+
+.help-center .offcanvas-body-container .container  li span{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+}
+
+.offcanvas-body-container .help-main-box {
+  padding-inline: 10px;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.offcanvas-body-container .help-main-box textarea {
+  border-radius: 10px;
+  background: rgb(55, 57, 60);
+  padding: 10px 20px;
+  color: rgb(2, 150, 177) !important;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  max-height: 300px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.offcanvas-body-container .help-main-box textarea::placeholder {
+  color: rgb(153, 153, 153) !important;
+}
+ 
+.offcanvas-body-container .help-main-box .send-help-btn{
+  box-shadow: none;
+  background: rgb(49, 75, 89) !important;
+  border: none;
+  width: 100%;
+}
+  
+  .help-center .offcanvas-body-container li span {
+    margin-left: 0;
+    color: #02b951;
+    font-size: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+  .offcanvas-body-container .help-main-box {
+    padding-inline: 10px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20%;
+  }
+  
+  .offcanvas-body-container .help-main-box textarea {
+    border-radius: 10px;
+    background: rgb(55, 57, 60);
+    padding: 10px 20px;
+    color: rgb(2, 150, 177) !important;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    max-height: 300px;
+  }
+  
+  .offcanvas-body-container .help-main-box textarea::placeholder {
+    color: rgb(153, 153, 153) !important;
+  }
+   
+  .offcanvas-body-container .help-main-box .send-help-btn{
+    box-shadow: none;
+    background: rgb(49, 75, 89) !important;
+    /* background: rgb(2, 74, 114) !important; */
+    border: none;
+    width: 100%;
+  }
+  
+  .offcanvas-body-container .help-main-box textarea:active ~ .send-help-btn{
+    background: rgb(2, 74, 114) !important;
+  }
+  
+  

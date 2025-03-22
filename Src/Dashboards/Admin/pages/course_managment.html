@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../../../Assets/Images/Backgrounds/logo.png">
+    <title>Sama Islamic Digital College | Admin</title>
+    <link rel="stylesheet" href="../Styles/Boostrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../Styles/Css/custom_Styles.css">
+    <link rel="stylesheet" href="../Styles/Css/customizedCourseStyles.css">
+    <link rel="stylesheet" href="../Assets/customs/Awesome_Icons/css/">
+    <link rel="stylesheet" href="../Styles/Css/addElementStyles.css">
+    <script src="../Scripts/bootsrap/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< START DASHBOARD SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <div class="dashboard-wrapper">
+        <div id="statusMessage"></div>
+        <aside>
+            <div class="admin-logo-content">
+                <div class="d-flex align-items-center justify-content-start  ">
+                    <img class="img-fluid logo-img" width="60px" src="../Assets/customs/logo.png"
+                        alt="logo Image loading....." srcset="">
+                    <div class="logo-name">Sama Islamic Digital College</div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="fs-5 fw-bolder  pt-4 pb-3">Menu</div>
+                <ul class="navbar-nav nav dashboard-menu">
+                    <li class="nav-item">
+                        <i class="fa fa-dashboard" aria-hidden="true"></i>
+                        <span class="icon-text">Dashboard</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-dashboard" aria-hidden="true"></i>
+                        <span class="icon-text">Course Management</span>
+
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-dashboard" aria-hidden="true"></i>
+                        <span class="icon-text">Students</span>
+
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-dashboard" aria-hidden="true"></i>
+                        <span class="icon-text">Teachers</span>
+
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-dashboard" aria-hidden="true"></i>
+                        <span class="icon-text">Attendance</span>
+
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-dashboard" aria-hidden="true"></i>
+                        <span class="icon-text">Report Cards</span>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <main>
+            <!-- START NAVBAR SECTION -->
+            <nav class="navbar nav py-3">
+                <div class="container d-flex  align-items-center">
+                    <!-- START CLOSE ASIDE BAR BUTTON -->
+                    <div class="close-aside-btn">
+                        <button type="button" class="btn p-0 rounded-3 px-2" id="closeSidebarNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <!-- END CLOSE ASIDE BAR BUTTON -->
+
+                    <!-- QUICK ACCESS CENTER -->
+                    <div class="nav-action-center d-flex align-items-center  justify-content-center px-3">
+                        <form class="navbar-search-wrapper">
+                            <input class="form-control search-input shadow-none border-none m-0 p-0" type="search"
+                                placeholder="Search....">
+                            <i class="fa fa-search search-icon" aria-hidden="true"></i>
+                        </form>
+                        <!-- FULL SCREEN BUTTON  -->
+                        <div>
+                            <button id="ViewFullScreen" type="button" class="btn action-btns" data-bs-toggle="tooltip"
+                                data-bs-placement="top" title="Full Screen View">
+                                <i class="fa fa-square" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <!-- NOTIFICATION BUTTON -->
+                        <div>
+                            <button type="button" class="btn action-btns notification-btn" data-bs-toggle="tooltip"
+                                data-bs-placement="top" title="Notifications">
+                                <i class="fa fa-bell" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div>
+                            <button type="button" class="btn action-btns settings-btn" data-bs-toggle="tooltip"
+                                data-bs-placement="top" title="settings">
+                                <i class="fa fa-gear" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="admin-mode-box">
+                            <div class="admin-mode">Admin</div>
+                            <img class="img-fluid admin-img" src="../Assets/Images/admin/customer01.jpg"
+                                alt="admin img loading">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- END NAVBAR SECTION-->
+
+            <!-- START DASH BOARD SECTION -->
+            <section class="dashboard-section mb-5 pb-5">
+                <!-- QUICK CHOICES CONTAINER -->
+                <div class="block-page-info-choices d-none" style="user-select: none;">
+                    <!-- WELCOME INSTRUCTION BOX -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 p-5">
+                                <h1>Course Management</h1>
+                                <p><i class="text-info">Create, manage, delete and view enrolled courses....</i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- QUICK CHOICES -->
+                    <div class="container quick-choices ps-5">
+                        <div class="create_course card d-flex align-items-center justify-content-center flex-column ">
+                            <i class="fas fa-plus-circle fs-1 icon" aria-hidden="true"></i>
+                            <span class="fs-5">Create Course</span>
+                        </div>
+                        <div class="manage_courses card d-flex align-items-center justify-content-center flex-column ">
+                            <i class="fa fa-address-book fs-1 icon" aria-hidden="true"></i>
+                            <span class="fs-5">Manage courses</span>
+                        </div>
+                        <div class="card d-flex align-items-center justify-content-center flex-column ">
+                            <i class="fas fa-book-open fs-1 icon text-info"></i>
+                            <span class="fs-5">Enrolled Courses</span>
+                        </div>
+                        <div class="delete_courses card d-flex align-items-center justify-content-center flex-column ">
+                            <i class="fas fa-trash-alt fs-1 icon" aria-hidden="true"></i>
+                            <span class="fs-5">Delete Courses</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- CREATE COURSE CONTAINER -->
+                <div class="createCourseContainesr">
+                    <div class="container">
+                        <div class="container p-4">
+                            <button type="button" class="back-button btn btn-light fw-bold border-0 outline-none"> <i
+                                    class="fa fa-arrow-left pe-2" aria-hidden="true"></i> Back</button>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-12 px-5 py-3 d-flex align-items-center  justify-content-between">
+                                <div class="header">
+                                    <span>Course setup</span>
+                                    <small>Complete all fields</small>
+                                </div>
+                                <div>
+                                    <span class="btn shadow-lg">
+                                        Publish
+                                        <button type="button" class="btn btn-dark btn-sm">
+                                            <i class="fa fa-trash" aria-hidden="true"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-flex flex-wrap align-items-stretch justify-content-stretch">
+                            <div class="col-md-6 px-5 pt-5">
+                                <div class="heading mb-5 d-flex align-items-center justify-content-start">
+                                    <i class="fa fa-cubes text-info fs-2" aria-hidden="true"></i>
+                                    <span class="ms-3 text-dark fw-bold" style="font-size: 18px;">Customize your
+                                        course</span>
+                                </div>
+
+                                <!-- COURSE NAME BOX -->
+                                <div class="card shadow-sm border-0 p-3">
+                                    <div class="card-title d-flex justify-content-between align-items-center pe-4">
+                                        <span>Course name</span>
+                                        <span>
+                                            <i class="fa fa-pencil pe-1" aria-hidden="true"></i>
+                                            <span>Edit name</span>
+                                        </span>
+                                    </div>
+                                    <div class="form-group mt-4">
+                                        <label for="Select name">Select Course name</label>
+                                        <select class="form-control course-select-input" name="" id="">
+                                            <option selected disabled>none</option>
+                                            <option>IPLE (Islamic Primary Leaving Examinations)</option>
+                                            <option>Idaad</option>
+                                            <option>Thanawi</option>
+                                            <option>Yasaruna</option>
+                                            <option>Arabic Language</option>
+                                            <option>Quran</option>
+                                            <option>General Basics Of Islam</option>
+                                        </select>
+                                    </div>
+                                    <div class="btn-saver mt-4 ms-auto">
+                                        <button type="button" class="btn btn-primary">Save</button>
+                                    </div>
+                                </div>
+
+                                    <!-- COURSE INTRO VIDEO -->
+                                    <div class="card shadow-sm border-0 p-3">
+                                        <div class="card-title d-flex justify-content-between align-items-center pe-4">
+                                            <span>Course video Introduction</span>
+                                            <span>
+                                                <button type="button" class="btn btn-sm btn-outline-success">
+                                                    Upload
+                                                    <i class="fa fa-upload px-1" aria-hidden="true"></i>
+                                            </button>
+                                            </span>
+                                        </div>
+                                        <div class="mt-4 course-intr-video-wrapper">
+                                         <video src="../Assets/customs/Lessons/" class="img-fluid"></video>  
+                                        </div> 
+                                        <div class="btn-saver mt-4 ms-auto">
+                                            <button type="button" class="btn btn-primary">Save</button>
+                                        </div>
+                                    </div>
+
+                                 <!-- COURSE OVERVIEW BOX -->
+                                 <div class="card shadow-sm border-0 p-3">
+                                    <div class="card-title d-flex justify-content-between align-items-center pe-4">
+                                        <span>Course Overview</span>
+                                        <span>
+                                            <i class="fa fa-pencil pe-1" aria-hidden="true"></i>
+                                            <span>Edit Overview</span>
+                                        </span>
+                                    </div>
+                                    <div class="" style="color: rgb(85, 0, 255);">What will the student learn in this course? <br> 
+                                        ( summarise all that below)</div>
+                                    <ul class="navbar-nav nav">
+                                        <div class="form-group my-2">
+                                            <input id="my-input" class="form-control" type="text" name="">
+                                        </div>
+                                        <div class="form-group mb-2">
+                                            <input id="my-input" class="form-control" type="text" name="">
+                                        </div>
+                                        <div class="form-group mb-2">
+                                            <input id="my-input" class="form-control" type="text" name="">
+                                        </div>
+                                        <div class="form-group mb-2">
+                                            <input id="my-input" class="form-control" type="text" name="">
+                                        </div>
+                                        <div class="form-group mb-2">
+                                            <input id="my-input" class="form-control" type="text" name="">
+                                        </div>
+                                        <div class="form-group mb-2">
+                                            <input id="my-input" class="form-control" type="text" name="">
+                                        </div>
+                                    </ul>
+                                  
+                                    <div class="btn-saver mt-4 ms-auto">
+                                        <button type="button" class="btn btn-primary">Save</button>
+                                    </div>
+                                </div>
+
+                                <!-- COURSE DESCRIPTION BOX -->
+                                <div class="card shadow-sm border-0 p-3">
+                                    <div class="card-title d-flex justify-content-between align-items-center pe-4">
+                                        <span>Course description</span>
+                                        <span>
+                                            <i class="fa fa-pencil pe-1" aria-hidden="true"></i>
+                                            <span>Edit description</span>
+                                        </span>
+                                    </div>
+                                    <div class="mt-4">
+                                        <textarea class="form-control" name="" id="" cols="30" rows="2"
+                                            placeholder="no description."></textarea>
+                                    </div>
+                                    <div class="btn-saver mt-4 ms-auto">
+                                        <button type="button" class="btn btn-primary">Save</button>
+                                    </div>
+                                </div>
+
+                                <!-- COURSE DURATION BOX -->
+                                <div class="card shadow-sm border-0 p-3">
+                                    <div class="card-title d-flex justify-content-between align-items-center pe-4">
+                                        <span>Course Duration</span>
+                                        <span>
+                                            <i class="fa fa-pencil pe-1" aria-hidden="true"></i>
+                                            <span>Edit Duration</span>
+                                        </span>
+                                    </div>
+                                    <div class="mt-4">
+                                        <textarea class="form-control" name="" id="" cols="30" rows="2"
+                                            placeholder="No Course Duration"></textarea>
+                                    </div>
+                                    <div class="btn-saver mt-4 ms-auto">
+                                        <button type="button" class="btn btn-primary">Save</button>
+                                    </div>
+                                </div>
+
+                                <!-- COURSE CLASSS BOX -->
+                                <div class="card shadow-sm border-0 p-3">
+                                    <div class="card-title d-flex justify-content-between align-items-center pe-4">
+                                        <span>Course classes</span>
+                                        <span>
+                                            <i class="fa fa-pencil pe-1" aria-hidden="true"></i>
+                                            <span>Edit classes</span>
+                                        </span>
+                                    </div>
+                                    <div class="form-group mt-4">
+                                        <label for="number of classes" class="form-label text-secondary">Number of
+                                            classes</label>
+                                        <input type="text" name="" id="" class="form-control class-input-name"
+                                            placeholder="0">
+                                        <!-- <select class="form-control d-none" name="" id="classArray">
+                                      <option selected disabled value="Number of classes">Number of classes</option>
+                                    </select> -->
+                                    </div>
+                                    <div class="inputs-wrapper" id="classNameInputsArray">
+                                    </div>
+                                    <div class="btn-saver mt-4 ms-auto">
+                                        <button type="button" class="btn btn-primary">Save</button>
+                                    </div>
+                                </div>
+
+                                <!-- COURSE SUBJECT BOX -->
+                                <div class="card shadow-sm border-0 p-3">
+                                    <div class="card-title d-flex justify-content-between align-items-center pe-4">
+                                        <span>Course subjects</span>
+                                        <span>
+                                            <i class="fa fa-pencil pe-1" aria-hidden="true"></i>
+                                            <span>Edit subjects</span>
+                                        </span>
+                                    </div>
+                                    <div class="form-group mt-4">
+                                        <label for="Select of class" class="form-label text-secondary">Number of
+                                            subjects</label>
+                                        <input type="text" name="" id="" class="form-control subject-name-input"
+                                            placeholder="0" min="0" max="20">
+                                        <!-- <select class="form-control d-none" name="" id="subjectArray">
+                                      <option selected disabled>Number of subjects</option>
+                                    </select> -->
+                                    </div>
+                                    <div class="inputs-wrapper" id="subjectNameInputsArray">
+
+                                    </div>
+                                    <div class="btn-saver mt-4 ms-auto">
+                                        <button type="button" class="btn btn-primary save-details">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 px-5 pt-5">
+                                <div class="heading mb-5 d-flex align-items-center justify-content-start">
+                                    <i class="fa fa-bars text-info fs-2" aria-hidden="true"></i>
+                                    <span class="ms-3 text-dark fw-bold" style="font-size: 18px;">About the
+                                        subjects</span>
+                                </div>
+                                <!-- COURSE SELECT SUBJECTS INFO BOX -->
+                                <div class="card shadow-sm border-0 p-3 subject-box">
+                                    <div class="card-title d-flex justify-content-between align-items-center pe-4">
+                                        <span>Subject Details</span>
+                                        <span>
+                                            <i class="fa fa-pencil fs-5 pe-1" aria-hidden="true"></i>
+                                            <span>Edit details</span>
+                                        </span>
+                                    </div>
+                                    <!-- SELECT SUBJECT DETAILS -->
+                                    <div class="form-group mt-4">
+                                        <label for="Select subject" class="form-label text-secondary">Select
+                                            Subject</label>
+                                        <select class="form-control " name="" id="alreadyCreatedSubjectsArray">
+                                            <option selected disabled>Select subject</option>
+                                        </select>
+                                    </div>
+                                    <!-- COURSE TOPICS DETAILS -->
+                                    <div class="form-group mt-4">
+                                        <label for="number of Topics" class="form-label text-secondary">Number of
+                                            Topics</label>
+                                        <input type="text" name="" id="" class="form-control topic-name-input"
+                                            placeholder="0">
+                                        <!-- <select class="form-control d-none" name="" id="alreadyCreatedTopicsArray">
+                                          <option selected disabled>Number of Lessons</option>
+                                        </select> -->
+                                    </div>
+                                    <div class="inputs-wrapper" id="topicsArray">
+                                    </div>
+                                    <div class="btn-saver mt-4 ms-auto">
+                                        <button type="button" class="btn btn-primary">Save</button>
+                                    </div>
+                                </div>
+                                <!-- ABOUT LESSONS INFO BOX -->
+                                <div class="heading mb-5 d-flex align-items-center justify-content-start">
+                                    <i class="fa fa-cube text-info fs-2" aria-hidden="true"></i>
+                                    <span class="ms-3 text-dark fw-bold" style="font-size: 18px;">About The
+                                        Lessons</span>
+                                </div>
+                                <!-- SELECT TOPIC & NUMBER OF LESSONS  -->
+                                <div class="card shadow-sm border-0 p-3">
+                                    <div class="card-title d-flex justify-content-between align-items-center pe-4">
+                                        <span>Lesson Details</span>
+                                        <span>
+                                            <i class="fa fa-pencil fs-5 pe-1" aria-hidden="true"></i>
+                                            <span>Edit details</span>
+                                        </span>
+                                    </div>
+                                    <!-- SELECT TOPIC DETAILS -->
+                                    <div class="form-group mt-4">
+                                        <label for="Select subject" class="form-label text-secondary">Select a
+                                            Topic</label>
+                                        <select class="form-control " name="" id="alreadyCreatedTopicsArray">
+                                            <option selected disabled>Select a topic to upload Lessons</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group mt-4">
+                                        <label for="Select-number-class" class="form-label text-secondary">Number of
+                                            Lessons</label>
+                                        <input type="text" name="" id="" class="form-control lesson-input"
+                                            placeholder="0">
+                                    </div>
+                                    <div class="inputs-wrapper" id="lessonsInputsArray">
+                                    </div>
+                                    <div class="btn-saver mt-4 ms-auto">
+                                        <button type="button" class="btn btn-primary">Save</button>
+                                    </div>
+                                </div>
+                                <div class="heading mb-5 d-flex align-items-center justify-content-start">
+                                    <i class="fa fa-upload text-info fs-2" aria-hidden="true"></i>
+                                    <span class="ms-3 text-dark fw-bold" style="font-size: 18px;">Upload Lessons for the
+                                        Topic</span>
+                                </div>
+                                <!-- UPLOAD YOUR LESSONS  -->
+                                <div class="card upload-lesson shadow-sm border-0 p-0 card-lesson">
+                                    <div
+                                        class="card-title d-flex justify-content-center align-items-center bg-dark text-warning p-2 m-0 rounded-top-3">
+                                        <span>Upload all lessons for the topic</span>
+                                    </div>
+                                    <div class="card-body p-0 card-upload-lesson p-0 m-0">
+                                        <button class="upload-lesson-btn p-0 m-0">
+                                            <span class="icon-wrapper">
+                                                <i class="fa fa-cloud-upload upload-icon" aria-hidden="true"></i>
+                                                <span>Click to upload now</span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 px-5">
+                                <!-- SELL COURSE BOX -->
+                                <div class="heading mb-5 d-flex align-items-center justify-content-start">
+                                    <i class="fas fa-dollar-sign text-info fs-2"></i>
+                                    <span class="ms-3 text-dark fw-bold" style="font-size: 18px;">Sell your
+                                        Course</span>
+                                </div>
+                                <div class="card shadow-sm border-0 p-3">
+                                    <div class="card-title d-flex justify-content-between align-items-center pe-4">
+                                        <span>Course price</span>
+                                        <span>
+                                            <i class="fa fa-pencil fs-5 pe-1" aria-hidden="true"></i>
+                                            <span>Edit price</span>
+                                        </span>
+                                    </div>
+                                    <div class="mt-4">
+                                        <textarea class="form-control" name="" id="" cols="30" rows="2"
+                                            placeholder="no price"></textarea>
+                                    </div>
+                                    <div class="btn-saver mt-4 ms-auto">
+                                        <button type="button" class="btn btn-primary">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- SAVE COURSE BUTTON-->
+                            <div class="container col-md-6  px-5 pt-5">
+                                <button type="button" class="btn btn-primary fw-lighter">Save all and Publish
+                                    course</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UPLOAD LESSONS CONTAINER -->
+                <div class="uploadLessonsContainer">
+                       <!-- DELETE LESSON -->
+                       <div class="warning-msg-container collapse">
+                        <div class="container">
+                        <div class="card p-3 delete-box">
+                            <h4 class="h5 py-3"> <i class="mx-2 fa fa-exclamation-triangle text-warning" aria-hidden="true"></i> Know this before deleting this lesson</h4>
+                        <p class="lesson-delete-warning-msg">
+                       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, ea sit?
+                        Quia adipisci molestias mollitia ex alias facilis nobis eum ipsam quos
+                         dolorum, vero eligendi officia? Accusamus doloremque molestias ad possimus
+                          ipsum! Laboriosam suscipit illum, placeat provident ut dolores minus 
+                       sapiente odit iure accusantium fugit nisi at, amet inventore. Facere?
+                          </p>
+        
+                      <div class="w-100 d-flex align-items-center justify-content-center py-3">
+                       <button type="button" class="btn btn-sm btn-secondary mx-3" id="cancelDeleteBtn">Cancel</button>
+                       <button type="button" class="btn btn-sm btn-danger mx-3">Delete</button>
+                         </div>
+                         </div>
+                        </div>
+                            </div>
+
+                    <div class="container">
+                        <div class="container p-4">
+                            <button type="button" class="back-lessons-btn btn btn-light fw-bold border-0 outline-none">
+                                <i class="fa fa-arrow-left pe-2" aria-hidden="true"></i> Back</button>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-12 px-5 py-3 d-flex align-items-center  justify-content-between">
+                                <div class="header">
+                                    <span>Lessons Management</span>
+                                    <small>View, delete, replace and upload your lessons in form of videos</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-4 py-2 row d-flex flex-wrap align-items-stretch justify-content-stretch">
+                            <div class="container">
+                          <div class="options-container">
+                            <div class="form-group">
+                                <label for="my-select" class="form-label">Choose a class</label>
+                                <select id="my-select" class="custom-select" name="">
+                                    <option>None</option>
+                                </select>
+                            </div> 
+                           <div class="form-group">
+                                <label for="my-select" class="form-label">Select Subject</label>
+                                <select id="my-select" class="custom-select" name="">
+                                    <option>None</option>
+                                </select>
+                            </div> 
+                           <div class="form-group">
+                                <label for="my-select" class="form-label"> choose a Topic</label>
+                                <select id="my-select" class="custom-select" name="">
+                                    <option>None</option>
+                                </select>
+                            </div> 
+                          </div>
+                                <div class="upload-header">
+                                    <div>
+                                        <span class="fs-5 fw-bold">Upload lessons</span>
+                                        <span class="search-input-wrapper">
+                                            <form action="" method="get">
+                                                <i class="fa fa-search icon" aria-hidden="true"></i>
+                                                <input type="search" name="" id="" class="seacrh-lesson-input form-control"
+                                                placeholder="Search lessons by title....">
+                                            </form>
+                                        </span>
+                                        <div class="action-btn-wrapper lesson-action-action">
+                                            <button id="selectLesson" class="btn btn-sm text-light" style="background: rgb(0, 31, 66);">
+                                                <span id="lesson-select-btn">select</span>
+                                                <i class="fa fa-check text-success" aria-hidden="true"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-sm text-light btn-danger d-none delete-Btn">
+                                                <span>Delete</span>
+                                                <i class="fa fa-trash-alt" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lessons-wrapper">
+                                    
+                                    <div class="all-lessons">
+                                        <div class="card">
+                                            <div class="lessons-header">
+                                                <button type="button" class="btn delete-lesson-btn">
+                                                    <input type="checkbox" name="" id="" class="delete-check-box">
+                                                    <span class="title-lesson">Introduction to swalah </span>
+                                                </button>
+                                              <span>  <i class="fas fa-boxes icons"></i></span>
+                                                <input type="text" class="lessons-title form-control" name="" id="titleInput"
+                                                    placeholder="Title For this Lesson" value="Introduction to swalah" readonly>
+                                                <span
+                                                    class="edit-lesson-title d-flex align-items-center justify-content-center flex-column" id="editLessonTitleBtn">
+                                                    <i class="fa fa-pencil-square icons"></i>
+                                                    <span style="font-size: x-small;" class="edit-mode">Edit</span>
+                                                </span>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="lesson-video img-fluid">
+                                                    <video src="../Assets/customs/Lessons/lesson_demo.mp4"></video>
+                                                </div>
+                                                <div class="lesson-action-wrapper mt-1">
+                                                    <button class="btn btn-sm save-lesson-btn btn-info">Attachments and Resou..</button>
+                                                    <button class="btn btn-sm btn-danger">
+                                                        delete
+                                                    </button>
+                                                    <button class="btn btn-sm btn-success">
+                                                        replace
+                                                    </button>
+                                                    <button class="btn btn-sm btn-primary">
+                                                        Save
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- MANAGE COURSES CONTAINER -->
+                <div class="manageCourseContainer">
+                    <div class="container">
+                        <div class="container p-4">
+                            <button type="button" id="backButton" class="btn btn-light fw-bold border-0 outline-none">
+                                <i class="fa fa-arrow-left pe-2" aria-hidden="true"></i> Back</button>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-12 px-5 py-3 d-flex align-items-center  justify-content-between">
+                                <div class="header">
+                                    <span>Manage Courses</span>
+                                    <small>View course Summary, delete and edit courses</small>
+                                </div>
+                                <div>
+                                    <span class="btn shadow-lg border-0">
+                                        View All
+                                        <button type="button" class="btn btn-dark btn-sm border-0 outline-none">
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container p-5">
+                            <div class="course-card-container">
+                                <div class="card">
+                                    <div class="text-header-img">
+                                        <span>Thanawi</span>
+                                    </div>
+                                    <div class="down-content">
+                                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="navbar-nav nav">
+                                            <li class="nav-item">
+                                                <i class="fas fa-podcast    icon"></i>
+                                                <span class="course-title">Published on <span
+                                                        class="course-published-time"> 20 / 03 / 2025 </span></span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span>
+                                                    <span>
+                                                        <i class="fa fa-users icon" aria-hidden="true"></i>
+                                                    </span>
+                                                    <span class="total-number-enrolled">29</span>
+                                                    <span class="teachers">students</span> enrolled
+                                                </span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="course-classes">
+                                                    <span>
+                                                        <i class="fas fa-chalkboard-teacher icon"></i>
+                                                        Classes Offered
+                                                    </span>
+                                                    <div class="all-course-classes">
+                                                        <ul class="navbar-nav nav">
+                                                            <li class="nav-item ms-4">
+                                                                <i class="text-success fa fa-check me-1"
+                                                                    aria-hidden="true"></i> Senior five
+                                                            </li>
+                                                            <li class="nav-item ms-4">
+                                                                <i class="text-success fa fa-check me-1"
+                                                                    aria-hidden="true"></i> Senior six
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span>
+                                                    <span>
+                                                        <i class="fa fa-users-cog icon"></i>
+                                                    </span>
+                                                    <span>Managed by</span>
+                                                    <span class="teachers">4</span> teachers
+                                                </span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="total-course-amount">
+                                                    <span>
+                                                        <i class="fas fa-dollar-sign icon"></i>
+                                                    </span>
+                                                    UGX <span>300000 </span>generated
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="down-content">
+                                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="course-action-btns d-flex align-items-center justify-content-between ">
+                                        <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#deleteCourseAlert">
+                                            Delete course <span>
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                        <button type="button" class="btn btn-primary btn-sm">
+                                            <span>Edit Course</span>
+                                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="card">
+                                    <div class="text-header-img">
+                                        <span>IPLE</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="navbar-nav nav">
+                                            <li class="nav-item">
+                                                <i class="fas fa-podcast    icon"></i>
+                                                <span class="course-title">Published on <span
+                                                        class="course-published-time"> 20 / 03 / 2025 </span></span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span>
+                                                    <span>
+                                                        <i class="fa fa-users icon" aria-hidden="true"></i>
+                                                    </span>
+                                                    <span class="total-number-enrolled">29</span>
+                                                    <span class="teachers">students</span> enrolled
+                                                </span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="course-classes">
+                                                    <span>
+                                                        <i class="fas fa-chalkboard-teacher icon"></i>
+                                                        Classes Offered
+                                                    </span>
+                                                    <div class="all-course-classes">
+                                                        <ul class="navbar-nav nav">
+                                                            <li class="nav-item ms-4">
+                                                                <i class="text-success fa fa-check me-1"
+                                                                    aria-hidden="true"></i> Senior five
+                                                            </li>
+                                                            <li class="nav-item ms-4">
+                                                                <i class="text-success fa fa-check me-1"
+                                                                    aria-hidden="true"></i> Senior six
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span>
+                                                    <span>
+                                                        <i class="fa fa-users-cog icon"></i>
+                                                    </span>
+                                                    <span>Managed by</span>
+                                                    <span class="teachers">4</span> teachers
+                                                </span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="total-course-amount">
+                                                    <span>
+                                                        <i class="fas fa-dollar-sign icon"></i>
+                                                    </span>
+                                                    UGX <span>300000 </span>generated
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="down-content">
+                                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="course-action-btns d-flex align-items-center justify-content-between ">
+                                        <button type="button" class="btn btn-danger btn-sm">
+                                            Delete course <span>
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                        <button type="button" class="btn btn-primary btn-sm">
+                                            <span>Edit Course</span>
+                                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="card">
+                                    <div class="text-header-img">
+                                        <span>Idaad</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="navbar-nav nav">
+                                            <li class="nav-item">
+                                                <i class="fas fa-podcast    icon"></i>
+                                                <span class="course-title">Published on <span
+                                                        class="course-published-time"> 20 / 03 / 2025 </span></span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span>
+                                                    <span>
+                                                        <i class="fa fa-users icon" aria-hidden="true"></i>
+                                                    </span>
+                                                    <span class="total-number-enrolled">29</span>
+                                                    <span class="teachers">students</span> enrolled
+                                                </span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="course-classes">
+                                                    <span>
+                                                        <i class="fas fa-chalkboard-teacher icon"></i>
+                                                        Classes Offered
+                                                    </span>
+                                                    <div class="all-course-classes">
+                                                        <ul class="navbar-nav nav">
+                                                            <li class="nav-item ms-4">
+                                                                <i class="text-success fa fa-check me-1"
+                                                                    aria-hidden="true"></i> Senior five
+                                                            </li>
+                                                            <li class="nav-item ms-4">
+                                                                <i class="text-success fa fa-check me-1"
+                                                                    aria-hidden="true"></i> Senior six
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span>
+                                                    <span>
+                                                        <i class="fa fa-users-cog icon"></i>
+                                                    </span>
+                                                    <span>Managed by</span>
+                                                    <span class="teachers">4</span> teachers
+                                                </span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="total-course-amount">
+                                                    <span>
+                                                        <i class="fas fa-dollar-sign icon"></i>
+                                                    </span>
+                                                    UGX <span>300000 </span>generated
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="down-content">
+                                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="course-action-btns d-flex align-items-center justify-content-between ">
+                                        <button type="button" class="btn btn-danger btn-sm">
+                                            Delete course <span>
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                        <button type="button" class="btn btn-primary btn-sm">
+                                            <span>Edit Course</span>
+                                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="text-header-img">
+                                        <span>Quran</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="navbar-nav nav">
+                                            <li class="nav-item">
+                                                <i class="fas fa-podcast    icon"></i>
+                                                <span class="course-title">Published on <span
+                                                        class="course-published-time"> 20 / 03 / 2025 </span></span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span>
+                                                    <span>
+                                                        <i class="fa fa-users icon" aria-hidden="true"></i>
+                                                    </span>
+                                                    <span class="total-number-enrolled">29</span>
+                                                    <span class="teachers">students</span> enrolled
+                                                </span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="course-classes">
+                                                    <span>
+                                                        <i class="fas fa-chalkboard-teacher icon"></i>
+                                                        Classes Offered
+                                                    </span>
+                                                    <div class="all-course-classes">
+                                                        <ul class="navbar-nav nav">
+                                                            <li class="nav-item ms-4">
+                                                                <i class="text-success fa fa-check me-1"
+                                                                    aria-hidden="true"></i> Senior five
+                                                            </li>
+                                                            <li class="nav-item ms-4">
+                                                                <i class="text-success fa fa-check me-1"
+                                                                    aria-hidden="true"></i> Senior six
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span>
+                                                    <span>
+                                                        <i class="fa fa-users-cog icon"></i>
+                                                    </span>
+                                                    <span>Managed by</span>
+                                                    <span class="teachers">4</span> teachers
+                                                </span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="total-course-amount">
+                                                    <span>
+                                                        <i class="fas fa-dollar-sign icon"></i>
+                                                    </span>
+                                                    UGX <span>300000 </span>generated
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="down-content">
+                                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="course-action-btns d-flex align-items-center justify-content-between ">
+                                        <button type="button" class="btn btn-danger btn-sm">
+                                            Delete course <span>
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                        <button type="button" class="btn btn-primary btn-sm">
+                                            <span>Edit Course</span>
+                                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- DELETE ALERT BOX -->
+                <!-- Modal -->
+                <div class="delete">
+                    <div class="modal fade" id="deleteCourseAlert" tabindex="-1" role="dialog"
+                        aria-labelledby="modelTitleId" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="container">
+                                    <div class="container">
+                                        <h4 class="fw-bolder">Deleting this course will:</h4>
+                                        <ul class="navbar-nav nav p-4">
+                                            <li class="nav-item">
+                                                Delete all created content for this course
+                                            </li>
+                                            <li class="nav-item">
+                                                Delete all student's progress and track for this course
+                                            </li>
+                                            <li class="nav-item">
+                                                Delete all videos, topics and other related content will be limitedly
+                                                accessed
+                                            </li>
+                                            <li class="nav-item">
+                                                Unpublish the course from the public, students and teachers
+                                            </li>
+                                            <li class="nav-item">
+                                                Delete all Enrolled students within this course and the course to be
+                                                completely get deleted from the system
+                                            </li>
+
+                                        </ul>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <button type="button" class="btn-sm btn text-light"
+                                                style="background: rgb(1, 116, 112);">Edit Instead</button>
+                                            <button type="button" class="btn-sm btn btn-secondary"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#deleteCourseAlert">Cancel</button>
+                                            <button type="button" class="btn-sm btn btn-danger" id="confirmDeletion"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#deleteCourseAlert">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DELETE COURSES -->
+                <div class="DeleteCourseContainer">
+                    <div class="container">
+                        <div class="container p-4">
+                            <button type="button" id="backBtn" class="btn btn-light fw-bold border-0 outline-none"> <i
+                                    class="fa fa-arrow-left pe-2" aria-hidden="true"></i> Back</button>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-12 px-5 py-3 d-flex align-items-center  justify-content-between">
+                                <div class="header">
+                                    <span>Delete Courses</span>
+                                    <small style="color: rgb(148, 3, 3);">Confirm with admin password to completly
+                                        delete selected course</small>
+                                </div>
+                                <div>
+                                    <span class="btn shadow-lg border-0 btn-danger" data-bs-toggle="modal"
+                                        data-bs-target="#deleteCourseAlert">
+                                        Delete All
+                                        <button type="button" class="btn btn-sm border-0 outline-none">
+                                            <i class="fas fa-trash-alt fs-5 text-light"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container ps-5 pt-5">
+                            <div class="delete-course-wrapper">
+                                <div class="delete-heading d-flex align-items-center  justify-content-between  ">
+                                    <span>Select to delete</span>
+                                    <button type="button" class="btn btn-sm outline-none border-0 shadow-lg">
+                                        <span class="px-2">select all</span>
+                                        <input type="checkbox" name="" id="">
+                                    </button>
+                                </div>
+                                <div class="container p-3">
+                                    <ul class="all-courses">
+                                        <li class="" data-bs-toggle="modal" data-bs-target="#deleteCourseAlert">
+                                            <input type="checkbox" name="" id=""> <span>Thanawi</span>
+                                        </li>
+                                        <li class="" data-bs-toggle="modal" data-bs-target="#deleteCourseAlert">
+                                            <input type="checkbox" name="" id=""> <span>Thanawi</span>
+                                        </li>
+                                        <li class="" data-bs-toggle="modal" data-bs-target="#deleteCourseAlert">
+                                            <input type="checkbox" name="" id=""> <span>Thanawi</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CONFIRM COURSE DELETION -->
+                    <div class="password-container">
+
+                        <div class="confirm-password">
+                            <div class="container d-flex align-items-center justify-content-center flex-column ">
+                                <h4 class="p-5">Confirm Password to delete course</h4>
+                                <form action="" method="post">
+                                    <div class="form-group">
+                                        <label for="password" class="form-label">Enter Password</label>
+                                        <input type="password" class="form-control" name="inputName" id="inputName"
+                                            placeholder="Enter admin password...">
+                                    </div>
+
+                                    <div class="buttons py-4 d-flex align-items-center justify-content-between  ">
+                                        <button type="button" class="btn btn-primary"
+                                            id="cancelDeletion">Cancel</button>
+                                        <button type="button" class="btn btn-danger">Confirm</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- FOOTER SECTION -->
+                    <div class="container">
+                        <footer class="" style="margin-top: 100px !important;">
+                            <div class="footer-bottom">
+                                <p>&copy; 2024 Sama Islamic Digital Platform. All rights reserved.</p>
+                            </div>
+                        </footer>
+
+                    </div>
+                    <div class="mb-5 pb-5"></div>
+            </section>
+            <!-- END DASH BOARD SECTION -->
+
+
+
+        </main>
+    </div>
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< END DASHBOARD SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+
+
+    <script src="../Assets/customs/Awesome_Icons/js/all.js"></script>
+    <script src="../Scripts/bootsrap/bootstrap.min.js"></script>
+    <script src="../Scripts/Js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3acc367a10.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

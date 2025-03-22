@@ -1,0 +1,391 @@
+@font-face {
+    font-family: 'custom-fonts';
+    src: url('../../Assets/Fonts/Open_Sans/OpenSans-Regular.ttf');
+}
+body {
+    /* background: #000; */
+    font-family: 'custom-fonts', sans-serif;
+    color: aliceblue;
+}
+.specific-course {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    flex-wrap: wrap;
+}
+
+.header{
+    color: rgb(204, 206, 208);
+    padding: 15px;
+    overflow-x: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    /* box-shadow: 20px 0 20px rgb(244, 237, 226); */
+    /* position: fixed; */
+    /* display: none; */
+}
+
+.header ul  {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* padding-inline: 10px; */
+}
+
+.header ul .about-ul {
+    overflow-x: auto;
+    width: 100%;
+    display: inherit;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+
+.header ul .about-ul li  span{
+    font-weight: bold;
+    color: rgb(124, 136, 199) !important;
+}
+
+
+.header ul .about-ul li {
+    white-space: nowrap;
+    margin: 10px;
+    color: #000 !important;
+    font-weight: lighter;
+}
+
+
+/* 
+.specific-course .class-or-level-selected-container .header button{
+    font-size: 25px;
+    font-weight: bolder;
+    color: inherit;
+}
+
+.specific-course .class-or-level-selected-container .header span{
+    font-size: 30px;
+} */
+
+.specific-course .class-or-level-selected-container .sub-header {
+    max-width: 100%;
+    overflow-x: auto;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    background-color: red; */
+    
+}
+
+.specific-course .class-or-level-selected-container .sub-header .nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.class-or-level-selected-container .sub-header .nav .nav-item{
+    margin: 10px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background: rgb(0, 46, 62);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+}
+.class-or-level-selected-container .sub-header .nav .nav-item span{
+    font-size: 16px;
+}
+.class-or-level-selected-container .sub-header .nav .nav-item .icons{
+    font-size: 24px;
+    padding: 10px;
+}
+
+.class-or-level-selected-container .sub-header .nav .nav-item .class-price {
+    color: rgb(246, 144, 0) !important;
+    font-weight: bolder;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.header .class-topic-name{
+    white-space: nowrap;
+    font-size: 24px !important;
+}
+
+.sub-header .total-number-of-lessons {
+    text-align: right;
+    padding-inline: 10px;
+    color: rgb(6, 165, 1);
+    word-wrap: normal;
+}
+
+
+
+.class-or-level-selected-container .topicLesson {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-block: 10px;
+}
+
+.specific-course .class-or-level-selected-container .wrap{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 270px;
+}
+
+.specific-course .class-or-level-selected-container .topic-name{
+    font-size: 17px !important;
+    color: rgb(0, 168, 246);
+    margin-left: 5px;
+    font-family: 550;
+}
+
+
+.sub-header .total-number-of-lessons .numberoflessons {
+    font-size: 20px;
+    color: #ffa500;
+}
+
+.sub-header input {
+    box-shadow: none !important;
+    outline: none !important;
+    border-radius: 10px;
+    padding-inline: 15px;
+    /* width: 100%; */
+}
+
+.main-content .lesson-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.main-content .dropdown-icon {
+    color: #000
+    ;
+}
+
+.main-content .lesson-list .nav-item{
+    max-width: 100%;
+    margin: 10px 5px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.main-content .lesson-list .nav-item:hover{
+    background: linen;
+}
+
+.main-content .lesson-content{
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.main-content .lesson-content .video-lesson-wrapper {
+    /* max-width: 150px; */
+    /* max-height: 150px; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    margin-right: 10px;
+
+}
+
+.main-content .lesson-content .video-lesson-wrapper video{
+    width: 100%;
+    height: 100%;
+    background-position: inherit;
+    background-size: inherit;
+    background-repeat: inherit;
+    object-fit: inherit;
+    object-position: inherit;
+    border-radius: inherit;
+    cursor: pointer;
+}
+
+.main-content .lesson-content .video-lesson-wrapper .video-lesson-content {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    flex-direction: column;
+    flex-wrap: nowrap;
+   position: relative;
+   width: 100%;
+}
+
+.main-content .lesson-content .video-lesson-wrapper .video-lesson-content > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    width: 100%;
+}
+.main-content .video-lesson-content .lesson-title{
+    word-wrap: normal;
+    /* white-space: nowrap !important; */
+    /* overflow: hidden !important; */
+    /* max-width: 50px !important; */
+    text-overflow: ellipsis !important;
+    font-weight: 400;
+    font-size: 19px;
+    color: rgb(0, 46, 62);
+}
+
+.main-content .video-lesson-content .dropdown {
+    position: absolute;
+    bottom: 0%;
+    right: 5%;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+
+#video-player-container video{
+    width: 100%;
+}
+
+
+#video-player-container .about-lesson-wrapper {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent !important;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: aliceblue;
+    font-size: larger;
+}
+
+
+#video-player-container .about-lesson-wrapper .back-btn{
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+#video-player-container .lesson-name{
+    /* background: transparent !important; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 21px;
+    /* padding: 5px 15px; */
+    padding-block: 5px;
+    max-width: 400px;
+    color: #025f50;
+    font-weight: 500;
+}
+
+.min-height {
+    height: 0 !important; 
+    padding: 0 !important;
+    transition: all 114s ease-in-out !important;
+    display: none !important;
+}
+
+
+.about-lesson-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-inline: 10px;
+    width: 100%;
+    overflow-x: auto;
+    width: 90%;
+}
+
+.about-lesson-content li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.about-lesson-content  li:hover {
+    background: whitesmoke;
+    transform: scale(1.02);
+}
+
+.about-lesson-content > span span{
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.links-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: rgb(1, 13, 74);
+    z-index: 100;
+    padding: 7px 10px;
+}
+
+.links-container .nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links-container .nav .nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.links-container a {
+    color: unset !important;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.links-container .nav .nav-item span{
+    font-size: 12px;
+}
+
+.links-container .nav .nav-item .icon{
+    font-size: 20px !important;
+    color: #02a4ac;
+}

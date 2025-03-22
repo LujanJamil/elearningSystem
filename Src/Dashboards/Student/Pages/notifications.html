@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../Assets/Images/Backgrounds/logo.png" />
+    <title>Sama Islamic College | notifications</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Assets/Styles/Boostrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Assets/Icons/css/all.css">
+    <link rel="stylesheet" href="../Styles/main_styles.css">
+    <link rel="stylesheet" href="../Styles/responsive.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+       <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< START HEADER SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+      <div class="student-dashboard-wrapper">
+        <div class="notification-body-wrapper">
+          
+        <header class="container-fluid px-0">
+            <div class="nav-wrapper">
+               <!-- Start Navigation Menu -->
+               <div class="links-container">
+                <ul class="nav">
+                  <li class="nav-item">
+                    <a href="../../../../Public/Guest User/Pages/Home/home.html" aria-current="page">
+                      <i class="icon fa fa-solid fa-house-user"></i>
+                    </a>
+                    <span>Home</span>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./Default.html">
+                    <i class="icon fa fa-box-open"></i>
+                    </a>
+                    <span>My class</span>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./myCourses.html">
+                      <i class="icon fa fa-graduation-cap" aria-hidden="true"></i>
+                    </a>
+                    <span>My courses</span>
+                  </li>
+                  <li class="nav-item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                    <a href="./user_account.html">
+                    <i class="icon fa fa-user-circle" aria-hidden="true"></i>
+                    </a>
+                    <span>Account</span>
+                  </li>
+                  <li class="nav-item" data-bs-toggle="offcanvas" data-bs-target="#notifications">
+                    <a href="./notifications.html">
+                      <i class="icon fa fa-bell" aria-hidden="true"></i>
+                    </a>
+                    <span>Notifications</span>
+                  </li>
+                </ul>
+               </div>
+              <!-- End Navigation Menu -->
+            </div>
+        </header>
+        <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< END HEADER SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< START NOTIFICATION SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <main class="notification-container my-5 py-5">
+      <div class="heading">
+        <span>Notifications</span>
+      </div>
+      <div class="notification-section container">
+        <ul class="list navbar pt-5 list-group mb-3 notification-header-list">
+          <li class="text-warning nav-item list-group-item list-group-item-action active" data-bs-toggle="list" href="#announcements" role="tab">
+            <span>Announcements</span>
+          </li>
+          <li class="text-info nav-item list-group-item list-group-item-action " data-bs-toggle="list" href="#remainders" role="tab">
+            <span>Remainders</span>
+          </li>
+          <li style="color:rgb(120, 169, 123)" class="list-group-item list-group-item-action" data-bs-toggle="list" href="#payments" role="tab">
+            <span>Payments</span>
+          </li>
+        </ul>
+        <div class="tab-content notification-wrapper" id="pills-tabContent">
+        <div class="tab-pane active" id="announcements" role="tabpanel"  tabindex="0" aria-labelledby="Announcements">
+            <li
+              class="nav-item nav-link px-2 rounded-4 notification-body mt-4 text-light"
+            >
+              <span
+                class="notification-header px-2 border-bottom border-secondary w-100 d-block my-2 py-2 d-flex justify-content-between"
+              >
+                <span
+                  class="d-flex w-50 justify-content-start align-items-center py-1 notify-logo-content"
+                  >From:
+                  <span id="notification-origin" class="bg-infWo">
+                    <div
+                      class="notify-logo-content d-flex align-items-center justify-content-center flex-column ps-2"
+                    >
+                      <span><img src="../Assets/customs/logo.png" class="notify-logo " width="50px" alt="logo image loading"></span>
+                      <span
+                        class="notify-logo-name px-2"
+                        style="font-size: 12px"
+                        >Sama Islamic Digital College</span
+                      >
+                    </div>
+                  </span>
+                </span>
+                <span class="payment-duration-details"
+                  ><i class="fa fa-clock pe-2 pe-2" aria-hidden="true"></i
+                  ><span id="payment-date">December 6, 2024</span> |
+                  <span id="payment-time">09:45 PM</span></span
+                ></span
+              >
+              <p class="notify-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique, dicta.
+              </p>
+              <div
+                class="d-flex align-items-center justify-content-end notification-action-center pb-3"
+              >
+                <button
+                  id="copy-notification-btn"
+                  type="button"
+                  class="btn btn-small btn-outline-info opacity-75"
+                  style="
+                    --bs-btn-padding-y: 0.25rem;
+                    --bs-btn-padding-x: 0.5rem;
+                    --bs-btn-font-size: 0.75rem;
+                  "
+                >
+                  <i class="fa fa-regular fa-copy"></i>
+                </button>
+                <button
+                  id="delete-notification-btn"
+                  type="button"
+                  class="btn btn-small btn-outline-danger opacity-75"
+                  style="
+                    --bs-btn-padding-y: 0.25rem;
+                    --bs-btn-padding-x: 0.5rem;
+                    --bs-btn-font-size: 0.75rem;
+                  "
+                >
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                </button>
+                <button
+                  id="share-notification-btn"
+                  type="button"
+                  class="btn btn-small btn-outline-success opacity-75"
+                  style="
+                    --bs-btn-padding-y: 0.25rem;
+                    --bs-btn-padding-x: 0.5rem;
+                    --bs-btn-font-size: 0.75rem;
+                  "
+                >
+                  <i class="fa fa-share" aria-hidden="true"></i>
+                </button>
+              </div>
+            </li>
+            <li
+            class="nav-item nav-link px-2 rounded-4 notification-body mt-4 text-light"
+          >
+            <span
+              class="notification-header px-2 border-bottom border-secondary w-100 d-block my-2 py-2 d-flex justify-content-between"
+            >
+              <span
+                class="d-flex w-50 justify-content-start align-items-center py-1 notify-logo-content"
+                >From:
+                <span id="notification-origin" class="bg-infWo">
+                  <div
+                    class="notify-logo-content d-flex align-items-center justify-content-center flex-column ps-2"
+                  >
+                    <span><img src="../Assets/customs/logo.png" class="notify-logo " width="50px" alt="logo image loading"></span>
+                    <span
+                      class="notify-logo-name px-2"
+                      style="font-size: 12px"
+                      >Sama Islamic Digital College</span
+                    >
+                  </div>
+                </span>
+              </span>
+              <span class="payment-duration-details"
+                ><i class="fa fa-clock pe-2 pe-2" aria-hidden="true"></i
+                ><span id="payment-date">December 6, 2024</span> |
+                <span id="payment-time">09:45 PM</span></span
+              ></span
+            >
+            <p class="notify-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Similique, dicta.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Similique, dicta.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Similique, dicta.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Similique, dicta.
+            </p>
+            <div
+              class="d-flex align-items-center justify-content-end notification-action-center pb-3"
+            >
+              <button
+                id="copy-notification-btn"
+                type="button"
+                class="btn btn-small btn-outline-info opacity-75"
+                style="
+                  --bs-btn-padding-y: 0.25rem;
+                  --bs-btn-padding-x: 0.5rem;
+                  --bs-btn-font-size: 0.75rem;
+                "
+              >
+                <i class="fa fa-regular fa-copy"></i>
+              </button>
+              <button
+                id="delete-notification-btn"
+                type="button"
+                class="btn btn-small btn-outline-danger opacity-75"
+                style="
+                  --bs-btn-padding-y: 0.25rem;
+                  --bs-btn-padding-x: 0.5rem;
+                  --bs-btn-font-size: 0.75rem;
+                "
+              >
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              </button>
+              <button
+                id="share-notification-btn"
+                type="button"
+                class="btn btn-small btn-outline-success opacity-75"
+                style="
+                  --bs-btn-padding-y: 0.25rem;
+                  --bs-btn-padding-x: 0.5rem;
+                  --bs-btn-font-size: 0.75rem;
+                "
+              >
+                <i class="fa fa-share" aria-hidden="true"></i>
+              </button>
+            </div>
+          </li>
+          </div>
+        <div class="tab-pane " id="remainders" role="tabpane2"  tabindex="1" aria-labelledby="Remainders">
+            <li
+              class="nav-item nav-link px-2 rounded-4 notification-body mt-4 text-light"
+            >
+              <span
+                class="notification-header px-2 border-bottom border-secondary w-100 d-block my-2 py-2 d-flex justify-content-between"
+              >
+                <span
+                  class="d-flex w-50 justify-content-start align-items-center py-1 notify-logo-content"
+                  >From:
+                  <span id="notification-origin" class="bg-infos">
+                    <div
+                      class="notify-logo-content d-flex align-items-center justify-content-center flex-columdn ps-2"
+                    >
+                      <!-- <span><img src="../Assets/Images/Backgrounds/platform-logo.png" class="notify-logo " width="100px" alt="logo image loading"></span> -->
+                      <span
+                        class="notify-logo-name px-2"
+                        style="font-size: 12px"
+                        >Sama Islamic Digital College</span
+                      >
+                    </div>
+                  </span>
+                </span>
+                <span class="payment-duration-details"
+                  ><i class="fa fa-clock pe-2 pe-2" aria-hidden="true"></i
+                  ><span id="payment-date">December 6, 2024</span>|
+                  <span id="payment-time">09:45 PM</span></span
+                ></span
+              >
+              <p class="notify-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique, dicta.
+              </p>
+              <div
+                class="d-flex align-items-center justify-content-end notification-action-center pb-3"
+              >
+                <button
+                  id="copy-notification-btn"
+                  type="button"
+                  class="btn btn-small btn-outline-info opacity-75"
+                  style="
+                    --bs-btn-padding-y: 0.25rem;
+                    --bs-btn-padding-x: 0.5rem;
+                    --bs-btn-font-size: 0.75rem;
+                  "
+                >
+                  <i class="fa fa-regular fa-copy"></i>
+                </button>
+                <button
+                  id="delete-notification-btn"
+                  type="button"
+                  class="btn btn-small btn-outline-danger opacity-75"
+                  style="
+                    --bs-btn-padding-y: 0.25rem;
+                    --bs-btn-padding-x: 0.5rem;
+                    --bs-btn-font-size: 0.75rem;
+                  "
+                >
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                </button>
+                <button
+                  id="share-notification-btn"
+                  type="button"
+                  class="btn btn-small btn-outline-success opacity-75"
+                  style="
+                    --bs-btn-padding-y: 0.25rem;
+                    --bs-btn-padding-x: 0.5rem;
+                    --bs-btn-font-size: 0.75rem;
+                  "
+                >
+                  <i class="fa fa-share" aria-hidden="true"></i>
+                </button>
+              </div>
+            </li>
+            <li
+            class="nav-item nav-link px-2 rounded-4 notification-body mt-4 text-light"
+          >
+            <span
+              class="notification-header px-2 border-bottom border-secondary w-100 d-block my-2 py-2 d-flex justify-content-between"
+            >
+              <span
+                class="d-flex w-50 justify-content-start align-items-center py-1 notify-logo-content"
+                >From:
+                <span id="notification-origin" class="bg-infos">
+                  <div
+                    class="notify-logo-content d-flex align-items-center justify-content-center flex-columdn ps-2"
+                  >
+                    <!-- <span><img src="../Assets/Images/Backgrounds/platform-logo.png" class="notify-logo " width="100px" alt="logo image loading"></span> -->
+                    <span
+                      class="notify-logo-name px-2"
+                      style="font-size: 12px"
+                      >Sama Islamic Digital College</span
+                    >
+                  </div>
+                </span>
+              </span>
+              <span class="payment-duration-details"
+                ><i class="fa fa-clock pe-2 pe-2" aria-hidden="true"></i
+                ><span id="payment-date">December 6, 2024</span>|
+                <span id="payment-time">09:45 PM</span></span
+              ></span
+            >
+            <p class="notify-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Similique, dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Similique, dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Similique, dicta.
+            </p>
+            <div
+              class="d-flex align-items-center justify-content-end notification-action-center pb-3"
+            >
+              <button
+                id="copy-notification-btn"
+                type="button"
+                class="btn btn-small btn-outline-info opacity-75"
+                style="
+                  --bs-btn-padding-y: 0.25rem;
+                  --bs-btn-padding-x: 0.5rem;
+                  --bs-btn-font-size: 0.75rem;
+                "
+              >
+                <i class="fa fa-regular fa-copy"></i>
+              </button>
+              <button
+                id="delete-notification-btn"
+                type="button"
+                class="btn btn-small btn-outline-danger opacity-75"
+                style="
+                  --bs-btn-padding-y: 0.25rem;
+                  --bs-btn-padding-x: 0.5rem;
+                  --bs-btn-font-size: 0.75rem;
+                "
+              >
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              </button>
+              <button
+                id="share-notification-btn"
+                type="button"
+                class="btn btn-small btn-outline-success opacity-75"
+                style="
+                  --bs-btn-padding-y: 0.25rem;
+                  --bs-btn-padding-x: 0.5rem;
+                  --bs-btn-font-size: 0.75rem;
+                "
+              >
+                <i class="fa fa-share" aria-hidden="true"></i>
+              </button>
+            </div>
+          </li>
+          </div>
+        <div class="tab-pane" id="payments" role="tabpane3"  tabindex="2" aria-labelledby="Payments">
+            <li
+              class="nav-item nav-link px-2 rounded-4 notification-body mt-4 text-light"
+            >
+              <span
+                class="notification-header px-2 border-bottom border-secondary w-100 d-block my-2 py-2 d-flex justify-content-between"
+              >
+                <span
+                  class="d-flex w-50 justify-content-start align-items-center py-1 notify-logo-content"
+                  >From:
+                  <span id="notification-origin" class="">
+                    <div
+                      class="notify-logo-content d-flex align-items-center justify-content-between flex-column ps-2"
+                    >
+                      <img
+                        src="../Assets/Icons/notifications/mtnIcon.png"
+                        width="50px"
+                        class="notify-logo"
+                        alt="mtn image loading"
+                      />
+                      <span
+                        class="notify-logo-name px-2"
+                        style="font-size: 12px"
+                        >MTN</span
+                      >
+                    </div>
+                  </span>
+                </span>
+                <span class="payment-duration-details"
+                  ><i class="fa fa-clock pe-2 pe-2" aria-hidden="true"></i
+                  ><span id="payment-date">December 6, 2024</span>|
+                  <span id="payment-time">09:45 PM</span></span
+                ></span
+              >
+              <p class="notify-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique, dicta.
+              </p>
+              <div
+                class="d-flex align-items-center justify-content-end notification-action-center pb-3"
+              >
+                <button
+                  id="copy-notification-btn"
+                  type="button"
+                  class="btn btn-small btn-outline-info opacity-75"
+                  style="
+                    --bs-btn-padding-y: 0.25rem;
+                    --bs-btn-padding-x: 0.5rem;
+                    --bs-btn-font-size: 0.75rem;
+                  "
+                >
+                  <i class="fa fa-regular fa-copy"></i>
+                </button>
+                <button
+                  id="delete-notification-btn"
+                  type="button"
+                  class="btn btn-small btn-outline-danger opacity-75"
+                  style="
+                    --bs-btn-padding-y: 0.25rem;
+                    --bs-btn-padding-x: 0.5rem;
+                    --bs-btn-font-size: 0.75rem;
+                  "
+                >
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                </button>
+                <button
+                  id="share-notification-btn"
+                  type="button"
+                  class="btn btn-small btn-outline-success opacity-75"
+                  style="
+                    --bs-btn-padding-y: 0.25rem;
+                    --bs-btn-padding-x: 0.5rem;
+                    --bs-btn-font-size: 0.75rem;
+                  "
+                >
+                  <i class="fa fa-share" aria-hidden="true"></i>
+                </button>
+              </div>
+            </li>
+            <li
+              class="nav-item nav-link px-2 rounded-4 notification-body mt-4 text-light"
+            >
+              <span
+                class="notification-header px-2 border-bottom border-secondary w-100 d-block my-2 py-2 d-flex justify-content-between"
+              >
+                <span
+                  class="d-flex w-50 justify-content-start align-items-center py-1 notify-logo-content"
+                  >From:
+                  <span id="notification-origin" class="">
+                    <div
+                      class="notify-logo-content d-flex align-items-center justify-content-between  flex-column ps-2"
+                    >
+                      <img
+                        src="../Assets/Icons/notifications/airtelIcon.png"
+                        width="50px"
+                        class="notify-logo"
+                        alt="mtn image loading"
+                      />
+                      <span
+                        class="notify-logo-name px-2"
+                        style="font-size: 12px"
+                        >Airtel</span
+                      >
+                    </div>
+                  </span>
+                </span>
+                <span class="payment-duration-details"
+                  ><i class="fa fa-clock pe-2 pe-2" aria-hidden="true"></i
+                  ><span id="payment-date">December 6, 2024</span> |
+                  <span id="payment-time">09:45 PM</span></span
+                ></span
+              >
+              <p class="notify-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea
+                aspernatur nobis distinctio ut aperiam exercitationem sequi eos
+                quisquam, odit quibusdam labore dolorem sint veritatis mollitia
+                eligendi aut quod magnam neque.
+              </p>
+              <div
+                class="d-flex align-items-center justify-content-end notification-action-center pb-3"
+              >
+                <button
+                  id="copy-notification-btn"
+                  type="button"
+                  class="btn btn-small btn-outline-info opacity-75"
+                  style="
+                    --bs-btn-padding-y: 0.25rem;
+                    --bs-btn-padding-x: 0.5rem;
+                    --bs-btn-font-size: 0.75rem;
+                  "
+                >
+                  <i class="fa fa-regular fa-copy"></i>
+                </button>
+                <button
+                  id="delete-notification-btn"
+                  type="button"
+                  class="btn btn-small btn-outline-danger opacity-75"
+                  style="
+                    --bs-btn-padding-y: 0.25rem;
+                    --bs-btn-padding-x: 0.5rem;
+                    --bs-btn-font-size: 0.75rem;
+                  "
+                >
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                </button>
+                <button
+                  id="share-notification-btn"
+                  type="button"
+                  class="btn btn-small btn-outline-success opacity-75"
+                  style="
+                    --bs-btn-padding-y: 0.25rem;
+                    --bs-btn-padding-x: 0.5rem;
+                    --bs-btn-font-size: 0.75rem;
+                  "
+                >
+                  <i class="fa fa-share" aria-hidden="true"></i>
+                </button>
+              </div>
+            </li>
+          </div>
+      </div>
+      </div>
+    </main>
+     </div>
+      </div>
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< END NOTIFICATION SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <script src="../Assets/Script/boostrap/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="../Assets/Icons/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/3acc367a10.js"crossorigin="anonymous"></script>
+  </body>
+</html>

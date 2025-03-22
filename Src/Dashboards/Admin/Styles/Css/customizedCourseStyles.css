@@ -1,0 +1,1325 @@
+@font-face {
+    font-family: "customsFonts";
+    src: url('../../Assets/customs/Fonts/Open_Sans/OpenSans-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+aside {
+    width: 25%;
+}
+
+main {
+    width: 75% !important;
+    font-family: 'customsFonts';
+    user-select: none;
+}
+
+main nav {
+    background: whitesmoke !important;
+}
+
+.header {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    padding-inline: 10px;
+    border-left: 3px solid rgb(65, 140, 225);
+}
+
+.header span {
+    font-size: 27px;
+    font-weight: bolder;
+}
+
+.header small{
+    color: #808080;
+    font-weight: 400;
+}
+
+.quick-choices {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.quick-choices .card {
+    width: 200px;
+    height: 150px;
+    cursor: pointer;
+    margin: 20px;
+    border: 1px solid rgba(65, 140, 225, 0.421) !important;
+}
+
+.quick-choices .card span{
+    margin-top: 25px;
+    user-select: none;
+}
+
+.quick-choices .card .icon {
+    color: rgb(65, 140, 225) !important;
+}
+
+.quick-choices .card:hover {
+    box-shadow: 0px 10px 30px rgb(228, 230, 231);
+    font-weight: bolder !important;
+    border: 2px solid rgb(65, 140, 225) !important;
+}
+
+.createCourseContainer, .manageCourseContainer, .DeleteCourseContainer, .ManageStudentContainer, .AllStudentContainer, .studentContainerContent, .AddStudentContainer, .ExploreStudentContainer, .ManageTeachersContainer, .AddTeacherContainer, .TeachersAttendanceContainer, .studentsAttendanceContainer, .uploadLessonsContainer {
+    transform: translateX(100%) scale(0);
+    display: none;
+    transition: all .5s ease-in-out;
+}
+
+.block-page-info-choices .card {
+    position: relative !important;
+}
+
+.total-number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgb(2, 125, 102);
+    color: aliceblue;
+    border-radius: 0 5px 0 0;
+    border: 2px solid ;
+}
+
+.collapse_create_cousre {
+    transform: translateX(100%) scale(0);
+    display: none;  
+}
+
+.show_create_cousre{
+    transform: translateX(-100%) scale(1);
+    display: unset;
+    transition: all .5s ease-in-out;
+}
+
+input, select, textarea {
+    box-shadow: none !important; 
+    outline: none !important;
+}
+
+.card {
+    background: rgb(239, 244, 246);
+    margin-bottom: 40px;
+}
+
+textarea {
+    resize: none;
+}
+
+textarea::placeholder {
+    font-style: italic;
+}
+
+.video-container{
+    width: 100%;
+    max-height: 200px;
+    border-radius: 10px;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.lessons-container {
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.lesson {
+    margin-bottom: 15px;
+    background-color: rgba(191, 228, 241, 0.487);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+/* manage courses */
+
+.course-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-card-container .card {
+    max-width: 300px;
+    max-height: fit-content;
+    border-radius: 10px;
+    background: #00070f;
+    color: aliceblue;
+    margin: 10px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.down-content {
+    background-color: rgb(0, 52, 98);
+    position: absolute;
+    bottom: 20%;
+    right: 5%;
+    width: 50px;
+    height: 25px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.delete .modal-content {
+    background-color: rgb(0, 74, 138);
+    color: wheat;
+    padding: 20px;
+
+}
+
+.delete .modal-content ul li {
+    list-style: disc;
+    color: white;
+}
+
+.course-card-container .card .course-action-btns {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.text-header-img {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    background: linear-gradient(-200deg,#05a5f5db 20%,#6703d3d4 47%,#c10242be 57%,#ccc502cf 100%);
+    color: white;
+    font-weight: bolder;
+    border-radius: 10px 10px 0 0 ;
+    text-transform: capitalize;
+    text-overflow: clip;
+    user-select: none;
+}
+
+.course-card-container .card .card-body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 170px;
+    overflow-y: auto;
+}
+
+.card-body::-webkit-scrollbar {
+    width: 3px;
+    background-color: rgb(18, 220, 0);
+    border-radius: 100px;
+}
+
+.card-body .all-course-classes {
+    overflow-y: auto;
+    max-height: 60px;
+}
+
+.card-body .all-course-classes li {
+    margin-bottom: 0 !important;
+}
+
+.course-card-container .card-body li  {
+    margin-bottom: 15px;
+}
+
+.course-card-container .card .card-body .icon {
+    color: yellow;
+    margin-right: 10px;
+}
+
+
+/* DELETE COURSE */
+
+.delete-course-wrapper {
+    background: whitesmoke;
+    border-radius: 9px;
+}
+
+.delete-course-wrapper .delete-heading {
+    padding: 10px 20px;
+    border-radius: 10px 10px 0 0;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid grey;
+    margin-inline: 10px;
+}
+
+.delete-course-wrapper .all-courses {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.delete-course-wrapper .all-courses li {
+    margin: 10px;
+    box-shadow: 0px 10px 30px rgb(228, 230, 231);
+    border-radius: 5px;
+    background: rgb(243, 246, 246);
+    padding: 10px 14px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid cadetblue;
+}
+
+.delete-course-wrapper .all-courses li span {
+    padding: 10px;
+    border-left: 1px solid cadetblue;
+}
+
+.delete-course-wrapper .all-courses li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.password-container {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9));
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    color: wheat;
+    transform: scale(0);
+    visibility: collapse;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.password-container .confirm-password {
+    background-color: rgb(244, 242, 237);
+    height: 300px;
+    border-radius: 10px;
+    color: rgb(1, 21, 59);
+    display: none;
+}
+
+.show-password-container {
+    transform: scale(1) !important;
+    visibility: visible !important;
+    z-index: 100 !important;
+    display: flex !important;
+    transition: all .5s ease-in-out;
+}
+
+.class-select-row {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 60%;
+    height: 100%;
+    margin-inline-start: auto;
+    background: rgb(196, 196, 196);
+    border-radius: 50px;
+    border: 1px solid grey;
+    overflow-x: auto;
+
+}
+
+.class-select-row::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    height: 0px;
+}
+
+.class-select-row .row-header {
+    background: rgb(187, 187, 187);
+    padding: 10px 15px;
+    font-weight: bolder;
+    border-radius: 50px;
+    color: rgb(1, 55, 46)
+}
+
+.class-select-row ul::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+.class-select-row ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    white-space: nowrap;
+    padding-inline: 15px;
+    border-radius: 10px;
+    background: rgb(229, 228, 228);
+    list-style: none;
+    overflow-x: auto;
+    padding: 10px;
+    padding-left: 425px;
+    border-radius: 50px;
+}
+
+.class-select-row ul li {
+    padding-inline: 10px;
+    background-color: rgb(79, 139, 191);
+    margin-inline: 10px;
+    border-radius: 50px;
+    box-shadow: inset 0px 10px 30px rgb(2, 79, 120);
+    color: white;
+    cursor: pointer;
+}
+
+.class-select-row ul li:hover {
+    background: honeydew;
+    box-shadow: inset 0px 10px 30px rgb(2, 79, 120);
+    color: white;
+}
+
+/* students progress container */
+.all-students-container, .all-teachers-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 100%;
+}
+
+
+.all-students-container .course-aside-bar , .all-teachers-container .course-aside-bar{
+    background: whitesmoke;
+    padding: 10px;
+    width: 20%;
+    align-self: flex-start;
+    border-radius: 0 0 10px 10px;
+}
+
+.all-students-container .course-aside-bar ul li , .all-teachers-container .course-aside-bar ul li{
+    padding: 10px 15px;
+    margin-block: 5px;
+    border-start-end-radius: 10px;
+    border-end-end-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-inline-start: 3px solid transparent;
+    user-select: none;
+    transition: all .2s ease-in-out;
+    border: 1px solid rgb(65, 225, 161);
+    border-inline-start: 3px solid rgb(2, 221, 245);
+}
+
+.all-students-container .course-aside-bar ul li:hover, .all-teachers-container .course-aside-bar ul li:hover {
+    font-weight: bold;
+    border-inline-start: 3px solid rgb(119, 2, 245);
+    cursor: pointer;
+    background:rgb(0, 69, 66);
+    color: white;
+}
+
+
+.student-progress-container, .teacher-container {
+    max-width: 80%;
+}
+
+.student-progress-container .student-progress-nav-list, .teacher-nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-radius: none;
+    background-color: red;
+}
+
+.student-progress-container .student-progress-list::-webkit-scrollbar, .teacher-list::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.student-progress-container .student-progress-nav-list , .student-progress-list, .teacher-list{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto;
+    width: 100%;
+}
+
+.student-progress-container .student-progress-nav-list .student-progress-list .nav-item, .teacher-list .nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5px 10px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.student-progress-container .student-progress-nav-list .student-progress-list .nav-item:hover ,.teacher-list .nav-item:hover{
+    background-color: #034a7a;
+    border-radius: 5px;
+    color: rgb(254, 254, 255) !important;
+    font-weight: bolder;
+    transform: scale(1.2);
+    transition: all .3s ease;
+    border-radius: 10px;
+
+}
+
+.student-progress-container .student-progress-nav-list .student-progress-list .nav-item .student-progress-img , .teacher-list .nav-item .teacher-list-img{
+    max-width: 45px;
+    max-height: 45px;
+    border-radius: 50px;
+    border: 1px solid rgb(2, 221, 245);
+    padding: 2px;
+}
+.student-progress-container .student-progress-list .student-progress-name, .teacher-list-name {
+    font-size: 12px;
+}
+
+.student-progress-profile-wrapper, .teacher-profile-wrapper {
+    max-width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.student-progress-profile-wrapper .student-profile-progress  , .teacher-profile-content{
+    display: flex;
+    align-items: start;
+    justify-content: stretch;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.student-progress-profile-wrapper .student-profile-progress .student-profile, .teacher-profile-wrapper .teacher-profile{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding-block: 10px;
+}
+
+
+.student-progress-profile-wrapper .student-profile-progress .student-profile img , .teacher-profile-wrapper .teacher-profile img{
+   max-width: 90px;
+   max-height: 90px;
+   border-radius: 50px;
+   border: 2px solid rgb(2, 221, 245);
+   padding: 2px;
+}
+
+.student-progress-profile-wrapper .student-profile-progress .student-name  , .teacher-profile-wrapper  .teacher-content .teacher-name{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.student-profile-progress .student-class, .student-profile-progress .teacher-taught-courses {
+    font-size: small;
+    color: #034a7a;
+}
+
+ .student-progress-profile-wrapper .student-profile-progress .quick-admin-student-actions, .teacher-content .quick-admin-teacher-actions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-block: 10px;
+}
+
+.student-profile-progress .enrolled-list-courses, .teacher-content .taught-list-courses {
+    width: 100%;
+ }
+
+.student-profile-progress .enrolled-list-courses .navbar-nav ,.teacher-content .taught-list-courses .navbar-nav{
+    background-color: rgb(237, 235, 220);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.student-profile-progress .enrolled-list-courses .navbar-nav .nav-item, .teacher-content .taught-list-courses .navbar-nav .nav-item{
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding: 4px;
+    border-start-end-radius: 10px;
+    border-end-end-radius: 10px;
+    border-inline-start: 3px solid transparent;
+    user-select: none;
+    transition: all .2s ease-in-out;
+    border-inline-start: 3px solid rgb(2, 245, 119);
+    cursor: pointer;
+}
+
+.student-profile-progress .enrolled-list-courses .navbar-nav .nav-item:hover ,.teacher-content .taught-list-courses .navbar-nav .nav-item:hover{
+    background: rgb(0, 52, 98);
+    color: floralwhite !important;
+    font-weight: lighter;
+}
+
+.enrolled-list-courses .enrolled-course-subjects, .teacher-content .taught-course-subjects  {
+    margin-left: 20px;
+}
+.enrolled-list-courses .enrolled-course-subjects .icon, .teacher-content .taught-course-subjects .icon {
+    color: green !important;
+}
+
+.student-progress-status {
+    background-color: rgb(148, 191, 186);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.student-progress-status .subject-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto;
+    border-radius: 50px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: rgb(229, 228, 228);
+    list-style: none;
+    border-radius: 50px;
+}
+
+
+.student-progress-status .subject-list::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+.student-progress-status .subject-list .nav-item{
+    padding-inline: 15px;
+    margin-inline: 10px;
+    border-radius: 50px;
+    background-color: rgb(1, 52, 82);
+    box-shadow: inset 0px 10px 30px rgb(2, 120, 120);
+    color: white;
+    cursor: pointer;
+}
+
+.progress-status {
+    margin-block: 15px;
+    background: rgb(206, 223, 221);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.progress-status ul {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    flex-direction: column;
+    flex-wrap: wrap;
+    white-space: nowrap;
+}
+
+.progress-status .nav li{
+    margin-block: 10px;
+    background-color: rgb(190, 209, 207);
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(1, 34, 70);
+}
+
+.progress-status .nav li .progress {
+    margin-top: 10px;
+}
+
+.progress-status .nav li span {
+    font-weight: bolder;
+
+}
+
+.progress-status .nav li .icon {
+    color: green;
+    margin-right: 10px;
+}
+
+.comment-box {
+    padding-inline: 40px;
+}
+
+.comment-box textarea{
+    resize: none;
+    height: 200px;
+}
+
+
+/* ALL STUDENTS */
+
+.student-table::-webkit-scrollbar {
+    width: 0px;
+    background-color: transparent;
+    height: 0px;
+}
+
+
+.student-table  {
+    margin-top: 15px;
+    border-radius: 10px;
+    background-color: rgb(228, 230, 231);
+    padding: 10px;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.student-table img {
+    border-radius: 50px;
+    max-width: 45px;
+    max-height: 45px;
+}
+
+.student-table thead tr th{
+    text-align: center;
+}
+
+.student-table tbody tr{
+    text-align: center;
+}
+
+.student-table table {
+    white-space: nowrap;
+}
+
+.students-container {
+    width: 100%;
+}
+
+.students-container-nav {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    padding: 10px;
+    background: wheat !important;
+    border-radius: 0 0 10px 0;
+}
+
+.students-container-nav form {
+    min-width: 60%;
+}
+
+.students-container-nav form input[type="search"] {
+    border-radius: 50px;
+    padding-inline: 20px;
+}
+.students-container-nav .action-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.students-container-nav .action-center .button-wrapper  {
+    min-width: 20%;
+}
+
+.students-container-nav .action-center .button-wrapper  button{
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+    padding-inline: 10px;
+    margin-inline: 10px;
+    outline: none;
+    border: none;
+}
+
+.students-container-nav .action-center .button-wrapper button:first-child:hover {
+    box-shadow: 0px 0px 20px rgb(0, 60, 123);
+    border: 1px solid transparent;
+}
+
+.students-container-nav .action-center .button-wrapper button:last-child:hover {
+    box-shadow: 0px 0px 20px rgb(107, 1, 168);
+    border: 1px solid transparent;
+}
+
+.student-list {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    overflow-y: auto;
+}
+
+.student-list .card {
+    margin: 10px;
+    cursor: pointer;
+    max-width: 130px;
+}
+
+.student-list .card:hover {
+    transform: scale(.99);
+    transition: all .2s ease;
+}
+
+.card .card-delete-student-btn-wrapper {
+    position: absolute;
+    left: 5%;
+    top: 0;
+}
+
+.student-list .card .card-actions{
+    top: 0;
+    right: 0;
+    border-radius: 0 5px 0 0;
+    padding-inline: 20px !important;
+
+}
+.student-list .card .card-actions button{
+    transform: scale(.9);
+    padding: 0;
+    margin: 0;
+    margin-top: 4px;
+    outline: none;
+    border: none;
+}
+
+.student-list .card .card-actions button:hover{
+    transform: scale(1);
+}
+
+.student-list .card .student-img {
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    object-fit: fit;
+    max-width: 130px;
+    max-height: 130px;
+}
+
+.student-list .card .student-details {
+    font-size: 10px !important;
+    align-items: center !important;
+}
+
+.student-list .card .student-details .student-name, .student-name , .teacher-container .teacher-name{
+    font-weight: bolder;
+    text-overflow: clip;
+    text-wrap: wrap;
+    margin-block: 5px;
+    color: rgb(0, 143, 214);
+}
+
+.teacher-taught-courses {
+    color: rgb(0, 37, 106);
+    font-size: 14px;
+}
+
+.student-list .card .student-details .student-class , .student-class{
+    text-wrap: wrap;
+    margin-bottom: 5px;
+    color: rgb(1, 215, 154);
+}
+
+.student-content, .teacher-content {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin-block: 20px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.student-content > div, .teacher-content > div{
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    width: 100%;
+    margin: 10px;
+}
+
+.student-info, .teacher-info {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 10px;
+    /* background-color: rgb(254, 250, 244); */
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px !important;
+}
+
+.student-img-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.student-info .student-img {
+    max-width: 90px;
+    max-height: 90px;
+    border-radius: 50px;
+    background-size: cover;
+    background-position: center;
+    object-fit: fit;
+    border: 2px solid rgb(2, 221, 245);
+    padding: 2px;
+}
+
+.student-info .student-details-info {
+    margin-top: 10px;
+    flex-direction: column;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+.student-info .action-btn-wrapper {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.student-info .action-btn-wrapper button{
+    margin-inline: 10px;
+}
+
+.student-info .info-list, .teacher-content .info-list {
+    border-radius: 10px;
+    padding-right: 15px;
+    margin-block: 15px;
+    background-color: rgb(111, 129, 150);
+}
+
+.student-info .info-list .navbar-nav li, .teacher-content .info-list .navbar-nav li{
+    border-radius: 0 10px 10px 0;
+    border-left: 2px solid rgb(229, 255, 0);
+    background: rgb(27, 59, 84);
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.student-info .info-list .navbar-nav li:hover, .teacher-content .info-list .navbar-nav li:hover {
+    background: rgb(1, 21, 59);
+    font-weight: bolder;
+}
+
+.student-info .enrolled-course-list {
+    width: 100%;
+ }
+
+.student-info .enrolled-course-list .navbar-nav{
+    background-color: rgb(237, 235, 220);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.student-info .enrolled-course-list .navbar-nav .nav-item{
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding: 4px;
+    border-start-end-radius: 10px;
+    border-end-end-radius: 10px;
+    border-inline-start: 3px solid transparent;
+    user-select: none;
+    transition: all .2s ease-in-out;
+    border-inline-start: 3px solid rgb(2, 245, 119);
+    cursor: pointer;
+    background: rgba(27, 59, 84, 0.806);
+    color: rgb(255, 221, 0);
+}
+
+.student-info .enrolled-course-list .navbar-nav .nav-item:hover{
+    background: rgb(1, 21, 59);
+    color: white;
+    transform: scale(.95);
+}
+
+.student-info .enrolled-course-list .enrolled-list-courses .navbar-nav .nav-item:hover{
+    background: rgb(0, 52, 98);
+    color: floralwhite !important;
+    font-weight: lighter;
+}
+
+.student-info .enrolled-course-list .enrolled-course-subjects {
+    margin-left: 20px;
+}
+.student-info .enrolled-course-list .enrolled-course-subjects .icon {
+    color: green !important;
+}
+
+.student-bio, .teacher-bio, .tab-content .info {
+    background-color: rgb(224, 224, 224) !important;
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+    align-self: self-start;
+}
+
+.student-bio .form-group, .teacher-bio .form-group, .tab-content .info .form-group{
+    padding: 10px;
+    margin-bottom: 0 !important;
+}
+
+.student-bio .form-group input, select, .teacher-bio .form-group input, select, .tab-content .info .form-group input, select{
+    box-shadow: none !important;
+    outline: none !important;
+    border: none !important;
+    background-color: rgb(237, 235, 220);
+    color:  rgb(0, 29, 115);
+}
+
+.editing {
+    background-color: rgb(252, 252, 249) !important;
+    color: rgb(0, 121, 213) !important;
+}
+
+.tab-content .student-progress-status-bar {
+    width: 100%;
+    background: rgb(231, 231, 231);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.student-progress-status-bar .progress-subject-list .subject-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto;
+    border-radius: 50px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: rgb(229, 228, 228);
+    list-style: none;
+    border-radius: 50px;
+}
+
+
+.student-progress-status-bar .progress-subject-list .subject-list li{
+    padding-inline: 15px;
+    margin-inline: 10px;
+    border-radius: 50px;
+    background-color: rgb(1, 52, 82);
+    box-shadow: inset 0px 10px 30px rgb(2, 120, 120);
+    color: white;
+    cursor: pointer;
+}
+
+.student-progress-status-bar .subject-list::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+
+.payments-container {
+    background-color: rgb(221, 220, 220);
+    border-radius: 10px;
+    padding: 4px 14px;
+}
+
+.payments-container .card-body > span {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px;
+}
+
+.payments-container .card {
+    border: none;
+}
+
+.payments-container .card-body > span > span:first-child{
+    font-size: 17px;
+    padding-inline-end: 10px;
+    color: #034a7a;
+    font-weight: bold;
+}
+.payments-container .card-body > span > span:last-child{
+    font-size: 15px;
+    color: rgb(1, 52, 82);
+}
+
+.student-delete-info {
+    padding: 10px;
+    background: #002c4a;
+    border-radius: 10px;
+}
+
+.student-delete-info .student-delete-img {
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50px;
+    margin-right: 15px;
+}
+
+.student-delete-info .student-name{
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.student-delete-info .student-class{
+    font-size: 12px;
+    color: rgb(2, 156, 130);
+}
+
+.delete-container {
+    position: fixed;
+   inset: 0;
+   background-color: rgba(0,0,0,0.9);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   z-index: 100;
+}
+
+.delete-container .delete-content {
+    background-color: rgb(1, 25, 55);
+    max-width: 500px;
+    overflow: auto;
+    padding: 10px;
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+.container .add-student-img-box, .add-teacher-img-box {
+    background: red; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50px;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    object-position: center;
+    margin: 10px auto;
+    position: relative;
+}
+
+.container .add-student-img-box img, .container .add-teacher-img-box img{
+    max-width: inherit;
+    max-height: inherit;
+    background-position: inherit;
+    background-size: inherit;
+    object-fit: inherit;
+    object-position: inherit;
+    border-radius: inherit;
+}
+
+.container .add-student-img-box button, .add-teacher-img-box button{
+    border: none;
+    outline: none;
+    position: absolute;
+    inset: 0;
+    background-color: rgb(0, 0, 0);
+    border-radius: inherit;
+    border: 3px solid #036e7a;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container .add-student-img-box button .camera-icon, .container .add-teacher-img-box .camera-icon{
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 0%;
+    bottom: -5%;
+    color: #033b7a;
+    background-color: #002c4a;
+    border-radius: 50px;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.add-student-bio-container, .add-teacher-bio-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    padding: 10px;
+}
+
+.add-student-bio-container .info, .add-teacher-bio-container .info{
+    /* background-color: rgb(251, 244, 230); */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.add-student-bio-container > div, .add-teacher-bio-container > div{
+    width: 100%;
+    margin: 10px;
+}
+
+.add-student-bio-container .form-group input, select .add-teacher-bio-container .form-group input, select{
+    border-radius: 10px;
+    background: rgb(213, 220, 224) !important;
+    color: rgb(2, 147, 101) !important;
+    border: none;
+}
+
+.add-student-bio-container .form-group label, .add-teacher-bio-container .form-group label{
+    font-weight: bold;
+    color: rgb(1, 52, 82);
+    margin-block: 10px;
+}
+
+.add-teacher-bio-container .form-group label {
+    color: aliceblue;
+}
+
+.add-student-bio-container .form-group input::placeholder, .add-teacher-bio-container .form-group input::placeholder{
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.add-student-bio-container .course-details > div, .add-teacher-bio-container .course-details > div{
+    background-color: rgb(251, 244, 230);
+    padding: 10px;
+    border-radius: 10px;
+    align-self: flex-start;
+}
+
+.add-teacher-bio-container .course-details > div{
+    background: transparent;
+}
+
+.add-student-bio-container .course-details .add-student-btn {
+    margin-block-start: 20px;
+    width: 100%;
+}
+
+
+.exploreStudentsWrapper .table-container{
+    background: rgb(229, 228, 228);
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    padding-top: 30px !important;
+    position: relative;
+}
+
+.exploreStudentsWrapper .table-container .card{
+    position: absolute;
+    min-width: 300px;
+    border: 10px;
+    box-shadow: 0px 10px 30px rgb(0, 51, 76);
+    background-color: rgb(0, 36, 57);
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    display: none;
+}
+
+.card-hover-tr {
+    display: block !important;
+    transition: all .3s ease;
+}
+
+.exploreStudentsWrapper .table-container .card .card-body .list-item > span span:first-child{
+    color: wheat;
+    padding-inline-end: 5px;
+}
+
+.exploreStudentsWrapper .table-container .card .card-body .list-item {
+    margin-block: 5px;
+}
+
+.exploreStudentsWrapper table th {
+    border: none !important;
+    background: rgb(0, 75, 78);
+    color: rgb(172, 198, 203);
+    font-weight: lighter;
+}
+
+.exploreStudentsWrapper table tbody td:nth-child(odd):hover{
+    border: none !important;
+    background: rgb(18, 135, 202) !important;
+    color: rgb(255, 255, 255) !important;
+    cursor: pointer;
+}
+
+.exploreStudentsWrapper table thead tr th:first-child{
+    border-radius: 20px 0 0 0 ;
+}
+
+.exploreStudentsWrapper table thead tr th:last-child{
+    border-radius: 0 20px 0 0 ;
+}
+
+.exploreStudentsWrapper .explore-student-img img{
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50px;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.options-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.options-container .form-group select {
+    width: 100%;
+    border-radius: 3px !important;
+}

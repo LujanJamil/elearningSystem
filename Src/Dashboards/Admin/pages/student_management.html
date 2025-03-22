@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../Assets/Images/Backgrounds/logo.png">
+    <title>Sama Islamic Digital College | Admin</title>
+    <link rel="stylesheet" href="../Styles/Boostrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../Styles/Css/custom_Styles.css">
+    <link rel="stylesheet" href="../Styles/Css/customizedCourseStyles.css">
+    <link rel="stylesheet" href="../Assets/customs/Awesome_Icons/css/">
+  </head>
+  <body>
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< START DASHBOARD SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <div class="dashboard-wrapper">
+        <aside>
+                <div class="admin-logo-content">
+                    <div class="d-flex align-items-center justify-content-start  ">
+                        <img class="img-fluid logo-img" width="60px" src="../Assets/customs/logo.png" alt="logo Image loading....." srcset="">
+                        <div class="logo-name">Sama Islamic Digital College</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="fs-5 fw-bolder  pt-4 pb-3">Menu</div>
+                <ul class="navbar-nav nav dashboard-menu">
+                    <li class="nav-item">
+                        <i class="fa fa-dashboard" aria-hidden="true"></i>
+                        <span class="icon-text">Dashboard</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-dashboard" aria-hidden="true"></i>
+                        <span class="icon-text">Course Management</span>
+                
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-dashboard" aria-hidden="true"></i>
+                        <span class="icon-text">Students</span>
+                
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-dashboard" aria-hidden="true"></i>
+                        <span class="icon-text">Teachers</span>
+                
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-dashboard" aria-hidden="true"></i>
+                        <span class="icon-text">Attendance</span>
+                
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-dashboard" aria-hidden="true"></i>
+                        <span class="icon-text">Report Cards</span>
+                    </li>
+                </ul>
+            </div>
+         
+        </aside>
+        <main>
+            <!-- START NAVBAR SECTION -->
+                <nav class="navbar nav py-3">
+                    <div class="container d-flex  align-items-center">
+                            <!-- START CLOSE ASIDE BAR BUTTON -->
+                           <div class="close-aside-btn">
+                            <button type="button" class="btn p-0 rounded-3 px-2" id="closeSidebarNav">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                           </div>
+                            <!-- END CLOSE ASIDE BAR BUTTON -->
+
+                            <!-- QUICK ACCESS CENTER -->
+                            <div class="nav-action-center d-flex align-items-center  justify-content-center px-3">
+                            <form class="navbar-search-wrapper">
+                                <input class="form-control search-input shadow-none border-none m-0 p-0" type="search" placeholder="Search....">
+                                    <i class="fa fa-search search-icon" aria-hidden="true"></i>
+                             </form>
+                             <!-- FULL SCREEN BUTTON  -->
+                             <div>
+                                <button id="ViewFullScreen" type="button" class="btn action-btns" data-bs-toggle="tooltip" data-bs-placement="top" title="Full Screen View">
+                                    <i class="fa fa-square" aria-hidden="true"></i>
+                                </button>
+                             </div>
+                             <!-- NOTIFICATION BUTTON -->
+                             <div>
+                                <button type="button" class="btn action-btns notification-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Notifications">
+                                    <i class="fa fa-bell" aria-hidden="true"></i>
+                                </button>
+                             </div>
+
+                               <div>
+                                <button type="button" class="btn action-btns settings-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="settings">
+                                    <i class="fa fa-gear" aria-hidden="true"></i>
+                                </button>
+                             </div>
+                             <div class="admin-mode-box">
+                                <div class="admin-mode">Admin</div>
+                                <img class="img-fluid admin-img" src="../Assets/Images/admin/customer01.jpg" alt="admin img loading">
+                            </div>
+                            </div>
+                    </div>
+                </nav>
+            <!-- END NAVBAR SECTION-->
+
+            <!-- START STUDENT MANAGEMENT BOARD SECTION -->
+            <section class="dashboard-section mb-5 pb-5">
+                  <!-- QUICK CHOICES CONTAINER -->
+                  <div class="block-page-info-choices" style="user-select: none;">
+                    <!-- WELCOME INSTRUCTION BOX -->
+                    <div class="container">
+                        <div class="row">
+                          <div class="col-md-12 p-5">
+                              <h1>Student Management</h1>
+                              <p><i class="text-info">Manage, delete and view student progress....</i></p>
+                          </div>
+                        </div>
+                    </div>    
+                    <!-- QUICK CHOICES -->
+                    <div class="container quick-choices ps-5">
+                        <div class="manage_students card d-flex align-items-center justify-content-center flex-column ">
+                            <i class="fas fa-users-cog icon fs-1"></i>
+                            <span class="fs-5">Manage students</span>
+                        </div>
+                        <div class="add_student card d-flex align-items-center justify-content-center flex-column ">
+                            <i class="fas fa-user-plus fs-1 icon"></i>
+                            <span class="fs-5">Add student</span>
+                        </div>
+                        <div class="all_students card d-flex align-items-center justify-content-center flex-column ">
+                            <i class="fas fa-user-friends fs-1 icon"></i>
+                            <span class="fs-5">All students</span>
+                        </div>
+                        <div class="explore_students card d-flex align-items-center justify-content-center flex-column ">
+                            <i class="fas fa-book-open fs-1 icon text-info"></i>
+                            <span class="fs-5">Explore students</span>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- MANAGE STUDENTS CONTAINER -->
+                   <div class="ManageStudentContainer" >
+                    <div class="container">
+                        <div class="container p-4">
+                            <button type="button" class="backButton btn btn-light fw-bold border-0 outline-none"> <i class="fa fa-arrow-left pe-2" aria-hidden="true"></i> Back</button>
+                        </div>
+                        <div class="row justify-content-center">
+                    <div class="col-md-12 px-5 py-3 d-flex align-items-center  justify-content-between">
+                    <div class="header">
+                    <span>Manage All students</span>
+                    <small>Edit, delete ,View progress, contact , message and more</small>
+                    </div>
+                     </div>
+                     </div>
+                   
+                     <div class="container p-5">
+                        <nav class="navbar nav justify-content-start px-4 rounded-top">
+                            <div class="nav-header d-flex align-items-center justify-content-start ">
+                                <span>
+                                    <span class="navbar-toggler btn btn-sm d-flex align-items-center justify-content-center flex-column border-0" >
+                                        <span class="navbar-toggler-icon"></span>
+                                        <small style="font-size: 10px;" class="fw-bolder">courses</small>
+                                    </span>
+                                </span>
+                            </div>
+                           <div class="class-select-row d-flex align-items-center justify-content-center ">
+                            <span class="row-header">Classes</span>
+                            <ul class="navbar-nav">
+                                    <li class="nav-item">Senior Five</li>
+                                    <li class="nav-item">Senior Five</li>
+                                    <li class="nav-item">Senior Five</li>
+                                    <li class="nav-item">Senior Five</li>
+                                    <li class="nav-item">Senior Five</li>
+                                    <li class="nav-item">Senior Five</li>
+                                    <li class="nav-item">Senior Five</li>
+                            </ul>
+                           </div>
+                        </nav>
+                        <div class="all-students-container">
+                        <div class="course-aside-bar">
+                            <div class="fs-5 fw-bolder pb-3">All courses</div>
+                            <ul class="navbar-nav nav">
+                                <li class="nav-item">IPLE</li>
+                                <li class="nav-item">Quran</li>
+                                <li class="nav-item">Idaad</li>
+                                <li class="nav-item">Thanawi</li>
+                                <li class="nav-item">Yasaruna</li>
+                                <li class="nav-item">Arabic Language</li>
+                                <li class="nav-item">General Basics of Islam</li>
+                            </ul>
+                        </div>
+                        <div class="student-progress-container">
+                            <nav class="navbar nav justify-content-start student-progress-nav-list">
+                                <ul class="nav student-progress-list">
+                                    <li class="nav-item">
+                                        <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid student-progress-img" alt="image loading....." sizes="40px" srcset="">
+                                        <span class="student-progress-name">Lucjan Jamil</span>
+                                    </li>
+                                    <li class="nav-item">
+                                        <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid student-progress-img" alt="image loading....." sizes="40px" srcset="">
+                                        <span class="student-progress-name">Lucjan Jamil</span>
+                                    </li>
+                                    <li class="nav-item">
+                                        <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid student-progress-img" alt="image loading....." sizes="40px" srcset="">
+                                        <span class="student-progress-name">Lucjan Jamil</span>
+                                    </li>
+                                    <li class="nav-item">
+                                        <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid student-progress-img" alt="image loading....." sizes="40px" srcset="">
+                                        <span class="student-progress-name">Lucjan Jamil</span>
+                                    </li>
+                                    <li class="nav-item">
+                                        <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid student-progress-img" alt="image loading....." sizes="40px" srcset="">
+                                        <span class="student-progress-name">Lucjan Jamil</span>
+                                    </li>
+                                    <li class="nav-item">
+                                        <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid student-progress-img" alt="image loading....." sizes="40px" srcset="">
+                                        <span class="student-progress-name">Lucjan Jamil</span>
+                                    </li>
+                                    <li class="nav-item">
+                                        <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid student-progress-img" alt="image loading....." sizes="40px" srcset="">
+                                        <span class="student-progress-name">Lucjan Jamil</span>
+                                    </li>
+                                    <li class="nav-item">
+                                        <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid student-progress-img" alt="image loading....." sizes="40px" srcset="">
+                                        <span class="student-progress-name">Lucjan Jamil</span>
+                                    </li>
+                                    <li class="nav-item">
+                                        <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid student-progress-img" alt="image loading....." sizes="40px" srcset="">
+                                        <span class="student-progress-name">Lucjan Jamil</span>
+                                    </li>
+                                    <li class="nav-item">
+                                        <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid student-progress-img" alt="image loading....." sizes="40px" srcset="">
+                                        <span class="student-progress-name">Lucjan Jamil</span>
+                                    </li>
+                                    <li class="nav-item">
+                                        <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid student-progress-img" alt="image loading....." sizes="40px" srcset="">
+                                        <span class="student-progress-name">Lucjan Jamil</span>
+                                    </li>
+                                    <li class="nav-item">
+                                        <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid student-progress-img" alt="image loading....." sizes="40px" srcset="">
+                                        <span class="student-progress-name">Lucjan Jamil</span>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="student-progress-profile-wrapper">
+                                <div class="container my-3">
+                                    <div class="student-profile-progress">
+                                        <div class="student-profile">
+                                            <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid" alt="image-loading" sizes="40px" srcset="">
+                                            <span class="student-name">Lucjan Jamil</span>
+                                            <span class="student-class">senior Five</span>
+                                        </div>
+                                        <div class="quick-admin-student-actions">
+                                            <button type="button" class="btn btn-sm btn-outline-info">Message</button>
+                                            <button type="button" class="btn btn-sm btn-outline-primary">Contact</button>
+                                            <button type="button" class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#comment-Box">Comment</button>
+                                        </div> 
+                                        <div class="enrolled-list-courses">
+                                            <div class="fw-bold py-2">Enrolled Courses</div>
+                                            <ul class="navbar-nav nav">
+                                                <li class="nav-item">
+                                                    <span class="enrolled-course">Thanawi</span>
+                                                    <span class="enrolled-course-subjects">
+                                                        <span>
+                                                        <i class="fa fa-check icon" aria-hidden="true"></i>
+                                                        <span>
+                                                            <span class="total-subjects">15</span>
+                                                            subjects
+                                                        </span>
+                                                            
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <span class="enrolled-course">Quran</span>
+                                                    <span class="enrolled-course-subjects">
+                                                        <span>
+                                                        <i class="fa fa-check icon" aria-hidden="true"></i>
+                                                        <span>
+                                                            <span class="total-subjects">9</span>
+                                                            subjects
+                                                        </span>
+                                                            
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                                 <li class="nav-item">
+                                                    <span class="enrolled-course">Thanawi</span>
+                                                    <span class="enrolled-course-subjects">
+                                                        <span>
+                                                        <i class="fa fa-check icon" aria-hidden="true"></i>
+                                                        <span>
+                                                            <span class="total-subjects">8</span>
+                                                            subjects
+                                                        </span>
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container ">
+                                    <div class="student-progress-status">
+                                    <div class="fs-5 fw-bolder mt-3" style="color: rgb(0, 23, 98);">Progress Status</div>
+                                    <div class="progress-subject-list">
+                                        <div class="py-3" style="color: rgb(75, 76, 76);">Subjects (<span class="total-subjects">15</span>)</div>
+                                        <nav class="navbar nav subject-list d-flex">
+                                            <li class="nav-item">
+                                                <span class="subject-name">Figh</span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="subject-name">Figh</span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="subject-name">Figh</span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="subject-name">Figh</span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="subject-name">Figh</span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="subject-name">Figh</span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="subject-name">Figh</span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="subject-name">Figh</span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="subject-name">Figh</span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="subject-name">Figh</span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="subject-name">Figh</span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="subject-name">Figh</span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="subject-name">Figh</span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="subject-name">Figh</span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span class="subject-name">Figh</span>
+                                            </li>
+                                        </nav>
+                                    </div>
+                                    <div class="progress-status">
+                                        <ul class="navbar-nav nav">
+                                            <li class="nav-item">
+                                                <div>
+                                                    <i class="fa fa-check icon" aria-hidden="true"></i>
+                                                    <span class="topics">
+                                                <span class="opened-topics">
+                                                    28 /
+                                                    <span class="total-topics">100 <span> topics opened</span></span>
+                                                </span>
+                                                </span>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                                </div>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item">
+                                                <div>
+                                                    <i class="fa fa-check icon" aria-hidden="true"></i>
+                                                    <span class="lessons">
+                                                <span class="completed-lessons">
+                                                    210 /
+                                                    <span class="total-lessons">300 <span> lessons completed</span></span>
+                                                </span>
+
+                                                </span>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                                </div>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item">
+                                                <div>
+                                                    <i class="fa fa-check icon" aria-hidden="true"></i>
+                                                    <span class="days">
+                                                <span class="days-studied">
+                                                    28 <span>days <span>studied</span></span>
+                                                </span>
+
+                                                </span>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                                </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                     </div>
+                <!-- comment box -->
+                <!-- Modal -->
+                <div class="modal fade" id="comment-Box" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content p-3 d-flex align-items-start  justify-content-start  comment-box ">
+                           <h4 class="py-2">Write a comment </h4>
+                           <textarea name="" id="" cols="30" rows="10" placeholder="Type a comment" class="form-control"></textarea>
+                            <div class="modal-buttons d-flex align-items-center justify-content-evenly mt-4 w-100  ">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- START ALL STUDENTS SECTION -->
+                  <div class="AllStudentContainer" >
+                    <div class="container">
+                        <div class="container p-4">
+                            <button type="button" class="back btn btn-light fw-bold border-0 outline-none"> <i class="fa fa-arrow-left pe-2" aria-hidden="true"></i> Back</button>
+                        </div>
+                    <div class="row justify-content-center">
+                    <div class="col-md-12 px-5 py-3 d-flex align-items-center  justify-content-between">
+                    <div class="header">
+                    <span>All students</span>
+                    <small>Edit, delete ,View profile and more</small>
+                    </div>
+                    </div>
+                     </div>
+                     <div class="container p-5">
+                        <nav class="navbar nav justify-content-start px-4 rounded-top">
+                            <div class="nav-header d-flex align-items-center justify-content-start ">
+                                <span>
+                                    <span class="navbar-toggler btn btn-sm d-flex align-items-center justify-content-center flex-column border-0" >
+                                        <span class="navbar-toggler-icon"></span>
+                                        <small style="font-size: 10px;" class="fw-bolder">courses</small>
+                                    </span>
+                                </span>
+                            </div>
+                           <div class="class-select-row d-flex align-items-center justify-content-center ">
+                            <span class="row-header">Classes</span>
+                            <ul class="navbar-nav">
+                                    <li class="nav-item">Senior Five</li>
+                                    <li class="nav-item">Senior Five</li>
+                                    <li class="nav-item">Senior Five</li>
+                                    <li class="nav-item">Senior Five</li>
+                                    <li class="nav-item">Senior Five</li>
+                                    <li class="nav-item">Senior Five</li>
+                                    <li class="nav-item">Senior Five</li>
+                            </ul>
+                           </div>
+                        </nav>
+                        <div class="all-students-container">
+                        <div class="course-aside-bar">
+                            <div class="fs-5 fw-bolder pb-3">All courses</div>
+                            <ul class="navbar-nav nav">
+                                <li class="nav-item">IPLE</li>
+                                <li class="nav-item">Quran</li>
+                                <li class="nav-item">Idaad</li>
+                                <li class="nav-item">Thanawi</li>
+                                <li class="nav-item">Yasaruna</li>
+                                <li class="nav-item">Arabic Language</li>
+                                <li class="nav-item">General Basics of Islam</li>
+                            </ul>
+                        </div>
+                        <div class="students-container">
+                            <nav class="navbar nav justify-content-start students-container-nav">
+                               <div class="action-center">
+                                <form action="" method="get">
+                                    <div class="form-group">
+                                        <input type="search" name="" id="" placeholder="Search by name, class" class="form-control">
+                                    </div>
+                                </form>
+                                <div class="button-wrapper d-flex align-items-center  justify-content-evenly">
+                                    <button class="btn btn-sm text-light" style="background: rgb(0, 31, 66);">
+                                        <span>select</span>
+                                        <i class="fa fa-check text-success" aria-hidden="true"></i>
+                                    </button>
+                                    <button class="btn btn-sm text-light" style="background: rgb(107, 1, 168);">
+                                        <span>view</span>
+                                        <i class="fa fa-eye text-warning" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                               </div>
+                            </nav>
+                            <div class="student-list">
+                                <div class="card student-card position-relative">
+                                    <div class="card-delete-student-btn-wrapper">
+                                        <input type="checkbox" name="" id="" class="delete-student-card-btn">
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center flex-column card-actions w-25 position-absolute end-0">
+                                        <button class="view-student-btn btn btn-sm d-flex flex-column-reverse  align-items-center justify-content-center">
+                                            <span style="font-size: 10px;" class="fw-bolder">view</span>
+                                            <i class="fa fa-eye text-primary" aria-hidden="true"></i>
+                                        </button>
+                                        <button class="btn btn-sm d-flex flex-column-reverse  align-items-center justify-content-center">
+                                            <span style="font-size: 10px;" class="fw-bolder">edit</span>
+                                            <i class="fa fa-pencil-square text-info" aria-hidden="true"></i>
+                                        </button>
+                                        <button class="btn btn-sm d-flex flex-column-reverse  align-items-center justify-content-center">
+                                            <span style="font-size: 9px;" class="fw-bolder">Delete</span>    
+                                            <i class="fa fa-trash-alt text-danger"></i>
+                                        </button>
+                                    </div>
+                                    <img class="card-img-top student-img" src="../Assets/Images/student_imgs/customer01.jpg"  alt="student image loading....">
+                                    <div class="student-details d-flex align-items-start justify-content-center flex-column">
+                                        <span class="student-name">Lucjan Jamil</span>
+                                        <span class="student-class">senior Five</span>
+                                    </div>
+                                </div>
+                                <div class="card student-card position-relative">
+                                    <div class="card-delete-student-btn-wrapper">
+                                        <input type="checkbox" name="" id="" class="delete-student-card-btn">
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center flex-column card-actions w-25 position-absolute end-0">
+                                        <button class="view-student-btn btn btn-sm d-flex flex-column-reverse  align-items-center justify-content-center">
+                                            <span style="font-size: 10px;" class="fw-bolder">view</span>
+                                            <i class="fa fa-eye text-primary" aria-hidden="true"></i>
+                                        </button>
+                                        <button class="btn btn-sm d-flex flex-column-reverse  align-items-center justify-content-center">
+                                            <span style="font-size: 10px;" class="fw-bolder">edit</span>
+                                            <i class="fa fa-pencil-square text-info" aria-hidden="true"></i>
+                                        </button>
+                                        <button class="btn btn-sm d-flex flex-column-reverse  align-items-center justify-content-center">
+                                            <span style="font-size: 9px;" class="fw-bolder">Delete</span>    
+                                            <i class="fa fa-trash-alt text-danger"></i>
+                                        </button>
+                                    </div>
+                                    <img class="card-img-top student-img" src="../Assets/Images/student_imgs/customer01.jpg"  alt="student image loading....">
+                                    <div class="student-details d-flex align-items-start justify-content-center flex-column">
+                                        <span class="student-name">Lucjan Jamil</span>
+                                        <span class="student-class">senior Five</span>
+                                    </div>
+                                </div>
+                                <div class="card student-card position-relative">
+                                    <div class="card-delete-student-btn-wrapper">
+                                        <input type="checkbox" name="" id="" class="delete-student-card-btn">
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center flex-column card-actions w-25 position-absolute end-0">
+                                        <button class="view-student-btn btn btn-sm d-flex flex-column-reverse  align-items-center justify-content-center">
+                                            <span style="font-size: 10px;" class="fw-bolder">view</span>
+                                            <i class="fa fa-eye text-primary" aria-hidden="true"></i>
+                                        </button>
+                                        <button class="btn btn-sm d-flex flex-column-reverse  align-items-center justify-content-center">
+                                            <span style="font-size: 10px;" class="fw-bolder">edit</span>
+                                            <i class="fa fa-pencil-square text-info" aria-hidden="true"></i>
+                                        </button>
+                                        <button class="btn btn-sm d-flex flex-column-reverse  align-items-center justify-content-center">
+                                            <span style="font-size: 9px;" class="fw-bolder">Delete</span>    
+                                            <i class="fa fa-trash-alt text-danger"></i>
+                                        </button>
+                                    </div>
+                                    <img class="card-img-top student-img" src="../Assets/Images/student_imgs/customer01.jpg"  alt="student image loading....">
+                                    <div class="student-details d-flex align-items-start justify-content-center flex-column">
+                                        <span class="student-name">Lucjan Jamil</span>
+                                        <span class="student-class">senior Five</span>
+                                    </div>
+                                </div>
+                                <div class="card student-card position-relative">
+                                    <div class="card-delete-student-btn-wrapper">
+                                        <input type="checkbox" name="" id="" class="delete-student-card-btn">
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center flex-column card-actions w-25 position-absolute end-0">
+                                        <button class="view-student-btn btn btn-sm d-flex flex-column-reverse  align-items-center justify-content-center">
+                                            <span style="font-size: 10px;" class="fw-bolder">view</span>
+                                            <i class="fa fa-eye text-primary" aria-hidden="true"></i>
+                                        </button>
+                                        <button class="btn btn-sm d-flex flex-column-reverse  align-items-center justify-content-center">
+                                            <span style="font-size: 10px;" class="fw-bolder">edit</span>
+                                            <i class="fa fa-pencil-square text-info" aria-hidden="true"></i>
+                                        </button>
+                                        <button class="btn btn-sm d-flex flex-column-reverse  align-items-center justify-content-center">
+                                            <span style="font-size: 9px;" class="fw-bolder">Delete</span>    
+                                            <i class="fa fa-trash-alt text-danger"></i>
+                                        </button>
+                                    </div>
+                                    <img class="card-img-top student-img" src="../Assets/Images/student_imgs/customer01.jpg"  alt="student image loading....">
+                                    <div class="student-details d-flex align-items-start justify-content-center flex-column">
+                                        <span class="student-name">Lucjan Jamil</span>
+                                        <span class="student-class">senior Five</span>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- view student box container-->
+                     <div class="container studentContainerContent">
+                         <div class="container">
+                             <button type="button" class="BackButton btn btn-sm btn-outline-secondary fw-light"> <i class="fa fa-arrow-left pe-2" aria-hidden="true"></i> Back</button>
+                         </div>
+                        <div class="position-relative student-content ">
+                           <div class="student-info">
+                               <div class="student-img-box">
+                                   <img  class="img-fluid student-img" src=".././Assets/Images/student_imgs/customer01.jpg" alt="student image loadding" sizes="40 40" srcset="">
+                                   <div class="student-details-info">
+                                       <span class="student-name">Lucjan Jamil</span>
+                                       <span class="student-class">senior five</span>
+                                   </div>
+                               </div>
+                               <div class="action-btn-wrapper">
+                                   <button class="btn btn-sm btn-outline-primary">Message</button>
+                                   <button class="btn btn-sm btn-outline-danger" data-bs-toggle="collapse" data-bs-target="#deleteStudentModal">Delete</button>
+                                   
+                               </div>
+                               <div class="info-list" >
+                                   <ul class="navbar-nav nav list-group " id="myList" role="tablist">
+                                       <li class="list-item list-group-item list-group-item-action active" data-bs-toggle="list" href="#bioDetails" role="tab">Bio Details</li>
+                                       <li class="list-item list-group-item list-group-item-action" data-bs-toggle="list" href="#viewProgress" role="tab">View Progress</li>
+                                       <li class="list-item list-group-item list-group-item-action" data-bs-toggle="list" href="#paymentsContainer" role="tab">Payments</li>
+                               </ul>
+                                </div>
+                           <div class="enrolled-course-list">
+                               <div class="fw-bold py-2">Enrolled Courses</div>
+                               <ul class="navbar-nav nav">
+                                   <li class="nav-item">
+                                       <span class="enrolled-course">Thanawi</span>
+                                       <span class="enrolled-course-subjects">
+                                           <span>
+                                           <i class="fa fa-check icon" aria-hidden="true"></i>
+                                           <span>
+                                               <span class="total-subjects">15</span>
+                                               subjects
+                                           </span>
+                                               
+                                           </span>
+                                       </span>
+                                   </li>
+                                   <li class="nav-item">
+                                       <span class="enrolled-course">Quran</span>
+                                       <span class="enrolled-course-subjects">
+                                           <span>
+                                           <i class="fa fa-check icon" aria-hidden="true"></i>
+                                           <span>
+                                               <span class="total-subjects">9</span>
+                                               subjects
+                                           </span>
+                                               
+                                           </span>
+                                       </span>
+                                   </li>
+                                    <li class="nav-item">
+                                       <span class="enrolled-course">Thanawi</span>
+                                       <span class="enrolled-course-subjects">
+                                           <span>
+                                           <i class="fa fa-check icon" aria-hidden="true"></i>
+                                           <span>
+                                               <span class="total-subjects">8</span>
+                                               subjects
+                                           </span>
+                                           </span>
+                                       </span>
+                                   </li>
+                               </ul>
+                           </div>
+                           </div>
+   
+                       <!-- Bio details TAB -->
+                       <div class="tab-content">
+                       <div class="student-bio bg-light rounded-4 tab-pane active" id="bioDetails" role="tabpanel">
+                           <div class="d-flex align-items-center justify-content-between px-5  p-2 rounded-top" style="background: whitesmoke;">
+                               <span class="fs-5 fw-bold">Student Details</span>
+                               <button id="editStudentInfobtn" class="btn btn-sm  border-info shadow-lg text-info">
+                                   <span>Edit</span>
+                                   <i class="fa fa-pencil px-2 text-warning"></i>
+                           </button>
+                           </div>
+                           <div class="info">
+                           <div class="form-group mb-2">
+                             <label for="first name" class="form-label">First name</label>
+                             <input type="text" name="" id="" class="form-control" placeholder="First name" aria-describedby="first name" value="Lucjan" disabled>
+                           </div>
+                           <div class="form-group mb-2">
+                             <label for="last name" class="form-label">Last name</label>
+                             <input type="text" name="" id="" class="form-control" placeholder="Last name" aria-describedby="last name" value="Jamil" disabled>
+                           </div>
+                           <div class="form-group mb-2">
+                             <label for="other names" class="form-label">Other names <small>(optional)</small></label>
+                             <input type="text" name="" id="" class="form-control" placeholder="other names (optional)" aria-describedby="other names" value="Jamil" disabled>
+                           </div>
+                           <div class="form-group mb-2">
+                               <label for="gender">Gender</label>
+                               <select class="form-control" name="" id="" disabled>
+                                 <option disabled>Select Gender  <i class="fa fa-caret-down" aria-hidden="true"></i></option>
+                                 <option selected>Male</option>
+                                 <option>Female</option>
+                                 <option>Custom</option>
+                               </select>
+                           </div>
+                           <div class="form-group mb-2">
+                               <label for="age" class="form-label">Age</label>
+                               <input type="number" name="" id="" class="form-control" placeholder="" aria-describedby="helpId" value="17" disabled>
+                             </div>
+                           <div class="form-group mb-2">
+                             <label for="email" class="form-label">Email</label>
+                             <input type="email" name="" id="" class="form-control" placeholder="Email" aria-describedby="email" value="myemail9@gmail.com" disabled>
+                           </div>
+                           <div class="form-group mb-2">
+                             <label for="mobile contact" class="form-label">Mobile number</label>
+                             <input type="tel" name="" id="" class="form-control" placeholder="Mobile number" aria-describedby="Mobile number" value="+256740000--" disabled>
+                           </div>
+                           <div class="form-group mb-2">
+                             <label for="password" class="form-label">Password</label>
+                             <input type="password" name="" id="" class="form-control" placeholder="studet password..." aria-describedby="password" value="..........." disabled>
+                           </div>
+                           </div>
+                       </div>
+                       <!-- View Progress -->
+                       <div class="container tab-pane" id="viewProgress" role="tabpane2">
+                           <div class="student-progress-status-bar">
+                           <div class="fs-5 fw-bolder " style="color: rgb(0, 23, 98);">Progress Status</div>
+                           <div class="progress-subject-list" >
+                               <div class="py-3" style="color: rgb(75, 76, 76);">Subjects (<span class="total-subjects">15</span>)</div>
+                               <nav class="navbar nav subject-list d-flex">
+                                
+                                  
+                                   <li class="nav-item">
+                                       <span class="subject-name">Figh</span>
+                                   </li>
+                                   <li class="nav-item">
+                                       <span class="subject-name">Figh</span>
+                                   </li>
+                                   <li class="nav-item">
+                                       <span class="subject-name">Figh</span>
+                                   </li>
+                                   <li class="nav-item">
+                                       <span class="subject-name">Figh</span>
+                                   </li>
+                                   <li class="nav-item">
+                                       <span class="subject-name">Figh</span>
+                                   </li>
+                               </nav>
+                           </div>
+                           <div class="progress-status">
+                               <ul class="navbar-nav nav">
+                                   <li class="nav-item">
+                                       <div>
+                                           <i class="fa fa-check icon" aria-hidden="true"></i>
+                                           <span class="topics">
+                                       <span class="opened-topics">
+                                           28 /
+                                           <span class="total-topics">100 <span> topics opened</span></span>
+                                       </span>
+                                       </span>
+                                       <div class="progress">
+                                           <div class="progress-bar bg-success" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                       </div>
+                                       </div>
+                                   </li>
+                                   <li class="nav-item">
+                                       <div>
+                                           <i class="fa fa-check icon" aria-hidden="true"></i>
+                                           <span class="lessons">
+                                       <span class="completed-lessons">
+                                           210 /
+                                           <span class="total-lessons">300 <span> lessons completed</span></span>
+                                       </span>
+   
+                                       </span>
+                                       <div class="progress">
+                                           <div class="progress-bar bg-info" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                       </div>
+                                       </div>
+                                   </li>
+                                   <li class="nav-item">
+                                       <div>
+                                           <i class="fa fa-check icon" aria-hidden="true"></i>
+                                           <span class="days">
+                                       <span class="days-studied">
+                                           28 <span>days <span>studied</span></span>
+                                       </span>
+   
+                                       </span>
+                                       <div class="progress">
+                                           <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                       </div>
+                                       </div>
+                                   </li>
+                               </ul>
+                           </div>
+                       </div>
+                       </div>
+                       <!-- payments -->
+                       <div class="container tab-pane " id="paymentsContainer" role="tabpane3">
+                           <div class="payments-container">
+                           <div class="fs-5 fw-bolder py-3" style="color: rgb(0, 23, 98);">Payments Info</div>
+                               <div class="card">
+                                   <div class="card-body d-flex  align-items-start justify-content-start flex-column">
+                                           <span>
+                                               <span>Course:</span>
+                                               <span class="paid-course">Thanawi</span>
+                                           </span>
+                                           <span>
+                                               <span>Class:</span>
+                                               <span class="paid-course">Senior Five</span>
+                                           </span>
+                                           <span>
+                                               <span>Date:</span>
+                                               <span class="payment-date">Dec / 25 / 2025</span>
+                                           </span>
+                                           <span>
+                                                   <span>Type: </span>
+                                                   <span class="payment-type text-warning-emphasis">half payment</span>
+                                           </span>
+                                           <span>
+                                                   <span>Amount: </span>
+                                                   <span >UGX <span class="text-primary amount-paid"> 25000 </span></span>
+                                           </span>
+                                           <span>
+                                                   <span>Status: </span>
+                                                   <span class="payment-status text-success">
+                                                       <span>Approved</span>
+                                                       <i class="fa fa-check text-success" aria-hidden="true"></i>
+                                                   </span>
+                                           </span>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       </div>
+   
+                   </div>
+                       </div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                     </div>
+                <!--Delete alert box  -->
+                <!-- Modal -->
+                <div class="delete-container collapse" id="deleteStudentModal">
+                                <div class="delete-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Deleting this Student</h4>
+                                </div>
+                                       <div class="student-delete-info d-flex align-items-center">
+                                        <img class="student-delete-img" src="../Assets/Images/student_imgs/customer01.jpg" alt="image loading" sizes="" srcset="">
+                                        <div class="student-delete-info-details d-flex flex-column  ">
+                                            <span class="student-name">Lucjan Jamil</span>
+                                            <span class="student-class">Senior Five</span>
+                                        </div>
+                                       </div>
+                                        <div class="modal-body">
+                                        <h5 class="modal-title text-danger mt-2">Will delete</h5>
+                                        <ul class="navbar-nav nav p-4 text-warning" style="list-style: circle;">
+                                            <li class="nav-item">
+                                                All course contents for this student
+                                            </li>
+                                            <li class="nav-item">
+                                               All student's progress and track in all courses
+                                            </li>
+                                            <li class="nav-item">
+                                               All videos, topics, lessons paid by this student and other related content will be limitedly accessed 
+                                            </li>
+                                            <li class="nav-item">
+                                               The student from the classroom and Sama platform
+                                            </li>
+                                            <li class="nav-item">
+                                                All student's enrollements within particular classes and the student shall be completely deleted from the system
+                                            </li>
+                        
+                                        </ul>
+                                        <div class="d-flex align-items-center justify-content-evenly pb-3">
+                                            <button type="button" class="btn-sm btn text-light" style="background: rgb(1, 116, 112);">Dismiss Instead</button>
+                                            <button type="button" class="btn-sm btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#deleteStudentModal">Cancel</button>
+                                            <button type="button" class="btn-sm btn btn-danger" id="confirmDeletion" data-bs-toggle="modal" data-bs-target="#deleteCourseAlert">Delete</button>
+                                        </div>
+                                        
+                                       </div>
+                                </div>
+                </div>
+
+                <!-- ADD STUDENT -->
+                <div class="AddStudentContainer" >
+                    <div class="container">
+                        <div class="container p-4">
+                            <button type="button" class="ButtonBack btn btn-light fw-bold border-0 outline-none"> <i class="fa fa-arrow-left pe-2" aria-hidden="true"></i> Back</button>
+                        </div>
+                        <div class="row justify-content-center">
+                    <div class="col-md-12 px-5 py-3 d-flex align-items-center  justify-content-between">
+                    <div class="header">
+                    <span>Add a student</span>
+                    <small>Type student bio info, assign negotiated price, confirm with the add student button</small>
+                    </div>
+                     </div>
+                     </div>
+                   
+                     <div class="container">
+                        <div class="add-student-bio-container">
+                            <div class="info">
+                                <div class="add-student-img-box position-relative">
+                                    <img src="../Assets/Images/student_imgs/customer01.jpg" alt="Add profile  " srcset="">
+                                    <button type="button" class="btn btn-sm">
+                                        <span style="font-size: 15px;">Profile</span>
+                                        <div class="camera-icon"><i class="fa fa-camera" aria-hidden="true"></i></div>
+                                    </button>
+                                    
+                                </div>
+                                <div class="form-group mb-2">
+                                  <label for="first name" class="form-label">First name</label>
+                                  <input type="text" name="" id="" class="form-control" placeholder="First name" aria-describedby="first name">
+                                </div>
+                                <div class="form-group mb-2">
+                                  <label for="last name" class="form-label">Last name</label>
+                                  <input type="text" name="" id="" class="form-control" placeholder="Last name" aria-describedby="last name">
+                                </div>
+                                <div class="form-group mb-2">
+                                  <label for="other names" class="form-label">Other names <small>(optional)</small></label>
+                                  <input type="text" name="" id="" class="form-control" placeholder="other names (optional)" aria-describedby="other names">
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="gender">Gender</label>
+                                    <select class="form-control" name="" id="">
+                                      <option disabled selected>Select Gender</option>
+                                      <option>Male</option>
+                                      <option>Female</option>
+                                      <option>Custom</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="age" class="form-label">Age</label>
+                                    <input type="number" name="" id="" class="form-control" placeholder="Age" aria-describedby="helpId">
+                                  </div>
+                                <div class="form-group mb-2">
+                                  <label for="email" class="form-label">Email</label>
+                                  <input type="email" name="" id="" class="form-control" placeholder="Email" aria-describedby="email">
+                                </div>
+                                <div class="form-group mb-2">
+                                  <label for="mobile contact" class="form-label">Mobile number</label>
+                                  <input type="tel" name="" id="" class="form-control" placeholder="Mobile number" aria-describedby="Mobile number">
+                                </div>
+                                <div class="form-group mb-2">
+                                  <label for="password" class="form-label">Create Password</label>
+                                  <input type="password" name="" id="" class="form-control" placeholder="Create password..." aria-describedby="password">
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="create password" class="form-label">Confirm Password</label>
+                                    <input type="password" name="" id="" class="form-control" placeholder="confirm Password" aria-describedby="password">
+                                  </div>
+                                </div>
+                                <div class="course-details">
+                                    <div>
+                                    <div class="form-group ">
+                                        <label for="Select title" class="form-label">Assign course to the student</label>
+                                        <select class="form-control" name="" id="">
+                                          <option selected>Select Course name</option>
+                                          <option>IPLE (Islamic Primary Leaving Examinations)</option>
+                                          <option>Idaad</option>
+                                          <option>Thanawi</option>
+                                          <option>Yasaruna</option>
+                                          <option>Arabic Language</option>
+                                          <option>Quran</option>
+                                          <option>General Basics Of Islam</option>
+                                        </select>
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="Select class" class="form-label">Assign class to the student</label>
+                                        <select class="form-control" name="" id="">
+                                          <option selected>Select class</option>
+                                          <option value="senior five">Senior five</option>
+                                          <option value="senior five">Senior six</option>
+                                        </select>
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="price" class="form-label"> Price</label>
+                                        <input type="number" class="form-control" name="" id="" placeholder="Price ">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="random id" class="form-label">Random Id</label>
+                                        <input type="number" class="form-control" name="" id="" placeholder="Student id">
+                                        <small id="helpId" class="text-muted">This id is generated randomly</small>
+                                      </div>
+                                    </div>
+                                      <span class="form-group">
+                                        <button type="button" class="btn btn-primary add-student-btn">Add student</button>
+                                      </span>
+                                </div>
+                        </div>
+                     </div>
+                     
+                    </div>
+                </div>
+
+                <!-- EXPLORE STUDENTS -->
+                <div class="ExploreStudentContainer" >
+                    <div class="container">
+                        <div class="container p-4">
+                            <button type="button" class="Back-BTN btn btn-light fw-bold border-0 outline-none"> <i class="fa fa-arrow-left pe-2" aria-hidden="true"></i> Back</button>
+                        </div>
+                        <div class="row justify-content-center">
+                    <div class="col-md-12 px-5 py-3 d-flex align-items-center  justify-content-between">
+                    <div class="header">
+                    <span>Explore students</span>
+                    <small>view a summary of student's info with no payments yet!</small>
+                    </div>
+                     </div>
+                     </div>
+                   
+                     <div class="container">
+                        <div class="exploreStudentsWrapper my-5">
+                            <nav class="navbar nav rounded-top-3 px-4">
+                                <div class="container">
+                                <span class="fw-bolder fs-5">Students</span>
+                                <form action="" method="get" class="position-relative">
+                                    <span>
+                                        <div class="form-group position-relative">
+                                            <div class="position-absolute text-dark top-0 bottom-0 ps-3 px-2 rounded-start-5 text-center d-flex align-items-center justify-content-center text-light  ">
+                                                <i class="fa fa-search" aria-hidden="true"></i>
+                                            </div>
+                                          <input type="search" name="" id="" class="form-control rounded-5 w-100 ps-5" placeholder="search by name" aria-describedby="helpId">
+                                        </div>
+                                    </span>
+                                </form>
+                            </div>
+                            </nav>
+                            <div class="table-responsive table-container">
+                                <div class="card explore-studentmore-details">
+                                    <div class="card-body">
+                                       <ul class="navbar-nav nav">
+                                        <li class="list-item">
+                                            <span>
+                                                <span>Other names:</span>    
+                                                <span class="explore-student-othernames">Jamil</span>
+                                            </span>
+                                        </li>
+                                        <li class="list-item">
+                                            <span>
+                                                <span>Email :</span>
+                                                <span class="explore-student-email">
+                                                myemail@gmail.com
+                                            </span>
+                                        </span>
+                                        </li>
+                                        <li class="list-item">
+                                            <span>
+                                                <span>Mobile Contact :</span>
+                                                <span class="explore-student-mobile-contact">
+                                                    +256700000000
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li class="list-item">
+                                            <span>
+                                                <span>Gender :</span>
+                                                <span class="gender">
+                                                    Male
+                                                </span>
+                                            </span>
+                                            <li class="list-item">
+                                                <span class="text-danger">
+                                                    <span>Payment status : </span>
+                                                    <span class="payment-status">
+                                                        no paid courses yet
+                                                    </span>
+                                                </span>
+                                        </li>
+                                       </ul>
+                                    </div>
+                                </div>
+                            <table class="table table-striped table-responsive table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Profile</th>
+                                        <th>Names</th>
+                                        <th>Age</th>
+                                        <th>Courses</th>
+                                        <th>Registered on</th>
+                                        <th>Payments</th>
+                                        <th>Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="summary-data">
+                                        <tr>
+                                            <td scope="row">1.</td>
+                                            <td>
+                                                <span class="explore-student-img">
+                                                    <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid" alt="image loading" sizes="40" srcset="">
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class="explore-student-names">Lucjan Jamil</span>
+                                            </td>
+                                            <td><span class="explore-student-age">14</span></td>
+                                            <td>
+                                                <span class="explore-student-course">no</span>
+                                            </td>
+                                            <td class="text-success">
+                                                <span class="explore-student-registration-date">25 / 03 / 2024</span>
+                                            </td>
+                                            <td class="text-danger">
+                                                <span class="explore-student-payments">un paid</span>
+                                            </td>
+                                            <td class="text-secondary">
+                                                <span class="explore-student-status">Offline</span>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">1.</td>
+                                            <td>
+                                                <span class="explore-student-img">
+                                                    <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid" alt="image loading" sizes="40" srcset="">
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class="explore-student-names">Lucjan Jamil</span>
+                                            </td>
+                                            <td><span class="explore-student-age">14</span></td>
+                                            <td>
+                                                <span class="explore-student-course">no</span>
+                                            </td>
+                                            <td class="text-success">
+                                                <span class="explore-student-registration-date">25 / 03 / 2024</span>
+                                            </td>
+                                            <td class="text-danger">
+                                                <span class="explore-student-payments">un paid</span>
+                                            </td>
+                                            <td class="text-secondary">
+                                                <span class="explore-student-status">Offline</span>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">1.</td>
+                                            <td>
+                                                <span class="explore-student-img">
+                                                    <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid" alt="image loading" sizes="40" srcset="">
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class="explore-student-names">Lucjan Jamil</span>
+                                            </td>
+                                            <td><span class="explore-student-age">14</span></td>
+                                            <td>
+                                                <span class="explore-student-course">no</span>
+                                            </td>
+                                            <td class="text-success">
+                                                <span class="explore-student-registration-date">25 / 03 / 2024</span>
+                                            </td>
+                                            <td class="text-danger">
+                                                <span class="explore-student-payments">un paid</span>
+                                            </td>
+                                            <td class="text-secondary">
+                                                <span class="explore-student-status">Offline</span>
+                                            </td>
+                                            
+                                        </tr>
+                                    </tbody>
+                            </table>
+                        </div>
+                        </div>
+                     </div>
+                     
+                    </div>
+                </div>
+                           
+                <!-- END ALL STUDENTS SECTION -->
+
+               
+         
+        <!-- FOOTER SECTION -->
+            <div class="container">
+               <footer class="" style="margin-top: 100px !important;">
+                   <div class="footer-bottom">
+                       <p>&copy; 2024 Sama Islamic Digital Platform. All rights reserved.</p>
+                       </div>
+               </footer>                       
+           
+            </div>
+                 <div class="mb-5 pb-5"></div>
+            </section>
+            <!-- END DASH BOARD SECTION -->
+                                
+        
+
+        </main>
+    </div>
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< END DASHBOARD SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+
+    
+    <script src="../Assets/customs/Awesome_Icons/js/all.js"></script>
+    <script src="../Scripts/bootsrap/bootstrap.min.js"></script>
+    <script src="../Scripts/Jquery/"></script>
+    <script src="../Scripts/Js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/3acc367a10.js" crossorigin="anonymous"></script>
+    </body>
+  </html>
+  

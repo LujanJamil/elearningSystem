@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../Assets/Images/Backgrounds/logo.png">
+    <title>Sama Islamic Digital College | Admin</title>
+    <link rel="stylesheet" href="../Styles/Boostrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../Styles/Css/custom_Styles.css">
+  </head>
+  <body>
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< START DASHBOARD SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <div class="dashboard-wrapper">
+        <aside>
+                <div class="admin-logo-content">
+                    <div class="d-flex align-items-center justify-content-start  ">
+                        <img class="img-fluid logo-img" width="60px" src="../Assets/customs/logo.png" alt="logo Image loading....." srcset="">
+                        <div class="logo-name">Sama Islamic Digital College</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="fs-5 fw-bolder  pt-4 pb-3">Menu</div>
+                <ul class="navbar-nav nav dashboard-menu">
+                    <li class="nav-item">
+                        <i class="fa fa-dashboard" aria-hidden="true"></i>
+                        <span class="icon-text">Dashboard</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-dashboard" aria-hidden="true"></i>
+                        <span class="icon-text">Course Management</span>
+                
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-dashboard" aria-hidden="true"></i>
+                        <span class="icon-text">Students</span>
+                
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-dashboard" aria-hidden="true"></i>
+                        <span class="icon-text">Teachers</span>
+                
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-dashboard" aria-hidden="true"></i>
+                        <span class="icon-text">Attendance</span>
+                
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-dashboard" aria-hidden="true"></i>
+                        <span class="icon-text">Report Cards</span>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <main>
+            <!-- START NAVBAR SECTION -->
+                <nav class="navbar nav py-3">
+                    <div class="container d-flex  align-items-center">
+                            <!-- START CLOSE ASIDE BAR BUTTON -->
+                           <div class="close-aside-btn">
+                            <button type="button" class="btn p-0 rounded-3 px-2" id="closeSidebarNav">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                           </div>
+                            <!-- END CLOSE ASIDE BAR BUTTON -->
+
+                            <!-- QUICK ACCESS CENTER -->
+                            <div class="nav-action-center d-flex align-items-center  justify-content-center px-3">
+                            <form class="navbar-search-wrapper">
+                                <input class="form-control search-input shadow-none border-none m-0 p-0" type="search" placeholder="Search....">
+                                    <i class="fa fa-search search-icon" aria-hidden="true"></i>
+                             </form>
+                             <!-- FULL SCREEN BUTTON  -->
+                             <div>
+                                <button id="ViewFullScreen" type="button" class="btn action-btns" data-bs-toggle="tooltip" data-bs-placement="top" title="Full Screen View">
+                                    <i class="fa fa-square" aria-hidden="true"></i>
+                                </button>
+                             </div>
+                             <!-- NOTIFICATION BUTTON -->
+                             <div>
+                                <button type="button" class="btn action-btns notification-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Notifications">
+                                    <i class="fa fa-bell" aria-hidden="true"></i>
+                                </button>
+                             </div>
+
+                               <div>
+                                <button type="button" class="btn action-btns settings-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="settings">
+                                    <i class="fa fa-gear" aria-hidden="true"></i>
+                                </button>
+                             </div>
+                             <div class="admin-mode-box">
+                                <div class="admin-mode">Admin</div>
+                                <img class="img-fluid admin-img" src="../Assets/Images/admin/customer01.jpg" alt="admin img loading">
+                            </div>
+                            </div>
+                    </div>
+                </nav>
+            <!-- END NAVBAR SECTION-->
+
+            <!-- START DASH BOARD SECTION -->
+            <section class="dashboard-section">
+                <div class="container">
+                    <div class="row">
+                      <div class="col-md-12">
+                          <h1>Dashboard</h1>
+                          <p>Welcome to the admin dashboard.</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="quick-status-wrapper">
+                              <div class="card-box">
+                                  <div class="card-icon">
+                                      <i class="fa fa-solid fa-users text-info"></i>
+                                  </div>
+                                  <div class="card-body">
+                                      <div class="card-box-details">
+                                          <span class="card-title">Total Students</span>
+                                          <span id="totalStudentNumber" class="total-number">213</span>
+                                      </div>            
+                                      <div class="progress-status-bar">
+                                          <div>40%</div>
+                                      </div>
+                                  </div>
+                                  <p class="update-time"> Last updated 23mins ago</p>
+                              </div>
+                              <div class="card-box">
+                                  <div class="card-icon">
+                                      <i class="fa fa-user-plus text-warning" aria-hidden="true"></i>
+                                  </div>
+                                  <div class="card-body">
+                                      <div class="card-box-details">
+                                          <span class="card-title">New Students</span>
+                                          <span id="totalStudentNumber" class="total-number">13</span>
+                                      </div>            
+                                      <div class="progress-status-bar">
+                                          <div>40%</div>
+                                      </div>
+                                  </div>
+                                  <p class="update-time"> Last updated a minute ago</p>
+                              </div>
+                              <div class="card-box">
+                                <div class="card-icon">
+                                    <i class="fa fa-user-secret text-warning" aria-hidden="true"></i>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-box-details">
+                                        <span class="card-title">Teacher</span>
+                                        <span id="totalStudentNumber" class="total-number">9</span>
+                                    </div>            
+                                    <div class="progress-status-bar">
+                                        <div>40%</div>
+                                    </div>
+                                </div>
+                                <p class="update-time"> Last registraton 3 minutes ago</p>
+                            </div>
+                              <div class="card-box">
+                                  <div class="card-icon">
+                                      <i class="fa fa-solid fa-box-open text-primary-emphasis"></i>
+                                  </div>
+                                  <div class="card-body">
+                                      <div class="card-box-details">
+                                          <span class="card-title">Total Courses</span>
+                                          <span id="totalStudentNumber" class="total-number">7</span>
+                                      </div>            
+                                      <div class="progress-status-bar" style="border-color: green !important;">
+                                          <div>100%</div>
+                                      </div>
+                                  </div>
+                                  <p class="update-time"> Last added 2 years ago</p>
+                              </div>
+                              <div class="card-box">
+                                  <div class="card-icon">
+                                      <i class="fa fa-solid fa-dollar-sign text-danger"></i>
+                                  </div>
+                                  <div class="card-body">
+                                      <div class="card-box-details">
+                                          <span class="card-title">Fees Collection</span>
+                                          <span id="totalStudentNumber" class="total-number">UGX 2.3M</span>
+                                      </div>            
+                                      <div class="progress-status-bar border-warning">
+                                          <div>10%</div>
+                                      </div>
+                                  </div>
+                                  <p class="update-time">Last paid 2 days ago</p>
+                              </div>
+                      </div>
+                </div>
+                <div class="container">
+                    <div class="row my-4 px-5 d-flex justify-content-around  flex-wrap g-4">
+                    <div class="col-md-6">
+                        <span class=" fs-3">Calender</span>
+                        <div class="calender-container my-4">
+                        <div class="calender-header">
+                            <button class="prev-btn"><</button>
+                        <span class="month-name fs-5 text-info"></span>
+                        <button class="next-btn">></button>
+                    </div>
+                    <div class="calender-body">
+                        <div class="week-days">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div class="days-container">
+
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                     <div class="col-md-6">
+                        <span class="fs-3">Top Students</span>
+                      <div class="top-students my-4">
+                        <ul class="navbar-nav nav">
+                            <li class="nav-item">
+                                <div class=" position-relative">
+                                <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid" alt="">
+                                    <span class="active-status-ball"></span>
+                                </div>
+                                <div class="d-flex flex-column justify-content-start  align-items-start">
+                                    <span class="top-student-name fw-bold">Lucjan Jamil</span>
+                                    <span class="top-student-email">myemail@gmail.com</span>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="position-relative">
+                                <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid" alt="">
+                                    <span class="active-status-ball"></span>
+                                </div>
+                                <div class="d-flex flex-column justify-content-start  align-items-start">
+                                    <span class="top-student-name fw-bold">Lucjan Jamil</span>
+                                    <span class="top-student-email">myemail@gmail.com</span>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="  position-relative ">
+                                <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid" alt="">
+                                    <span class="active-status-ball"></span>
+                                </div>
+                                <div class="d-flex flex-column justify-content-start  align-items-start">
+                                    <span class="top-student-name fw-bold">Lucjan Jamil</span>
+                                    <span class="top-student-email">myemail@gmail.com</span>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="row mt-5 px-5">
+                    <div class="col-md-12">
+                        <span class=" fs-3">Teachers</span>
+                    <div class="teacher-details-container table-responsive my-4">
+                        <div class="heading px-3 d-flex align-items-center  justify-content-between  ">
+                        <span> Teacher Details</span>
+                            <button type="button" class="btn btn-">
+                                View All
+                                <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    <table class="table table-striped table-inverse table-responsive">
+                        <thead class="thead-inverse">
+                            <tr>
+                                <th>Names</th>
+                                <th>Taught Courses</th>
+                                <th>Contact</th>
+                                <th>Email</th>
+                                <th>status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">Lucjan Jamil</td>
+                                    <td>
+                                        <ul class="navbar nav p-0 bg-transparent">
+                                            <li>Iple</li>
+                                            <li>Quran</li>
+                                            <li>Idaad</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <span class="teacher-contact">+2569-000000</span>
+                                    </td>
+                                    <td>
+                                        <span class="teacher-email">myemail00@gmail.com</span>
+                                    </td>
+                                    <td>
+                                        <span class="teacher-status">Online</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Lucjan Jamil</td>
+                                    <td>
+                                        <ul class="navbar nav p-0">
+                                            <li>Iple</li>
+                                            <li>Quran</li>
+                                            <li>Idaad</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <span class="teacher-contact">+2569-000000</span>
+                                    </td>
+                                    <td>
+                                        <span class="teacher-email">myemail00@gmail.com</span>
+                                    </td>
+                                    <td>
+                                        <span class="teacher-status">Online</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                    </table>
+                     </div>
+                     </div>
+                    </div>
+            </div>
+            <div class="container">
+                <div class="row mb-5 px-5">
+                    <span class="fs-3 py-4">Last Payments</span>
+                    <div class="last-payment-container">
+                        <div class="heading d-flex align-items-center  justify-content-between  ">
+                            <span> Payment Details</span>
+                                <button type="button" class="btn btn-">
+                                    View All
+                                    <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                    <div class="col-md-12 table-responsive">
+                        <table class=" table table-responsive table-hover " style="white-space: nowrap;">
+                            <thead class="thead-inverse">
+                                <tr class="text-center">
+                                    <th>No</th>
+                                    <th>Profile</th>
+                                    <th>Names</th>
+                                    <th>Enrolled Courses</th>
+                                    <th>Payment</th>
+                                    <th>Type</th>
+                                    <th>Date</th>
+                                    <th>Email</th>
+                                    <th>Mobile Number</th>
+                                </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <tr>
+                                        <td scope="row" class="number border-start ">
+                                           <span>1.</span>
+                                        </td>
+                                        <td> <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid student-profile-img" alt="Profile Loading..." sizes="40px" srcset=""> </td>
+                                        <td class="student-name">Lucjan Jamil </td>
+                                        <td class="course-name">Thanawi, Quran</td>
+                                        <td> <span class="amoutn-paid">UGX 25000</span></td>
+                                        <td class="text-danger fw-bold"> <span class="amount-type">half</span></td>
+                                        <td>
+                                            <span class="payment-date">Today</span>
+                                         </td>
+                                         <td>
+                                            <span class="student-email">myemail00@gmail.com</span>
+                                         </td>
+                                        <td>
+                                            <span class="student-mobile-contact" style="cursor: grab;">+256727000000</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row" class="number border-start ">
+                                           <span>2.</span>
+                                        </td>
+                                        <td> <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid student-profile-img" alt="Profile Loading..." sizes="40px" srcset=""> </td>
+                                        <td class="student-name">Lucjan Jamil </td>
+                                        <td class="paid-courses">Thanawi, Quran</td>
+                                        <td> <span class="amoutn-paid">UGX 50000</span></td>
+                                        <td class="text-success fw-bold"> <span class="amount-type">Completed</span></td>
+                                        <td>
+                                            <span class="payment-date">Yesterday</span>
+                                         </td>
+                                         <td>
+                                            <span class="student-email">myemail00@gmail.com</span>
+                                         </td>
+                                        <td>
+                                            <span class="student-mobile-contact" style="cursor: grab;">+256727000000</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                         </table>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="container">
+                <footer class="my-5 py-4">
+                    <div class=" text-dark">
+                        <p>&copy; 2024 Sama Islamic Digital Platform. All rights reserved.</p>
+                        </div>
+                </footer>   
+            </div>
+            </section>
+            <!-- END DASH BOARD SECTION -->
+
+        </main>
+        <section class="recent-update-notifications">
+            <div class="container-fluid">
+                <div class="container d-flex flex-column  justify-content-start header">
+                    <span class="fs-5 fw-bolder">Recent Students</span>
+                   <span class="text-secondary small">You have  <span class="new-student-number">23</span> new Students</span>
+                </div>
+                <div class="container">
+                    <div class="recent-students">
+                        <ul class="navbar-nav nav">
+                            <li class="nav-item d-flex  align-items-start  justify-content-start">
+                                <img src="../Assets/Images/student_imgs/customer01.jpg" alt="loading" sizes="40px" class="recent-student-img" srcset="">
+                                <div class="course-class-details ms-2">
+                                    <span class="recent-student-name fw-bold">Lucjan Jamil</span>
+                                    <div class="d-flex small text-secondary">
+                                    <span class="recent-student-course">Thanawi</span>,
+                                    <span class="recent-student-class">Senior Five</span>
+                                </div>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex  align-items-start  justify-content-start">
+                                <img src="../Assets/Images/student_imgs/customer01.jpg" alt="loading" sizes="40px" class="recent-student-img" srcset="">
+                                <div class="course-class-details ms-2">
+                                    <span class="recent-student-name fw-bold">Lucjan Jamil</span>
+                                    <div class="d-flex small text-secondary">
+                                    <span class="recent-student-course">Thanawi</span>,
+                                    <span class="recent-student-class">Senior Five</span>
+                                </div>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex  align-items-start  justify-content-start">
+                                <img src="../Assets/Images/student_imgs/customer01.jpg" alt="loading" sizes="40px" class="recent-student-img" srcset="">
+                                <div class="course-class-details ms-2">
+                                    <span class="recent-student-name fw-bold">Lucjan Jamil</span>
+                                    <div class="d-flex small text-secondary">
+                                    <span class="recent-student-course">Thanawi</span>,
+                                    <span class="recent-student-class">Senior Five</span>
+                                </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn rounded-5 p-1 px-2 w-100 text-light" style="background: rgb(0, 105, 234);">View All</button>
+                </div>
+            </div>
+            <div class="container-fluid mt-4">
+                <div class="container d-flex flex-column  justify-content-start header">
+                    <span class="fs-5 fw-bold">Messages</span>
+                   <span class="text-secondary small">You have <span class="new-message-number">232</span> new messages</span>
+                </div>
+                <div class="container">
+                    <div class="messages mb-5">
+                        <ul class="navbar-nav nav">
+                            <li class="nav-item d-flex  align-items-start  justify-content-start">
+                                <img src="../Assets/Images/student_imgs/customer01.jpg" alt="loading" sizes="40px" class="message-user-img" srcset="">
+                                <div class="message-user-details ms-1">
+                                    <span class="message-user-name fw-bold">Lucjan Jamil</span>
+                                    <div class="message-user-email">
+                                        <span class="new-user">myemail00@gmail.com</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex  align-items-start  justify-content-start">
+                                <img src="../Assets/Images/student_imgs/customer01.jpg" alt="loading" sizes="40px" class="message-user-img" srcset="">
+                                <div class="message-user-details ms-1">
+                                    <span class="message-user-name fw-bold">Lucjan Jamil</span>
+                                    <div class="message-user-email">
+                                        <span class="new-user">myemail00@gmail.com</span>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="nav-item d-flex  align-items-start  justify-content-start">
+                                <img src="../Assets/Images/student_imgs/customer01.jpg" alt="loading" sizes="40px" class="message-user-img" srcset="">
+                                <div class="message-user-details ms-1">
+                                    <span class="message-user-name fw-bold">Lucjan Jamil</span>
+                                    <div class="message-user-email">
+                                        <span class="new-user">myemail00@gmail.com</span>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="nav-item d-flex  align-items-start  justify-content-start">
+                                <img src="../Assets/Images/student_imgs/customer01.jpg" alt="loading" sizes="40px" class="message-user-img" srcset="">
+                                <div class="message-user-details ms-1">
+                                    <span class="message-user-name fw-bold">Lucjan Jamil</span>
+                                    <div class="message-user-email">
+                                        <span class="new-user">myemail00@gmail.com</span>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="nav-item d-flex  align-items-start  justify-content-start">
+                                <img src="../Assets/Images/student_imgs/customer01.jpg" alt="loading" sizes="40px" class="message-user-img" srcset="">
+                                <div class="message-user-details ms-1">
+                                    <span class="message-user-name fw-bold">Lucjan Jamil</span>
+                                    <div class="message-user-email">
+                                        <span class="new-user">myemail00@gmail.com</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn rounded-5 p-1 px-2 w-100 text-light mb-5" style="background: rgb(0, 207, 234);">View All</button>
+                </div>
+            </div>
+        </section>
+       
+    </div>
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< END DASHBOARD SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+
+    
+    <script src="../Scripts/bootsrap/bootstrap.min.js"></script>
+    <script src="../Scripts/Jquery/"></script>
+    <script src="../Scripts/Js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/3acc367a10.js" crossorigin="anonymous"></script>
+    </body>
+  </html>
+  

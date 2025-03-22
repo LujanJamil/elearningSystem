@@ -1,0 +1,83 @@
+/* MOBILE DEVICES */
+@media (max-width: 768px) {
+    header {
+        border-radius: 0;
+    }
+    
+    header .container{
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    header .container button{
+        flex-grow: 1 !important;
+        margin-inline: 10px;
+    }
+
+    /* .authenication-box  */
+    .authenication-box {
+        width: 100% !important;
+        /* margin-top: 15px; */
+    }
+    .main-course-section-filter-search-form {
+        margin-block: 20px 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-card .course-card-descripition{
+        text-align: start !important;
+    }
+    .contact-form {
+      padding: 10px;
+    }
+    .footer-bottom {
+        padding-inline: 20px;
+    }
+    .what-we-offer, .popular-courses, .faq-section > h3,h2 {
+        font-size: 25px !important;
+    }
+    .what-we-offer h3  {      
+        font-size: 25px;    
+    }
+    .logo-img {
+        max-width: 50px  !important;
+        max-height: 50px;
+    }
+    .logo-content {
+        align-items: center;
+        justify-content: center !important;
+        text-align: center;
+        width: unset  !important;
+    }
+    .logo-content .logo-img {
+        margin-bottom: 10px;
+        justify-self: center;
+    }
+    .navbar-brand{
+        margin-left: unset !important;
+        font-size: small !important;
+    }
+}
+@media (min-width: 768px) {
+    /* .main-course-section-filter-search-form {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+    } */
+
+    .authenication-box {
+        display: flex;
+    }
+
+    .main-course-section-filter-search-form  .main-section-filter-icon {
+        left: 1%;
+    }
+    
+    
+} 

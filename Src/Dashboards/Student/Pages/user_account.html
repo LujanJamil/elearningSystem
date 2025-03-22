@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../Assets/Images/Backgrounds/logo.png" />
+    <title>Sama Islamic Digital College | my account</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Assets/Styles/Boostrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Styles/user-account-styles.css">
+    <link rel="stylesheet" href="../Assets/Icons/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Styles/main_styles.css">
+    <link rel="stylesheet" href="../Styles/responsive.css">
+    <!-- <link rel="stylesheet" href="../Styles/responsive.css"> -->
+  </head>
+  <body>
+      <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< START HEADER SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+      <div class="student-dashboard-wrapper">
+        <header class="container-fluid px-0">
+            <div class="nav-wrapper">
+               <!-- Start Navigation Menu -->
+               <div class="links-container">
+                <ul class="nav">
+                  <li class="nav-item">
+                    <a href="../../../../Public/Guest User/Pages/Home/home.html" aria-current="page">
+                      <i class="icon fa fa-solid fa-house-user"></i>
+                    </a>
+                    <span>Home</span>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./Default.html">
+                    <i class="icon fa fa-box-open"></i>
+                    </a>
+                    <span>My class</span>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./myCourses.html">
+                      <i class="icon fa fa-graduation-cap" aria-hidden="true"></i>
+                    </a>
+                    <span>My courses</span>
+                  </li>
+                  <li class="nav-item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                    <a href="./user_account.html">
+                    <i class="icon fa fa-user-circle" aria-hidden="true"></i>
+                    </a>
+                    <span>Account</span>
+                  </li>
+                  <li class="nav-item" data-bs-toggle="offcanvas" data-bs-target="#notifications">
+                    <a href="./notifications.html">
+                      <i class="icon fa fa-bell" aria-hidden="true"></i>
+                    </a>
+                    <span>Notifications</span>
+                  </li>
+                </ul>
+               </div>
+              <!-- End Navigation Menu -->
+            </div>
+        </header>
+        <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< END HEADER SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< START ACCOUNT SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <main class="account-container mt-4 pt-5">
+      <div class="heading">Account Settings</div>
+      <div class="account-section">
+      <div class="container">
+        <div class="user-profile-info">
+            <div class="card user-content">
+                <div>
+                    <div>
+                        <img src="../Assets/Images/student_imgs/customer01.jpg"  class="img-fluid user-img" alt="user image laoding..">
+                        <div class="user-details">
+                            <span class="user-name">Lucjan Jamil</span>
+                            <span class="user-enrolled-courses">Thanawi, Quran, Idaad</span>
+                        </div>
+                    </div>
+                    <span class="edit-btn" id="ChangeprofileBtn">
+                        <i class="fa fa-solid fa-camera change-user-img-icon"></i>
+                    </span>
+                </div>
+                <button data-bs-toggle="collapse" data-bs-target="#editProfile" type="button" class="btn btn-primary manage-account-settings">Manage Account 
+                  <i class="fas fa-user-lock pe-2"></i>
+                </button>
+            </div>
+            <div class="card user-quick-choices">
+                <ul class="nav quick-user-choices">
+                    <li class="nav-item">
+                      <a class="nav-link">
+                        <i class="quick-icons fas fa-book-reader" style="color: rgb(209, 209, 57);"></i>
+                        <span>Report Cards</span>
+                      </a>
+                    </li>
+                    <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#studentProgressContainer" aria-expanded="false" aria-controls="contentId">
+                          <i class="quick-icons fas fa-hand text-info"></i>
+                        <span>Progress</span>
+                    </li>
+                    <li class="nav-item" data-bs-toggle="modal" data-bs-target="#logoutBox">
+                      <a class="nav-link">
+                        <i class="quick-icons fa fa-sign-out" style="color: rgb(135, 143, 142);" aria-hidden="true"></i>
+                        <span>Log out</span>
+                      </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card user-course-settings custom">
+                <ul class="navbar-nav nav">
+                  <li>
+                    <i class="fa fa-book-open "></i>
+                        <span data-bs-toggle="collapse" data-bs-target="#learn" ><span>Enrolled Courses</span><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+                      </li>
+                      <li>
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <span data-bs-toggle="collapse" data-bs-target="#learn" ></i><span>Course Timetable</span><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+                      </li>
+                      <li>
+                        <svg style="width: 25px; fill: white; " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M384 160c-17.7 0-32-14.3-32-32s14.3-32 32-32l160 0c17.7 0 32 14.3 32 32l0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-82.7L342.6 374.6c-12.5 12.5-32.8 12.5-45.3 0L192 269.3 54.6 406.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160c12.5-12.5 32.8-12.5 45.3 0L320 306.7 466.7 160 384 160z"/></svg>
+                        <span data-bs-toggle="collapse" data-bs-target="#learn" ><span>Course Progress</span> <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </span>
+                      </li>
+                  </ul>
+            </div>
+            <div class="card account-preference custom">
+                <ul class="navbar-nav nav">
+                        <li>
+                            <i class="fas fa-user-cog"></i>
+                          <span data-bs-toggle="offcanvas" data-bs-target="#account-settings" > <span>Settings </span><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+                        </li>
+                        <!-- <a style="text-decoration: none; border-bottom: 1px solid rgb(0, 43, 70);" href="./certificates.html"> -->
+                          <li>
+                            <i class="fa fa-download" aria-hidden="true"></i>
+                          <span data-bs-toggle="collapse" data-bs-target="#learn" > <span>Report Card Download</span><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+                        </li>
+                            <!-- </a> -->
+                        <!-- <a style="text-decoration: none;" href="./payment_history.html"> -->
+                          <li>
+                            <i class="fas fa-user-lock"></i>
+                          <span> <span>Payment History</span><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+                        </li>
+                            <!-- </a> -->
+                       
+                </ul>
+            </div>
+            <div class="card support-box custom">
+                <ul class="navbar-nav nav">
+                    <li>
+                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                      <span data-bs-toggle="offcanvas" data-bs-target="#help-center" > <span>Help Center</span><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+                    </li>
+                    <li>
+                        <i class="fas fa-headset"></i>
+                      <span data-bs-toggle="collapse" data-bs-target="#learn" > <span>Contact Us</span><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+                    </li>
+            </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="account-tab-container collapse" id="editProfile">
+    <div class="container">
+   <div class="all-content-wrapper pt-5 mt-4">
+     <div class="user-settings-card">
+      <div class="container">
+        <div class="row">
+          <div class="heading">
+            <div>
+              <button class="btn border-0 outline-none text-light" data-bs-target="#editProfile" data-bs-toggle="collapse" aria-expanded="false" aria-controls="edit-profile">
+                <span>
+                  <i class="fa fa-arrow-left fs-4" aria-hidden="true"></i>
+                </span>
+              </button>
+            </div>
+            <span class="heading-text">Edit Profile</span>
+            <div></div>
+          </div>
+        </div>
+      </div>
+     <div class="container">
+       <form class="row g-3">
+         <div class="card-wrap">
+           <div class="col-md-4">
+             <label for="surname" class="form-label">Surname</label>
+             <input disabled type="text" class="form-control" placeholder="First name" value="Lucjan">
+           </div>
+           <div class="col-md-4">
+             <label for="giveaname" class="form-label">Given name</label>
+             <input disabled type="text" class="form-control" placeholder="Last name" value="Jamil">
+                  </div>
+           <div class="col-md-4">
+             <label for="othernames" class="form-label">Other Names</label>
+             <input disabled type="text" class="form-control" placeholder=" Other names" value="Lucjan Jamil">
+           </div>
+           <button type="button" class="save-btn btn btn-primary">Save changes</button>
+         </div>
+         <div class="card-wrap">
+           <div class="col-md-4 form-group">
+             <label for="Country/region" class="form-label">Select Country / region</label>
+             <select  class="form-select">
+                 <option class="hidden form-select"  selected disabled>Select  Country / region  </option>
+                 <option>Uganda</option>
+                 <option> Kenya</option>
+                 <option> Tanzania</option>
+             </select>
+            </div>
+                  <div class="col-md-4 form-group">
+                 <label for="email" class="form-label">Email</label>
+                    <input disabled type="email" class="form-control" placeholder="Email" value="myemail@gmail.com">
+                  </div>
+                  <div class="col-md-4 form-group">
+                    <label class="region" class="form-label">Mobile number</label>
+                    <div class="input-group">
+                      <span class="input-group-text" id="inputGroupPrepend">
+                        <span>+256 <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                      </span>
+                      <input disabled type="tel" class="form-control tel" placeholder="Mobile number" value="7581819775">
+                    </div>
+                  </div>
+                 <button type="button" class="save-btn btn btn-primary">Save changes</button>
+         </div>
+         <div class="col-md-12">
+           <button class="btn btn-primary change-passw-btn" type="button" data-bs-toggle="collapse" data-bs-target="#change-password-card" aria-expanded="false" aria-controls="change-password">Change Password</button>
+             <div class="collapse" id="change-password-card">
+              <div class="card-wrap">
+               <div class="form-group">
+                 <label for="current password">Enter your Current Password</label>
+                 <input disabled type="password" name="" id="" class="form-control" placeholder="..ddddd....." >
+               </div>
+               <div class="form-group">
+                 <label for="new password">New Password</label>
+                 <input disabled type="password" name="" id="" class="form-control" placeholder="..ddddd....." >
+               </div>
+               <div class="form-group">
+                 <label for="confirm password">Confirm New Password</label>
+                 <input disabled type="password" name="" id="" class="form-control" placeholder="..ddddd....." >
+               </div>
+           <button type="button" class="save-btn btn btn-primary">Save changes</button>
+          </div>
+           </div>
+         </div>
+       </form>
+   </div>
+   </div>
+   </div>  
+   </div>
+  </div>
+  <!-- ACCOUNT TAB LIST -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="account-settings" aria-labelledby="offcanvasRightLabel">
+  <div class="account-setings pt-5 mt-4">
+  <div class="account-settings-header">
+    <i class="fa fa-arrow-left"  data-bs-dismiss="offcanvas" aria-hidden="true"></i>
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Account </h5>
+    <div></div>
+  </div>
+  <div class="offcanvas-body">
+    <div class="container px-0">
+    <div class="card-wrap account-box">
+      <div class="col-md-4 navbar-nav nav">
+          <li>
+          <span >
+            <span data-bs-toggle="collapse" data-bs-target="#deleteAccount" >
+              <i class="fas fa-user-alt-slash pe-3 fs-4 text-danger"></i>
+              <span>Delete my account</span>
+            </span>
+              <i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+        </li>  
+      </div>
+      <div class="col-md-4">
+        <li class="border-0">
+          <span data-bs-toggle="collapse" data-bs-target="#changeLanguage" >
+            <i class="fa fa-language text-info pe-3 fs-4" aria-hidden="true"></i>
+             <span>Change Language </span>
+             <i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+        </li>
+          </div>
+    </div>
+</div>
+<!-- Delete my account -->
+<div class="collapse" id="deleteAccount">
+  <div class="card-body">
+    <div class="user-delete-card">
+      <div class="container mt-4 pt-5">
+        <div class="row">
+          <div class="heading">
+            <div>
+              <a data-bs-toggle="collapse" data-bs-target="#deleteAccount"  class="text-light z-3"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+            </div>
+            <span class="heading-text">Delete my account</span>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div class="px-3">
+        <div>
+        <i class="fa fa-warning text-warning fa-3x pe-3" aria-hidden="true"></i>
+          <span class="warn-heading">Deleting your account will:</span>
+        </div>
+        <ul>
+          <li>Delete your account info and enrolled courses</li>
+          <li>Delete your account from <span class="text-warning">Sama Islamic Digital College</span></li>
+          <li>Delete all your class chats, payment history and all course progress</li>
+          <li>Delete Attendance and attempted assignments</li>
+        </ul>
+        <button type="button" class="btn btn-danger w-100 shadow-none">Delete my account</button>
+      </div>
+   </div>
+  </div>
+</div>
+<!-- change language -->
+<div class="collapse" id="changeLanguage">
+  <div class="card-body">
+    <div class="user-notification-card px-3">
+      <div class="container mt-4 pt-5">
+        <div class="row">
+          <div class="heading">
+            <div>
+              <a data-bs-toggle="collapse" data-bs-target="#changeLanguage"  class="text-light z-3"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+            </div>
+            <span class="heading-text">Change Language</span>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div class="w-100">
+        <div class="card-wrap">
+        <div class="form-check text-light d-flex justify-content-center align-items-start flex-column  ">
+          <label class="form-check-label w-100"> 
+            <input class="form-check-input me-4" type="radio" name="language" id="englishLang" value="English" checked>
+                <span>English</span> 
+          </label>
+          <hr class="w-100 text-light">
+          <label class="form-check-label w-100"> 
+            <input  class="form-check-input me-4" type="radio" name="language" id="arabicLang" value="Arabic">
+                <span>Arabic</span> 
+          </label>
+        </div>
+      </div>
+      <button type="button" class="btn btn-secondary save-lang">Save</button>
+      </div>
+   </div>
+  </div>
+</div>
+  </div>
+</div>
+</div>
+
+<!-- HELP CENTER -->
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="help-center" aria-labelledby="offcanvasRightLabel">
+  <div class="help-center">
+  <div class="help-center-header">
+    <i class="fa fa-arrow-left"  data-bs-dismiss="offcanvas" aria-hidden="true"></i>
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Help Center </h5>
+    <div></div>
+  </div>
+  <!-- help Main box -->
+  <div class="offcanvas-body-container">
+    <div class="collapse" id="helpBox">
+      <div class="user-help-box">
+       <div class="container mt-4 pt-5">
+         <div class="row">
+           <div class="heading">
+             <div>
+               <span data-bs-toggle="collapse" data-bs-target="#helpBox">Cancel</span>
+             </div>
+             <span class="text-heading">Contact Us</span>
+             <div></div>
+           </div>
+         </div>
+       </div>
+      <div class="container help-main-box">
+        <div class="col-md-4">
+        <textarea name="" id="" cols="40" rows="10" placeholder="Tell us how we can help you in at least 5 characters"></textarea>
+        <small class="text-secondary">
+          By continuing, you allow Sama Platform Help Center to review technical information about your 
+          courses, lessons, Account and other Related
+           Information to help answer your question.
+        </small>
+        <button type="button" class="btn btn-primary send-help-btn my-3">Send Via Email</button>
+      </div>
+    </div>
+    </div>
+    </div>
+    <div class="container d-flex align-items-stretch justify-content-stretch  flex-column mt-5 pt-5">
+      <div class="logo-container-img-wrapper">
+        <img src="../../../../Public/Guest User/Assets/Images/Backgrounds/logo.png" class="img-fluid" alt="Logo Image loading.....">
+      </div>
+    <div class="card-wrap account-box">
+      <div class="col-md-4 navbar-nav nav">
+          <li class="pb-4">
+          <span ><span data-bs-toggle="collapse" data-bs-target="#helpBox">I need Your Help</span><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+        </li>  
+      </div>
+      <div class="col-md-4 navbar-nav nav">
+        <a href="./terms_Privacy.html" class="text-decoration-none">
+          <li class="border-0">
+            <span> <span>Terms and Privacy Policy </span><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+          </li>
+        </a>
+          </div>
+        </div>
+        <small class="text-secondary">&copy; <span id="currentDate">2024</span> Sama Islamic Digital Platform. All rights reserved.</small>
+    </div>
+</div>
+<!-- Notifications Preferences  -->
+<div class="collapse" id="notifications">
+  <div class="card-body">
+    <div class="user-notification-card px-3">
+      <div class="container">
+        <div class="row">
+          <div class="heading">
+            <div>
+              <a data-bs-toggle="collapse" data-bs-target="#notifications"  class="text-light z-3"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+            </div>
+            <span class="heading-text">Notification Preferences</span>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div class="card-notify w-100">
+       <div class="form-check form-switch d-flex w-100 form-card p-0">
+         <label class="form-check-label" for="flexSwitchCheckChecked">Allow assignments notifications</label>
+         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+       </div>
+      </div>
+   </div>
+  </div>
+</div>
+<!-- Delete my account -->
+<div class="collapse" id="deleteAccount">
+  <div class="card-body">
+    <div class="user-delete-card">
+      <div class="container">
+        <div class="row">
+          <div class="heading">
+            <div>
+              <a data-bs-toggle="collapse" data-bs-target="#deleteAccount"  class="text-light z-3"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+            </div>
+            <span class="heading-text">Delete my account</span>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div class="px-3">
+        <div>
+        <i class="fa fa-warning" aria-hidden="true"></i>
+          <span class="warn-heading">Deleting your account will:</span>
+        </div>
+        <ul>
+          <li>Delete your account info and enrolled courses</li>
+          <li>Delete your account from <span class="text-warning">Sama Islamic Digital College</span></li>
+          <li>Delete all your class chats, payment history and all course progress</li>
+          <li>Delete Attendance and attempted assignments</li>
+        </ul>
+        <button type="button" class="btn btn-danger w-100 shadow-none">Delete my account</button>
+      </div>
+   </div>
+  </div>
+</div>
+<!-- change language -->
+<div class="collapse" id="changeLanguage">
+  <div class="card-body">
+    <div class="user-notification-card px-3">
+      <div class="container">
+        <div class="row">
+          <div class="heading">
+            <div>
+              <a data-bs-toggle="collapse" data-bs-target="#changeLanguage"  class="text-light z-3"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+            </div>
+            <span class="heading-text">Change Language</span>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div class="w-100">
+        <div class="card-wrap">
+        <div class="form-check text-light d-flex justify-content-center align-items-start flex-column  ">
+          <label class="form-check-label w-100">
+            <input class="form-check-input me-4" type="radio" name="" id="" value="checkedValue" checked> English
+          </label>
+          <hr class="w-100 text-light">
+          <label class="form-check-label w-100">
+            <input class="form-check-input me-4" type="radio" name="" id="" value="checkedValue"> Arabic
+          </label>
+        </div>
+      </div>
+      <button type="button" class="btn btn-secondary save-lang">Save</button>
+      </div>
+   </div>
+  </div>
+</div>
+  </div>
+</div>
+
+<!-- REPORT CARDS -->
+<div class="student_progress_container collapse" id="studentProgressContainer">
+  <div class="container">
+
+    <div class="progress-header">
+        <span  style="color: rgb(249, 228, 3);" class="border-0 btn p-0 ps-3" type="button" data-bs-toggle="collapse" data-bs-target="#studentProgressContainer" aria-expanded="false" aria-controls="contentId">
+          close
+        </span>
+        <span>My Progress</span>
+        <span></span>
+    </div>
+
+  <div class="progress-container">
+     <div class="progress-container-wrapper">
+         <div class="card-progress">
+             <div class="progress-text-img">Thanawi</div>
+             <div class="progress-details">
+                 <span class="class-course">Senior Five</span>
+                 <div class="duration-wrapper">
+                 <div>
+                  <span> 
+                    <i class="fa fa-book text-info" aria-hidden="true"></i>
+                    <span>10 / 21 Topics</span>
+                </span>
+                     <span> 
+                         <i class="fa fa-book-open text-primary"></i> 
+                         <span>10 / 21 lessons</span>
+                     </span>
+                     <span> 
+                         <i class="fas fa-pencil-ruler text-success"></i>
+                         <span>2 / 12 Assignments</span>
+                     </span>
+                     <span> 
+                         <i class="fa fa-stopwatch text-warning"></i> 
+                         <span>18 months left</span>
+                     </span>
+                 </div>    
+                         <div class="progress-indicator">
+                             <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                 <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%">75%</div>
+                               </div>
+                     </div>
+                 </div>
+
+             </div>
+         </div>
+     </div>
+   </div>
+
+    </div>
+</div>
+
+<!-- LOG OUT BOX-->
+<div class="container">
+  <div class="modal fade" id="logoutBox" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content logout-box">
+              <div class="modal-header border-0" >
+                  <h5 class="modal-title text-center  fs-3 p-3 text-light ">Are you sure you want to Log out?</h5>
+              </div>
+              <div class="d-flex align-items-center   justify-content-evenly pb-5 modal-footer" style="border: none !important;">
+                  <button type="button" class="btn shadow-none outline-none border-none  btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn  shadow-none outline-none border-none btn-danger" id="logoutBtn">Logout</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- LOG OUT BOX-->
+</div>
+
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< END ACCOUNT SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <script src="../Assets/Script/boostrap/bootstrap.min.js"></script>
+    <!-- <script src="../Scripts/my_class.js"></script> -->
+    <script src="../Scripts/user_account.js"></script>
+    <!-- <script src="../Assets/Script/js/main.js"></script> -->
+    <script src="../Scripts/mainScript.js"></script>
+    <script src="../Assets/Icons/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/3acc367a10.js"crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+  </body>
+</html>

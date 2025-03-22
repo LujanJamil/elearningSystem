@@ -1,0 +1,153 @@
+.about-us-section {
+    padding: 100px;
+    background-color: #f7f7f7;
+  }
+  
+  .about-us-section h1 {
+    font-size: 36px !important;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .about-us-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: start;
+    color: #666;
+  }
+  
+  .about-us-section ul {
+    list-style: disc;
+    padding: 0;
+    margin: 0;
+    color: #666;
+  }
+  
+  .about-us-section li {
+    margin-bottom: 10px;
+  }
+  
+  .about-us-section img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #0884c7;
+  }
+  .testimonial {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .testimonial p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #666;
+    }
+    
+    .testimonial h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+    }
+    
+    .testimonial img {
+    width: 100PX;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 2px;
+    border: 2px solid #0884c7;
+    }
+    
+    .img-fluid {
+    max-width: 100%;
+    height: auto;
+    }
+    
+    .rounded-circle {
+    border-radius: 50%;
+    }
+  
+  .about-us-section h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  /* Team Member Styles */
+  
+  .team-member {
+    margin-bottom: 30px;
+  }
+  
+  .team-member img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .team-member h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  .team-member p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #999;
+  }
+
+
+.about-us-section .testimonial-wrapper::-webkit-scrollbar-thumb:hover { 
+  background-color: rgb(5, 97, 226);
+  }
+  
+  
+  /* Responsive Styles */
+  
+  @media (max-width: 768px) {
+    .testimonial-wrapper {
+      background: red;
+    }
+    .about-us-section {
+      padding: 50px 0;
+    }
+    .about-us-section h1 {
+      font-size: 24px;
+    }
+    .about-us-section p {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-us-section {
+      padding: 30px 0;
+    }
+    .about-us-section h1 {
+      font-size: 18px;
+    }
+    .about-us-section p {
+      font-size: 14px;
+    }
+  }

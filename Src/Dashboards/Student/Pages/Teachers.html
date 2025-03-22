@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../Assets/Images/Backgrounds/logo.png" />
+    <title>Sama Islamic College | class room</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Assets/Styles/Boostrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Assets/Icons/css/all.css">
+    <link rel="stylesheet" href="../Styles/text.css">
+  </head>
+  <body>
+
+    <div class="teacher-dashboard-wrapper">
+    <!-- START HEADER SECTION -->
+        <header>
+            <div class="container position-relative ">
+              <div class="student-quick-center-wrapper">
+                <div class="student-quick-actions-wrapper">
+                <div class="other-actions"> 
+                    <ul class="navbar-nav nav other-actions-content">
+                      <li class="nav-item me-3" data-bs-toggle="collapse" data-bs-target="#contactAdmin">
+                        <span>
+                            <i class="fa fa-user-shield"></i>
+                            Admin
+                        </span>
+                        <li class="logout-list-item" data-bs-toggle="modal" data-bs-target="#logoutBox">
+                          <span>
+                              <span class="user-title">Account</span>
+                              <img src="../Assets/Images/Teacher_imgs/customer02.jpg" class="img-fluid" alt="img loading...">
+                              <!-- <i class="fa fa-sign-in" aria-hidden="true"></i> -->
+                          </span>
+                      </li>
+                      </ul>
+                </div>
+              </div>
+                <div class="switch-content-header">
+                    <div class="switch-content-wrapper">
+                    <span class="switch-text">My Courses</span>
+                    <span class="switch-course-wrapper">
+                        <span class="current-course">IPLE</span>
+                        <button class="btn btn-primary switch-course-btn">
+                          <i class="fas fa-arrows-alt    "></i>
+                            <span><a href="./students.html" class="text-light">switch</a></span>
+                        </button>
+                    </span>
+                    </div>
+                </div>
+                <div class="search-dashboard-content-wrapper">
+                    <form action="" method="get">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                    <input type="search" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Search.....">
+                                  </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+          </div>
+      <!-- LOG OUT BOX-->
+        </header>
+    <!-- END HEADER SECTION -->
+        <!-- START TEACHER CHAT LIST -->
+        <div class="container-xsm">
+        <main class="container-fluids">
+            <div class="chat-list-container">
+              <ul class="navbar-nav nav chat-list">
+                  <div class="teacher-profile-content" data-bs-toggle="collapse" data-bs-target="#contentId">
+                    <img src="../Assets/Images/student_imgs/customer01.jpg" class="img-fluid teacher-img" alt="profile loading">
+                    <span class="teacher-chat-details">
+                      <span class="teacher-name-chat">
+                        <span class="teacher-name">Lucjan Jamil</span>
+                        <small class="text-secondary current-text">Tommorrow Send me the work</small>
+                      </span>
+                    </span>
+                    <span class="chat-time-details">
+                      <span class="time-record">15:21</span>
+                    <span class="unread-text">1</span>
+                    </span>
+                </div>
+              </ul>
+            </div>
+        </main>
+      </div>
+        <!-- END  TEACHER CHAT LIST -->
+        <!-- START TEACHER CHAT ROOM -->
+      <div class="collapse" id="contentId">
+        <div class="teacher-chat-room">
+        <header id="chat-room-header">
+          <div class="container-md">
+            <div class="teacher-profile-container">
+              <div class="teacher-profile">
+                <div class="back-btn">
+                  <a href="./Teachers.html" class="text-light"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                </div>
+                  <img data-bs-toggle="collapse" data-bs-target="#profileContainer"
+                    src="../Assets/Images/teacher_imgs/customer01.jpg"
+                    class="img-fluid teaher-img"
+                    alt="teacher image loading..."
+                  />
+                  <div class="teacher-details" data-bs-toggle="collapse" data-bs-target="#profileContainer">
+                    <div class="teacher-name">Lucjan Jamil</div>
+                    <small class="teacher-status">Teaching now....</small>
+                  </div>
+              </div>
+              <div class="teacher-call-action-center">
+                <ul class="navbar nav">
+                  <li class="nav-item ">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                  </li>
+                  <li class="nav-item">
+                    <i class="fa fa-video-camera" aria-hidden="true"></i>
+                  </li>
+                  <li class="nav-item dropstart">
+                            <i class="fa fa-ellipsis-v"  data-bs-toggle="dropdown"></i>
+                        <ul class="dropdown-menu">
+                          <li id="certificate-btn-direct">
+                              <i class="fa fa-download" aria-hidden="true"></i>
+                              <a class="dropdown-item" href="./certificates.html">Assigments</a>
+                        </li>
+                        </ul>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+        </header>
+        <div class="chat-area">
+          <code class="current-date">Wednesday</code>
+            <div class="welcome-text">
+              <p >
+                <span class="text-warning"><big>H</big>ello,</span>
+                <small class="text-info">
+                  Welcome to Sama Islamic Digital Platform. 
+                  We're very thankful for your 
+                  acceptance to teache our teachers. May Allah bless you.
+                </small>
+              </p>
+            </div>
+            <div class="send-info">
+              <span class="add-file-btn" data-bs-toggle="collapse" data-bs-target="#file-btn-container"><i class="fa fa-plus px-1" aria-hidden="true"></i></span>
+              <div class="collapse collapse-body" id="file-btn-container">
+                <div class="card card-body">
+                  <div class="file-btn-container" role="group" aria-label="Basic example">
+                    <a href="#">
+                      <span>
+                        <i class="fa fa-image text-warning" aria-hidden="true"></i>
+                        <small>Photos</small>
+                      </span>
+                     </a>
+                     <a href="#">
+                      <span>
+                        <i class="fa fa-camera" style="color: rgb(8, 219, 8);" aria-hidden="true"></i>
+                        <small>Camera</small>
+                      </span>
+                     </a>
+                     <a href="#">
+                      <span>
+                        <i class="fa fa-solid fa-file" style="color: rgb(150, 194, 123);"></i>
+                        <small>Documents</small>
+                      </span>
+                     </a>
+                     <a href="#">
+                      <span>
+                        <i class="fa fa-file-video-o" style="color: rgb(74, 190, 225);" aria-hidden="true"></i>
+                        <small>Videos</small>
+                      </span>
+                     </a>
+                  </div>
+                </div>
+              </div>
+              <textarea name="" id="" cols="30" rows="10" placeholder="Type a message...." class="message-input"></textarea>
+              <div class="file-btn-group ">
+                <span class="send-text-btn"><i class="fa fa-send" aria-hidden="true" style="transform: rotate(50deg)" ></i></span>
+                <div class="input-hide-btn d-flex">
+                  <span class="camera-btn"><i class="fa fa-camera" aria-hidden="true"></i></span>
+                  <span class="audio-btn"><i class="fa fa-microphone" aria-hidden="true"></i></span>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="offcanvas collapse profile-container p-0 pb-5" tabindex="-1" id="profileContainer" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-body p-0">
+        <div class="teacher-profile-content position-relative">
+          <div class="container">
+            <div class="close-btn" data-bs-toggle="collapse" data-bs-target="#profileContainer" ><button class="btn btn-transparent text-light">Close</button></div>
+            <div class="clear-both"></div>
+            <div class="profile-container-wrapper">
+              <div class="background-banner"></div>
+              <div class="profile-content">
+                <img src="../Assets/Images/teacher_imgs/customer01.jpg" class="teacher-img img-fluid" alt="image loading....">
+                <span class="teacher-name">Lucjan Jamil</span>
+              </div>
+              <div class="card-wrap mt-4 d-flex flex-row align-items-center justify-content-between px-3">
+                <div class="user-action-center">
+                 <ul class="d-flex">
+                  <li class="nav-link">
+                    <a href="./teacher_Dashboard.html" class="text-light">
+                      <i class="fa fa-send" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="nav-link">
+                    <i class="fa fa-video-camera" aria-hidden="true"></i>
+                  </li>
+                  <li class="nav-link">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                  </li>
+                 </ul>
+                </div>
+              </div>
+              <div class="card-wrap">
+                <ul class="navbar-nav nav">
+                    <span class="text-info fs-2 fw-bolder">Courses Taught:</span>
+                      <ul class="">
+                        <li class="course-taught">Thanawi</li>
+                        <li class="course-taught">IPLE</li>
+                        <li class="course-taught">Quran</li>
+                      </ul>
+                </ul>
+              </div>
+              <div class="card-wrap">
+                <li class="nav-item nav-link text-light" data-bs-toggle="collapse"  data-bs-target="#teacherBio"  >teacher Details</li>
+              </div>
+              <div class="card-wrap">
+                <li class="nav-item nav-link text-light" >Assigments</li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+    </div>
+        <!-- END teacher CHAT ROOM -->
+      </div>
+            <!-- admin contact panel -->
+    <div class="collapse " id="contactAdmin">
+      <div class="admin-contact-panel-wrapper">
+          <button class="rounded-4 btn close-admin-contact-card text-danger" data-bs-toggle="collapse" data-bs-target="#contactAdmin">cancel</button>
+          <div class="container px-4">
+      <div class="card-box">
+          <div class="card-box-header py-3 text-center fs-4 border-bottom w-100 rounded-top-4" style="background-color: rgb(1, 94, 94);">
+              <h3>Contact Admin</h3>
+          </div>
+          <ul class="navbar nav py-0">
+              <li class="nav-item">
+                  <a class="nav-link text-light" href="mailto:jerzylucjan86@gmail.com">
+                      <i class="fa fa-mail-forward" aria-hidden="true"></i>
+                      <span class="ps-4">Via Email</span>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-light" href="tel:+1234567890">
+                      <i class="fa fa-mobile-phone" aria-hidden="true"></i>
+                      <span class="ps-4">Via mobile</span>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-light" href="mailto:jerzylucjan86@gmail.com">
+                     <i class="fa fa-send-o" aria-hidden="true"></i>
+                      <span class="ps-4">Via Chat</span>
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  </div>
+</div>
+
+<!-- teacher Bio -->
+<div class="collapse" id="teacherBio">
+  <div class="container">
+   <div class="teacher-details-wrapper py-5 pb-5">
+       <span class="text-light close-detail-btn" data-bs-toggle="collapse" data-bs-target="#teacherBio" >Close</span>
+     <div class="background-banner"></div>
+     <div class="profile-content">
+       <img src="../Assets/Images/teacher_imgs/customer01.jpg" class="teacher-img img-fluid" alt="image loading....">
+     </div>
+<div class="container">
+  <div class="teacher-bio-details container my-5 pb-4">
+    <div class="form-group">
+      <label for="first name">First name</label>
+      <input type="text" name="" id="" class="form-control" placeholder="last name" aria-describedby="helpId" value="Lucjan" disabled>
+    </div>
+    <div class="form-group">
+      <label for="last name">Last name</label>
+      <input type="text" name="" id="" class="form-control" placeholder="Last name" aria-describedby="helpId" value="Jamil" disabled>
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <input type="text" name="" id="" class="form-control" placeholder="Gender" aria-describedby="helpId" value="male" disabled>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="../Scripts/my_class.js"></script>
+<script src="../Scripts/user_account.js"></script>
+<script src="../Assets/Script/boostrap/bootstrap.min.js"></script>
+<script src="../Assets/Script/Jquery/"></script>
+<script src="../Assets/Script/js/main.js"></script>
+ <script src="../Assets/Icons/js/all.js"></script>
+<script src="https://kit.fontawesome.com/3acc367a10.js"crossorigin="anonymous"></script>
+
+  </body>
+</html>

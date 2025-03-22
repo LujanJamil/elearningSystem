@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../Assets/Images/Backgrounds/logo.png" />
+    <title>Sama Islamic Digital College</title>
+    <link rel="stylesheet" href="../../../Styles/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../Assets/Icons/Fontawesomeicons/css/all.css">
+    <link rel="stylesheet" href="../custom_css/course.css" />
+    <link rel="stylesheet" href="../custom_css/course_page_styles.css" />
+    <link rel="stylesheet" href="../custom_css/lessonStyle.css">
+    <link rel="stylesheet" href="../../Home/home.css" />
+    <link rel="stylesheet" href="../../../Styles/Main_styles/Main.css">
+    <link rel="stylesheet" href="../../../Styles/Main_styles/responsive.css">    <style>
+      card-wrapper .card-img {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< START HEADER SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <header class="container-fluid">
+      <nav class="navbar navbar-expand-sm p-0">
+        <div class="container p-0">
+          <div class="logo-content d-none">
+            <!-- logo Image / Icon -->
+            <div class="logo">
+              <img
+                class="img-fluid logo-img"
+                src="../../Assets/Images/Backgrounds/logo.png"
+                alt="Logo Loading...."
+              />
+            </div>
+            <!-- Logo Name -->
+            <a href="../Home/home.html" class="navbar-brand"
+              >Sama Islamic Digital college</a
+            >
+          </div>
+          <!-- Start Navigation Menu -->
+          <div class="links-container">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="../../Home/home.html" aria-current="page">
+                  <i class="fa fa-solid fa-house-user"></i>
+                </a>
+                <span>Home</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Pages/courses.html">
+                  <i class="fa fa-solid fa-book-open"></i>
+                </a>
+                <span>Courses</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../About/about.html">
+                  <i class="fa fa-solid fa-user"></i>
+                </a>
+                <span>About Us</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../Contact/contact.html">
+                  <i class="fa fa-solid fa-envelope"></i>
+                </a>
+                <span>Contact Us</span>
+              </li>
+              <li class="nav-item search-form">
+                <form class="d-flex align-items-center justify-content-center">
+                  <button
+                    id="search-data-icon"
+                    type="button"
+                    class="btn fs-6 border-0 shadow">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </li>
+            </ul>
+        </div>
+          <!-- End Navigation Menu -->
+          <!-- START AUTHENICATION MENU -->
+          <div class="authenication-box d-none">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button">
+              Login
+            </button>
+            <button class="btn btn-primary my-2 my-sm-0" type="button">
+              Sign Up
+            </button>
+          </div>
+          <!--END AUTHENICATION MENU -->
+        </div>
+      </nav>
+    </header>
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< END HEADER SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< START COURSE SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <section class="specific-course my-5 py-5">
+        <div>
+            <div class="class-or-level-selected-container">
+              <div class="header">
+                <a href="./courses.html" class="text-decoration-none text-light">
+                <button type="button" class="btn btn-sm border-0 bg-transparent"> <i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+                </a>
+                <span class="course-class-name">Primary Five</span>
+                <div></div>
+              </div>
+              <div class="container">
+              <div class="sub-header">
+                <ul class="nav">
+                  <li class="nav-item d-none">
+                      <span><i class="fa fa-building icons" aria-hidden="true"></i> </span>
+                      <span class="class-course-name">Primary Five</span>
+                  </li>
+                  <li class="nav-item">
+                    <i class="fa fa-book icons text-info" aria-hidden="true"></i>
+                    <span class="course-class-subject">20 <span>subjects</span></span>
+                  </li>
+                  <li class="nav-item ">
+                    <i class="fa fa-clock icons text-warning" aria-hidden="true"></i>
+                    <span class="course-class-duration">9 <span>months</span></span>
+                  </li>
+                  <li class="nav-item fs-5 justify-content-center bg-success">
+                    <!-- <i class="fas fa-dollar-sign icons text-primary"></i> -->
+                    <!-- <span>UGX <span class="class-price">20000</span> per month</span> -->
+                      <span>You Paid For this Class</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="main-content">
+                <div class="course-description-box">
+                  <div class="fw-bold fs-5 my-2 px-1">About This Class</div>
+                  <div class="card">
+                    <p class="course-description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                       Rerum, eaque atque deleniti reprehenderit quae amet quasi 
+                       dolor omnis, itaque quidem a 
+                      tenetur earum architecto eius.
+                    </p>
+                  </div>
+                </div>
+                <div class="listed-class-subjects my-4">
+                  <span class="subject-indicator">
+                    <span>choose a subject</span>
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                  </span>
+                  <ul class="list navbar nav p-0 list-group">
+                    <li class="nav-item list-group-item list-group-item-action active" data-bs-toggle="list" href="#firstSuject" role="tab">
+                      <span class="subject-name">Fiquh</span>
+                    </li>
+                    <li class="nav-item list-group-item list-group-item-action" data-bs-toggle="list" href="#secondSubject" role="tab">
+                      <span class="subject-name">Quran</span>
+                    </li>
+                    <li class="nav-item list-group-item list-group-item-action" data-bs-toggle="list" href="#thirdSubject" role="tab">
+                      <span class="subject-name">Tajweed</span>
+                    </li>
+                    <li class="nav-item list-group-item list-group-item-action" data-bs-toggle="list" href="#fifthSubject" role="tab">
+                      <span class="subject-name">Luga</span>
+                    </li>
+                    <li class="nav-item list-group-item list-group-item-action" data-bs-toggle="list" href="#sixthSubject" role="tab">
+                      <span class="subject-name">Luga</span>
+                    </li>
+                    <li class="nav-item list-group-item list-group-item-action" data-bs-toggle="list" href="#seventhSubject" role="tab">
+                      <span class="subject-name">Luga</span>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="firstSuject" role="tabpanel">
+                    <span class="fw-bold fs-5">All topics</span>
+                    <div class="subject-listed-topics">
+                      <ul class="nav">
+                        <li class="nav-item">
+                          <i class="fa fa-square-full icons" aria-hidden="true"></i>
+                          <span class="topic-title">Introduction To swalah</span>
+                          <span class="number-of-lessons">23 lessons</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="secondSubject" role="tabpanel">
+                    <span class="fw-bold fs-5">All topics</span>
+                    <div class="subject-listed-topics">
+                      <ul class="nav">
+                        <li class="nav-item">
+                          <i class="fa fa-square-full icons" aria-hidden="true"></i>
+                          <span class="topic-title">Explore Quran</span>
+                          <span class="number-of-lessons">23 lessons</span>
+                        </li>
+                        <li class="nav-item">
+                          <i class="fa fa-square-full icons" aria-hidden="true"></i>
+                          <span class="topic-title">Introduction To swalah</span>
+                          <span class="number-of-lessons">23 lessons</span>
+                        </li>
+                        <li class="nav-item">
+                          <i class="fa fa-square-full icons" aria-hidden="true"></i>
+                          <span class="topic-title">Introduction To swalah</span>
+                          <span class="number-of-lessons">23 lessons</span>
+                        </li>
+                        <li class="nav-item">
+                          <i class="fa fa-square-full icons" aria-hidden="true"></i>
+                          <span class="topic-title">Introduction To swalah</span>
+                          <span class="number-of-lessons">23 lessons</span>
+                        </li>
+                        <li class="nav-item">
+                          <i class="fa fa-square-full icons" aria-hidden="true"></i>
+                          <span class="topic-title">Introduction To swalah</span>
+                          <span class="number-of-lessons">23 lessons</span>
+                        </li>
+                        <li class="nav-item">
+                          <i class="fa fa-square-full icons" aria-hidden="true"></i>
+                          <span class="topic-title">Introduction To swalah</span>
+                          <span class="number-of-lessons">23 lessons</span>
+                        </li>
+                        <li class="nav-item">
+                          <i class="fa fa-square-full icons" aria-hidden="true"></i>
+                          <span class="topic-title">Introduction To swalah</span>
+                          <span class="number-of-lessons">23 lessons</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="thirdSubject" role="tabpanel">
+                    <span class="fw-bold fs-5">All topics</span>
+                    <div class="subject-listed-topics">
+                      <ul class="nav">
+                        <li class="nav-item">
+                          <i class="fa fa-square-full icons" aria-hidden="true"></i>
+                          <span class="topic-title">All Allah's names</span>
+                          <span class="number-of-lessons">23 lessons</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="fourthSubject" role="tabpanel">
+                    <span class="fw-bold fs-5">All topics</span>
+                    <div class="subject-listed-topics">
+                      <ul class="nav">
+                        <li class="nav-item">
+                          <i class="fa fa-square-full icons" aria-hidden="true"></i>
+                          <span class="topic-title">How to read Quran</span>
+                          <span class="number-of-lessons">23 lessons</span>
+                        </li>
+                        <li class="nav-item">
+                          <i class="fa fa-square-full icons" aria-hidden="true"></i>
+                          <span class="topic-title">Introduction To swalah</span>
+                          <span class="number-of-lessons">23 lessons</span>
+                        </li>
+                        <li class="nav-item">
+                          <i class="fa fa-square-full icons" aria-hidden="true"></i>
+                          <span class="topic-title">Introduction To swalah</span>
+                          <span class="number-of-lessons">23 lessons</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< END COURSE SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< START FOOTER SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <footer class="d-none footer-section py-5">
+      <div class="container mb-5 pb-5 pt-3">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="footer-widget">
+              <h3>About Us</h3>
+              <p>
+                We are a team of dedicated individuals who are passionate about
+                providing high-quality Islamic education to Muslims around the
+                world.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="footer-widget">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Trending Events</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="footer-widget">
+              <h3>Get in Touch</h3>
+              <p>Whatsapp Us: +256702541831</p>
+              <p>Call Us: +256759563127</p>
+              <br />
+              <p>
+                Email:
+                <a href="mailto:info@samaislamicdigitalcollege.com"
+                  >info@samaislamicdigitalcollege.com</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="footer-widget">
+              <h3>Follow Us</h3>
+              <ul>
+                <li>
+                  <a href="#"
+                    ><i class="text-primary fa fa-facebook"></i> Facebook</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="text-primary fa fa-twitter"></i> Twitter</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="text-danger fa fa-youtube"></i> YouTube</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="text-success fa fa-whatsapp"></i> Whatsapp</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Sama Islamic Digital Platform. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< END FOOTER SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <script src="../Js/course.js"></script>
+    <script src="../../../Assets/Icons/Fontawesomeicons/css/all.css"></script>
+    <script src="../../../Scripts/Boostrap/bootstrap.min.js"></script>
+    <script src="../../../Scripts/Main_js/main.js"></script>
+    <script src="../../../Scripts/Jquery/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/3acc367a10.js" crossorigin="anonymous"></script>
+  </body>
+</html>

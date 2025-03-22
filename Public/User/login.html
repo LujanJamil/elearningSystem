@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="./Assets/style.css">
+  <link rel="stylesheet" href="../Guest User/Styles/Bootstrap/bootstrap.min.css">
+</head>
+<body>
+  <header>
+    <h1>Student Login</h1>
+    <div id="errorMessage" class="text-danger"></div>
+    <div id="successMessage" class="text-warning"></div>
+    <div id="loader" class="collapse">
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="spinner-border text-danger spinner-border-lg" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="mt-5 pt-4">
+    <form id="loginForm" class="mt-5">
+      <h4>Log in</h4>
+      <div class="form-group">
+        <label for="Email" class="form-label">Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+        </div>
+    <div class="form-group">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" name="password" id="password" class="form-control" placeholder="Create Password">
+   </div> 
+    <div class="form-group d-flex align-items-center submit-form-btn justify-content-end">
+      <input type="submit" class="submit-login-btn d-inline-block w-100" value="LogIn" />
+    </div>
+      <div class="text-center w-100 help-box">
+        <span>
+          <a href="./forgot-account.html">Forgot my account</a>
+        </span>
+        |
+        <span>
+          <a href="./register.html">Don't have an account?</a>
+        </span>
+      </div>
+  </form>
+  </main>
+  <script src="./Js/main.js"></script>
+</body>
+</html>
+

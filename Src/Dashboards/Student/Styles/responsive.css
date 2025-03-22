@@ -1,0 +1,296 @@
+@media (max-width: 686px) {
+
+    .student-dashboard-wrapper header{
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(0, 10, 35);
+        z-index: 100;
+        padding-block: 10px;
+    }
+
+    .student-dashboard-wrapper .links-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .student-dashboard-wrapper .links-container ul{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-wrapper {
+        padding-inline: 10px;
+    }
+
+    .links-container ul li {
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .links-container ul li span {
+        font-size: 13px;
+        color: aliceblue;
+        font-weight: lighter;
+    }
+    .icon {
+        font-size: 23px;
+        margin-bottom: 3px !important;
+        text-align: center;
+        color: rgb(3, 183, 254);
+    }
+    .links-container ul li a{
+        display: flex;
+        align-items: center;
+        justify-self: center;
+    }
+}
+
+@media (max-width: 360px) {
+    .links-container ul {
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .links-container ul li span {
+        font-size: 10px;
+        color: aliceblue;
+        font-weight: lighter;
+    }
+    .icon {
+        font-size: 19px;
+        margin-bottom: 3px !important;
+        text-align: center;
+        color: rgb(3, 183, 254);
+    }
+    
+.quick-student-options .card .card-body span {
+    font-size: 15px;
+}
+
+}
+
+@media (max-width: 387px) {
+    
+.quick-student-options .card{
+    max-width: 120px;
+    height: 90px;
+}
+
+.quick-student-options .card .card-body .card-icons {
+    font-size: 20px;
+}
+
+.quick-student-options .card .card-body span {
+    margin-top: 10px;
+    font-size: 13px;
+}
+}
+
+@media (max-width: 360px) {
+
+    .notify-logo-name {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: 120px;
+    }
+    .notify-logo-content {
+        max-width: 70px;
+      }
+    
+.course-section ul, .notification-section ul {
+    display: flex ;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .course-header-list .list-group-item, .notification-header-list .list-group-item{
+    margin-inline-end: 20px;
+    font-size: 14px;
+  }
+  
+  .course-section ul::-webkit-scrollbar, .notification-section ul::-webkit-scrollbar {
+    height: 0;
+  }
+
+  
+ .tab-container .card-course-content{
+    flex-direction: column !important;
+    align-items: unset !important;
+    min-width: 240px;
+  }
+
+  .course-container .heading span {
+    font-size: 14px;
+  }
+
+  .card-course-content .card-course-text-img {
+    border-radius: inherit;
+  }
+
+  .card-course-content .course-details {
+    justify-content: flex-start !important;
+    border-radius: 0 0 10px 10px;
+    padding-top: 10px;
+    padding-inline: unset;
+    padding-inline-start: 20px;
+    width: 100%;
+    margin: unset;
+  }
+    
+    .quick-student-options .card{
+        max-width: 135px;
+        height: 135px;
+    }
+
+    
+.quick-student-options .card .card-body .card-icons {
+    font-size: 26px;
+}
+
+.quick-student-options .card .card-body span {
+    margin-top: 10px;
+    font-size: 15px;
+}
+}    
+
+@media (max-width: 328px) {
+    
+    .quick-student-options .card{
+        max-width: 100px;
+        height: 90px;
+    }
+
+    .quick-student-options .card .card-body .card-icons {
+        font-size: 26px;
+    }
+    
+    .quick-student-options .card .card-body span {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    
+}
+
+@media (max-width: 289px) {
+    
+    .quick-student-options .card{
+        max-width: 80px;
+        height: 90px;
+    }
+
+    .quick-student-options .card .card-body span {
+        font-size: 12px;
+    }
+    
+    .links-container ul li span {
+        font-size: 9px;
+        color: aliceblue;
+        font-weight: lighter;
+    }
+    .icon {
+        font-size: 15px;
+        margin-bottom: 3px ;
+        text-align: center;
+        color: rgb(3, 183, 254);
+    }
+}
+
+
+
+
+@media (min-width: 645px) {
+    
+    
+.quick-student-options .card{
+    min-width: 190px;
+    min-height: 190px;
+}
+
+.student-dashboard-wrapper .links-container ul{
+    justify-content: space-evenly;
+}
+
+.quick-student-options .card .card-body .card-icons {
+    font-size: 38px;
+}
+
+.quick-student-options .card .card-body span {
+    margin-top: 10px;
+    font-size: 20px;
+}
+.links-container ul li {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.links-container ul li span {
+    font-size: 15px;
+    color: aliceblue;
+    font-weight: lighter;
+}
+.icon {
+    font-size: 25px;
+    margin-bottom: 10px !important;
+    text-align: center;
+    color: rgb(3, 183, 254);
+}
+
+
+}
+
+
+
+@media (min-width: 845px) {
+       
+.course-section ul, .notification-section ul  {
+    justify-content: space-evenly;
+    padding-top: 50px !important;
+  }
+
+  .course-header-list .list-group-item, .notification-header-list .list-group-item{
+    font-size: 20px;
+  }
+  .course-container .heading span {
+    font-size: 20px;
+  }
+    .quick-student-options .card{
+        min-width: 210px;
+        min-height: 210px;
+    }
+    
+    .student-dashboard-wrapper .links-container ul{
+        justify-content: space-evenly;
+    }
+    
+    .quick-student-options .card .card-body .card-icons {
+        font-size: 34px;
+    }
+    
+    .quick-student-options .card .card-body span {
+        margin-top: 10px;
+        font-size: 24px;
+    }
+
+    .links-container ul li span {
+        font-size: 18px;
+        color: aliceblue;
+        font-weight: lighter;
+    }
+    .icon {
+        font-size: 24px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    
+    }
+

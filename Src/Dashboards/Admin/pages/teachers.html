@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../Assets/Images/Backgrounds/logo.png" />
+    <title>Sama Islamic Digital College | Admin</title>
+    <link rel="stylesheet" href="../Styles/Boostrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Styles/Css/custom_Styles.css" />
+    <link rel="stylesheet" href="../Styles/Css/customizedCourseStyles.css" />
+    <link rel="stylesheet" href="../Assets/customs/Awesome_Icons/css/" />
+  </head>
+  <body>
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< START DASHBOARD SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <div class="dashboard-wrapper">
+      <aside>
+        <div class="admin-logo-content">
+          <div class="d-flex align-items-center justify-content-start">
+            <img
+              class="img-fluid logo-img"
+              width="60px"
+              src="../Assets/customs/logo.png"
+              alt="logo Image loading....."
+              srcset=""
+            />
+            <div class="logo-name">Sama Islamic Digital College</div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="fs-5 fw-bolder pt-4 pb-3">Menu</div>
+          <ul class="navbar-nav nav dashboard-menu">
+            <li class="nav-item">
+              <i class="fa fa-dashboard" aria-hidden="true"></i>
+              <span class="icon-text">Dashboard</span>
+            </li>
+            <li class="nav-item">
+              <i class="fa fa-dashboard" aria-hidden="true"></i>
+              <span class="icon-text">Course Management</span>
+            </li>
+            <li class="nav-item">
+              <i class="fa fa-dashboard" aria-hidden="true"></i>
+              <span class="icon-text">Students</span>
+            </li>
+            <li class="nav-item">
+              <i class="fa fa-dashboard" aria-hidden="true"></i>
+              <span class="icon-text">Teachers</span>
+            </li>
+            <li class="nav-item">
+              <i class="fa fa-dashboard" aria-hidden="true"></i>
+              <span class="icon-text">Attendance</span>
+            </li>
+            <li class="nav-item">
+              <i class="fa fa-dashboard" aria-hidden="true"></i>
+              <span class="icon-text">Report Cards</span>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <main>
+        <!-- START NAVBAR SECTION -->
+        <nav class="navbar nav py-3">
+          <div class="container d-flex align-items-center">
+            <!-- START CLOSE ASIDE BAR BUTTON -->
+            <div class="close-aside-btn">
+              <button
+                type="button"
+                class="btn p-0 rounded-3 px-2"
+                id="closeSidebarNav"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <!-- END CLOSE ASIDE BAR BUTTON -->
+
+            <!-- QUICK ACCESS CENTER -->
+            <div
+              class="nav-action-center d-flex align-items-center justify-content-center px-3"
+            >
+              <form class="navbar-search-wrapper">
+                <input
+                  class="form-control search-input shadow-none border-none m-0 p-0"
+                  type="search"
+                  placeholder="Search...."
+                />
+                <i class="fa fa-search search-icon" aria-hidden="true"></i>
+              </form>
+              <!-- FULL SCREEN BUTTON  -->
+              <div>
+                <button
+                  id="ViewFullScreen"
+                  type="button"
+                  class="btn action-btns"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Full Screen View"
+                >
+                  <i class="fa fa-square" aria-hidden="true"></i>
+                </button>
+              </div>
+              <!-- NOTIFICATION BUTTON -->
+              <div>
+                <button
+                  type="button"
+                  class="btn action-btns notification-btn"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Notifications"
+                >
+                  <i class="fa fa-bell" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <div>
+                <button
+                  type="button"
+                  class="btn action-btns settings-btn"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="settings"
+                >
+                  <i class="fa fa-gear" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="admin-mode-box">
+                <div class="admin-mode">Admin</div>
+                <img
+                  class="img-fluid admin-img"
+                  src="../Assets/Images/admin/customer01.jpg"
+                  alt="admin img loading"
+                />
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- END NAVBAR SECTION-->
+
+        <!-- START TEACHER MANAGEMENT BOARD SECTION -->
+        <section class="dashboard-section mb-5 pb-5">
+          <!-- QUICK CHOICES CONTAINER -->
+          <div class="block-page-info-choices" style="user-select: none">
+            <!-- WELCOME INSTRUCTION BOX -->
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 p-5">
+                  <h1>Teacher Management</h1>
+                  <p>
+                    <i class="text-info"
+                      >Manage, delete and view teachers....</i
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- QUICK CHOICES -->
+            <div class="container quick-choices ps-5">
+              <div
+                class="manage_teachers card d-flex align-items-center justify-content-center flex-column"
+              >
+                <div class="total-number">20</div>
+                <i class="fa fa-chalkboard-teacher fs-1 icon"></i>
+                <span class="fs-5">Manage teachers</span>
+              </div>
+              <div
+                class="add_teacher card d-flex align-items-center justify-content-center flex-column"
+              >
+                <i class="fas fa-user-plus fs-1 icon"></i>
+                <span class="fs-5">Add a teacher</span>
+              </div>
+              <div 
+                class="all_teaches d-none card d-flex align-items-center justify-content-center flex-column"
+              >
+                <i class="fas fa-chalkboard fs-1 icon"></i>
+                <span class="fs-5">View all teachers</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- MANAGE TEACHERS CONTAINER -->
+          <div class="ManageTeachersContainer">
+            <div class="container">
+              <div class="container p-4">
+                <button
+                  type="button"
+                  class="backteacherbtn btn btn-light fw-bold border-0 outline-none"
+                >
+                  <i class="fa fa-arrow-left pe-2" aria-hidden="true"></i> Back
+                </button>
+              </div>
+              <div class="row justify-content-center">
+                <div
+                  class="col-md-12 px-5 py-3 d-flex align-items-center justify-content-between"
+                >
+                  <div class="header">
+                    <span>Manage All Teachers</span>
+                    <small>Edit, delete ,View contact , message and more</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container p-5">
+                <nav
+                  class="navbar nav justify-content-start px-4 rounded-top"
+                  style="background: rgb(0, 26, 44) !important"
+                >
+                  <div
+                    class="nav-header d-flex align-items-center justify-content-start"
+                  >
+                    <span>
+                      <span
+                        class="text-light navbar-toggler btn btn-sm d-flex align-items-center justify-content-center flex-column border-0"
+                      >
+                        <span
+                          class="navbar-toggler-icon"
+                          style="filter: invert(1)"
+                        ></span>
+                        <small style="font-size: 10px"
+                          >view taught <br />
+                          courses</small
+                        >
+                      </span>
+                    </span>
+                  </div>
+                  <div
+                    class="class-select-row d-flex align-items-center justify-content-center"
+                  >
+                    <span class="row-header" style="color: rgb(0, 0, 0)"
+                      >Classes</span
+                    >
+                    <ul class="navbar-nav">
+                      <li class="nav-item">Senior Five</li>
+                      <li class="nav-item">Senior Five</li>
+                      <li class="nav-item">Senior Five</li>
+                      <li class="nav-item">Senior Five</li>
+                      <li class="nav-item">Senior Five</li>
+                      <li class="nav-item">Senior Five</li>
+                      <li class="nav-item">Senior Five</li>
+                    </ul>
+                  </div>
+                </nav>
+                <div class="all-teachers-container">
+                  <div
+                    class="course-aside-bar"
+                    style="background: rgb(0, 26, 44)"
+                  >
+                    <div class="fs-5 fw-bolder pb-3 text-warning">
+                      Taught courses
+                    </div>
+                    <ul class="navbar-nav nav text-light">
+                      <li class="nav-item">IPLE</li>
+                      <li class="nav-item">Quran</li>
+                      <li class="nav-item">Idaad</li>
+                      <li class="nav-item">Thanawi</li>
+                      <li class="nav-item">Yasaruna</li>
+                      <li class="nav-item">Arabic Language</li>
+                      <li class="nav-item">General Basics of Islam</li>
+                    </ul>
+                  </div>
+                  <div
+                    class="teacher-container"
+                    style="background: rgb(225, 239, 247) !important"
+                  >
+                    <nav
+                      class="navbar nav justify-content-start teacher-nav-list"
+                      style="background: rgb(0, 26, 44) !important"
+                    >
+                      <ul
+                        class="nav teacher-list text-light border-top border-secondary"
+                      >
+                        <li class="nav-item">
+                          <img
+                            src="../Assets/Images/student_imgs/customer01.jpg"
+                            class="img-fluid teacher-list-img"
+                            alt="image loading....."
+                            sizes="40px"
+                            srcset=""
+                          />
+                          <span class="teacher-list-name">Lucjan Jamil</span>
+                        </li>
+                        <li class="nav-item">
+                          <img
+                            src="../Assets/Images/student_imgs/customer01.jpg"
+                            class="img-fluid teacher-list-img"
+                            alt="image loading....."
+                            sizes="40px"
+                            srcset=""
+                          />
+                          <span class="teacher-list-name">Lucjan Jamil</span>
+                        </li>
+                        <li class="nav-item">
+                          <img
+                            src="../Assets/Images/student_imgs/customer01.jpg"
+                            class="img-fluid teacher-list-img"
+                            alt="image loading....."
+                            sizes="40px"
+                            srcset=""
+                          />
+                          <span class="teacher-list-name">Lucjan Jamil</span>
+                        </li>
+                        <li class="nav-item">
+                          <img
+                            src="../Assets/Images/student_imgs/customer01.jpg"
+                            class="img-fluid teacher-list-img"
+                            alt="image loading....."
+                            sizes="40px"
+                            srcset=""
+                          />
+                          <span class="teacher-list-name">Lucjan Jamil</span>
+                        </li>
+                        <li class="nav-item">
+                          <img
+                            src="../Assets/Images/student_imgs/customer01.jpg"
+                            class="img-fluid teacher-list-img"
+                            alt="image loading....."
+                            sizes="40px"
+                            srcset=""
+                          />
+                          <span class="teacher-list-name">Lucjan Jamil</span>
+                        </li>
+                        <li class="nav-item">
+                          <img
+                            src="../Assets/Images/student_imgs/customer01.jpg"
+                            class="img-fluid teacher-list-img"
+                            alt="image loading....."
+                            sizes="40px"
+                            srcset=""
+                          />
+                          <span class="teacher-list-name">Lucjan Jamil</span>
+                        </li>
+                        <li class="nav-item">
+                          <img
+                            src="../Assets/Images/student_imgs/customer01.jpg"
+                            class="img-fluid teacher-list-img"
+                            alt="image loading....."
+                            sizes="40px"
+                            srcset=""
+                          />
+                          <span class="teacher-list-name">Lucjan Jamil</span>
+                        </li>
+                        <li class="nav-item">
+                          <img
+                            src="../Assets/Images/student_imgs/customer01.jpg"
+                            class="img-fluid teacher-list-img"
+                            alt="image loading....."
+                            sizes="40px"
+                            srcset=""
+                          />
+                          <span class="teacher-list-name">Lucjan Jamil</span>
+                        </li>
+                        <li class="nav-item">
+                          <img
+                            src="../Assets/Images/student_imgs/customer01.jpg"
+                            class="img-fluid teacher-list-img"
+                            alt="image loading....."
+                            sizes="40px"
+                            srcset=""
+                          />
+                          <span class="teacher-list-name">Lucjan Jamil</span>
+                        </li>
+                        <li class="nav-item">
+                          <img
+                            src="../Assets/Images/student_imgs/customer01.jpg"
+                            class="img-fluid teacher-list-img"
+                            alt="image loading....."
+                            sizes="40px"
+                            srcset=""
+                          />
+                          <span class="teacher-list-name">Lucjan Jamil</span>
+                        </li>
+                        <li class="nav-item">
+                          <img
+                            src="../Assets/Images/student_imgs/customer01.jpg"
+                            class="img-fluid teacher-list-img"
+                            alt="image loading....."
+                            sizes="40px"
+                            srcset=""
+                          />
+                          <span class="teacher-list-name">Lucjan Jamil</span>
+                        </li>
+                        <li class="nav-item">
+                          <img
+                            src="../Assets/Images/student_imgs/customer01.jpg"
+                            class="img-fluid teacher-list-img"
+                            alt="image loading....."
+                            sizes="40px"
+                            srcset=""
+                          />
+                          <span class="teacher-list-name">Lucjan Jamil</span>
+                        </li>
+                      </ul>
+                    </nav>
+                    <div class="teacher-profile-wrapper">
+                      <div class="container my-3">
+                        <div class="teacher-content">
+                          <div class="teacher-info">
+                            <div
+                              class="rounded-4 shadow"
+                              style="background: rgb(254, 250, 244)"
+                            >
+                              <div class="teacher-profile">
+                                <img
+                                  src="../Assets/Images/student_imgs/customer01.jpg"
+                                  class="img-fluid"
+                                  alt="image-loading"
+                                  sizes="40px"
+                                  srcset=""
+                                />
+                                <span class="teacher-name">Lucjan Jamil</span>
+                                <span class="teacher-taught-courses"
+                                  >Thanawi, Idaad</span
+                                >
+                              </div>
+                              <div class="quick-admin-teacher-actions">
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-info"
+                                >
+                                  Message
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-danger"
+                                >
+                                  Delete
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-primary"
+                                >
+                                  Contact
+                                </button>
+                              </div>
+                            </div>
+                            <div>
+                              <div
+                                class="info-list rounded-4 shadow-sm"
+                                style="background: rgb(7, 34, 53)"
+                              >
+                                <ul
+                                  class="navbar-nav nav list-group"
+                                  id="myList"
+                                  role="tablist"
+                                >
+                                  <li
+                                    class="list-item list-group-item list-group-item-action"
+                                    data-bs-toggle="list"
+                                    href="#bioInfo"
+                                    role="tab"
+                                  >
+                                    Bio info
+                                  </li>
+                                  <li
+                                    class="list-item list-group-item list-group-item-action active"
+                                    data-bs-toggle="list"
+                                    href="#CourseInfo"
+                                    role="tab"
+                                  >
+                                    Education Info
+                                  </li>
+                                  <li
+                                    class="list-item list-group-item list-group-item-action"
+                                    data-bs-toggle="list"
+                                    href="#SecurityDetails"
+                                    role="tab"
+                                  >
+                                    Security Details
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="taught-list-courses">
+                              <div class="fw-bold py-2">Taught Courses</div>
+                              <ul
+                                class="navbar-nav nav rounded-4 text-light bg-secondary"
+                                style="background-color: rgb(75, 76, 76)"
+                              >
+                                <li class="nav-item">
+                                  <span class="taught-courses">Thanawi</span>
+                                  <span class="taught-course-subjects">
+                                    <span>
+                                      <i
+                                        class="fa fa-check icon"
+                                        aria-hidden="true"
+                                      ></i>
+                                      <span>
+                                        <span class="total-subjects">15</span>
+                                        subjects
+                                      </span>
+                                    </span>
+                                  </span>
+                                </li>
+                                <li class="nav-item">
+                                  <span class="enrolled-course">Quran</span>
+                                  <span class="taught-course-subjects">
+                                    <span>
+                                      <i
+                                        class="fa fa-check icon"
+                                        aria-hidden="true"
+                                      ></i>
+                                      <span>
+                                        <span class="total-subjects">3</span>
+                                        parts
+                                      </span>
+                                    </span>
+                                  </span>
+                                </li>
+                                <li class="nav-item">
+                                  <span class="enrolled-course">Thanawi</span>
+                                  <span class="taught-course-subjects">
+                                    <span>
+                                      <i
+                                        class="fa fa-check icon"
+                                        aria-hidden="true"
+                                      ></i>
+                                      <span>
+                                        <span class="total-subjects">8</span>
+                                        subjects
+                                      </span>
+                                    </span>
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- tab content -->
+                          <div class="tab-content">
+                            <!-- Teacher bio -->
+                            <div
+                              class="teacher-bio bg-light rounded-4 tab-pane"
+                              id="bioInfo"
+                              role="tabpanel"
+                            >
+                              <div
+                                class="d-flex align-items-center justify-content-between px-2 p-2 rounded-top"
+                                style="background: whitesmoke"
+                              >
+                                <span class="fs-5 fw-bold">Bio Info</span>
+                                <button
+                                  id="editInfobtn"
+                                  class="btn btn-sm border-info shadow-lg text-info"
+                                >
+                                  <span>Edit</span>
+                                  <i class="fa fa-pencil px-2 text-warning"></i>
+                                </button>
+                              </div>
+                              <div class="info">
+                                <div class="form-group mb-2">
+                                  <label for="first name" class="form-label"
+                                    >First name</label
+                                  >
+                                  <input
+                                    type="text"
+                                    name=""
+                                    id=""
+                                    class="form-control"
+                                    placeholder="First name"
+                                    aria-describedby="first name"
+                                    value="Lucjan"
+                                    disabled
+                                  />
+                                </div>
+                                <div class="form-group mb-2">
+                                  <label for="last name" class="form-label"
+                                    >Last name</label
+                                  >
+                                  <input
+                                    type="text"
+                                    name=""
+                                    id=""
+                                    class="form-control"
+                                    placeholder="Last name"
+                                    aria-describedby="last name"
+                                    value="Jamil"
+                                    disabled
+                                  />
+                                </div>
+                                <div class="form-group mb-2">
+                                  <label for="other names" class="form-label"
+                                    >Other names
+                                    <small>(optional)</small></label
+                                  >
+                                  <input
+                                    type="text"
+                                    name=""
+                                    id=""
+                                    class="form-control"
+                                    placeholder="other names (optional)"
+                                    aria-describedby="other names"
+                                    value="Jamil"
+                                    disabled
+                                  />
+                                </div>
+                                <div class="form-group mb-2">
+                                  <label for="gender">Gender</label>
+                                  <select
+                                    class="form-control"
+                                    name=""
+                                    id=""
+                                    disabled
+                                  >
+                                    <option disabled>
+                                      Select Gender
+                                      <i
+                                        class="fa fa-caret-down"
+                                        aria-hidden="true"
+                                      ></i>
+                                    </option>
+                                    <option selected>Male</option>
+                                    <option>Female</option>
+                                    <option>Custom</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Education bio -->
+                            <div
+                              class="container tab-pane active"
+                              id="CourseInfo"
+                              role="tabpane2"
+                            >
+                              <div
+                                class="d-flex align-items-center justify-content-between px-2 p-2 rounded-top"
+                                style="background: whitesmoke"
+                              >
+                                <span class="fs-5 fw-bold">Education Info</span>
+                                <button
+                                  id="editInfobtn"
+                                  class="btn btn-sm border-info shadow-lg text-info"
+                                >
+                                  <span>Edit</span>
+                                  <i class="fa fa-pencil px-2 text-warning"></i>
+                                </button>
+                              </div>
+                              <div class="info">
+                                <div class="courses-taught info">
+                                  <div class="form-group">
+                                    <label
+                                      for="Select-what-to-teach"
+                                      class="form-label fw-bolder"
+                                      style="color: rgb(3, 68, 165)"
+                                      >Taught Courses</label
+                                    >
+                                    <ul class="navbar-nav nav">
+                                      <li class="nav-item">
+                                        <input
+                                          type="checkbox"
+                                          checked
+                                          name=""
+                                          id=""
+                                          value="course"
+                                        />
+                                        <span class="course-name">IPLE</span>
+                                      </li>
+                                      <li class="nav-item">
+                                        <input
+                                          type="checkbox"
+                                          checked
+                                          name=""
+                                          id=""
+                                          value="course"
+                                        />
+                                        <span class="course-name">Quran</span>
+                                      </li>
+                                      <div class="d-none">
+                                        <li class="nav-item">
+                                          <input
+                                            type="checkbox"
+                                            name=""
+                                            id=""
+                                            value="course"
+                                          />
+                                          <span class="course-name"
+                                            >Arabic Language</span
+                                          >
+                                        </li>
+                                        <li class="nav-item">
+                                          <input
+                                            type="checkbox"
+                                            name=""
+                                            id=""
+                                            value="course"
+                                          />
+                                          <span class="course-name">Idaad</span>
+                                        </li>
+                                        <li class="nav-item">
+                                          <input
+                                            type="checkbox"
+                                            name=""
+                                            id=""
+                                            value="course"
+                                          />
+                                          <span class="course-name"
+                                            >Thanawi</span
+                                          >
+                                        </li>
+                                        <li class="nav-item">
+                                          <input
+                                            type="checkbox"
+                                            name=""
+                                            id=""
+                                            value="course"
+                                          />
+                                          <span class="course-name"
+                                            >Yasarunna</span
+                                          >
+                                        </li>
+                                        <li class="nav-item">
+                                          <input
+                                            type="checkbox"
+                                            name=""
+                                            id=""
+                                            value="course"
+                                          />
+                                          <span class="course-name"
+                                            >General Basics of Islam</span
+                                          >
+                                        </li>
+                                      </div>
+                                    </ul>
+                                  </div>
+                                  <div class="form-group">
+                                    <label
+                                      for="Classes-taught"
+                                      class="form-label fw-bolder"
+                                      style="color: rgb(3, 68, 165)"
+                                      >Classes Taught</label
+                                    >
+                                    <ul class="navbar-nav nav">
+                                      <li class="nav-item">
+                                        <input
+                                          type="checkbox"
+                                          checked
+                                          name=""
+                                          id=""
+                                          value="course"
+                                        />
+                                        <span class="course-class-name"
+                                          >senior Five</span
+                                        >
+                                      </li>
+                                      <li class="nav-item">
+                                        <input
+                                          type="checkbox"
+                                          checked
+                                          name=""
+                                          id=""
+                                          value="course"
+                                        />
+                                        <span class="course-class-name"
+                                          >Senior Six</span
+                                        >
+                                      </li>
+                                      <li class="nav-item">
+                                        <input
+                                          type="checkbox"
+                                          checked
+                                          name=""
+                                          id=""
+                                          value="course"
+                                        />
+                                        <span class="course-class-name"
+                                          >Senior one</span
+                                        >
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="form-group">
+                                    <label
+                                      for="random id"
+                                      class="form-label fw-bolder"
+                                      style="color: rgb(165, 138, 3)"
+                                      >Certifications</label
+                                    >
+                                    <select
+                                      class="form-control"
+                                      name=""
+                                      id=""
+                                      disabled
+                                    >
+                                      <option value="Thanawi">Thanawi</option>
+                                      <option value="Idaad">Idaad</option>
+                                      <option value="University">
+                                        University
+                                      </option>
+                                    </select>
+                                  </div>
+                                  <div class="form-group">
+                                    <label
+                                      for="type-of-university-certification"
+                                      class="form-label fw-bolder"
+                                      style="color: rgb(183, 0, 255)"
+                                      >What type?</label
+                                    >
+                                    <input
+                                      type="text"
+                                      name=""
+                                      id=""
+                                      class="form-control"
+                                      placeholder="University Certification"
+                                      aria-describedby="helpId"
+                                      value="None"
+                                      disabled
+                                    />
+                                  </div>
+                                  <div class="form-group fw-bolder">
+                                    <label
+                                      for="title"
+                                      class="form-label text-success"
+                                      >Title</label
+                                    >
+                                    <input
+                                      type="text"
+                                      name=""
+                                      id=""
+                                      class="form-control fw-bolder"
+                                      placeholder="How do you call this person?"
+                                      aria-describedby="helpId"
+                                      value="Shiekh"
+                                      disabled
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Security Details -->
+                            <div
+                              class="container tab-pane"
+                              id="SecurityDetails"
+                              role="tabpane3"
+                            >
+                              <div
+                                class="d-flex align-items-center justify-content-between px-2 p-2 rounded-top"
+                                style="background: whitesmoke"
+                              >
+                                <span class="fs-5 fw-bold"
+                                  >Security Details</span
+                                >
+                                <button
+                                  id="editInfobtn"
+                                  class="btn btn-sm border-info shadow-lg text-info"
+                                >
+                                  <span>Edit</span>
+                                  <i class="fa fa-pencil px-2 text-warning"></i>
+                                </button>
+                              </div>
+                              <div class="info">
+                                <div class="form-group mb-2">
+                                  <label for="email" class="form-label"
+                                    >Email</label
+                                  >
+                                  <input
+                                    type="email"
+                                    name=""
+                                    id=""
+                                    class="form-control"
+                                    placeholder="Email"
+                                    aria-describedby="email"
+                                    value="myemail9@gmail.com"
+                                    disabled
+                                  />
+                                </div>
+                                <div class="form-group mb-2">
+                                  <label for="mobile contact" class="form-label"
+                                    >Mobile number</label
+                                  >
+                                  <input
+                                    type="tel"
+                                    name=""
+                                    id=""
+                                    class="form-control"
+                                    placeholder="Mobile number"
+                                    aria-describedby="Mobile number"
+                                    value="+256740000--"
+                                    disabled
+                                  />
+                                </div>
+                                <div class="form-group mb-2">
+                                  <label for="password" class="form-label"
+                                    >Password</label
+                                  >
+                                  <input
+                                    type="password"
+                                    name=""
+                                    id=""
+                                    class="form-control"
+                                    placeholder="studet password..."
+                                    aria-describedby="password"
+                                    value="..........."
+                                    disabled
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ADD TEACHER -->
+          <div class="AddTeacherContainer">
+            <div class="container">
+              <div class="container p-4">
+                <button
+                  type="button"
+                  id="backBtn"
+                  class="btn btn-light fw-bold border-0 outline-none"
+                >
+                  <i class="fa fa-arrow-left pe-2" aria-hidden="true"></i> Back
+                </button>
+              </div>
+              <div class="row justify-content-center">
+                <div
+                  class="col-md-12 px-5 py-3 d-flex align-items-center justify-content-between"
+                >
+                  <div class="header">
+                    <span>Add a Teacher</span>
+                    <small
+                      >Type teacher bio info, security Details, level of
+                      education and generate an id for log in</small
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="container">
+                <div class="add-teacher-bio-container">
+                  <div class="info">
+                    <div class="mb-3">
+                      <div class="fs-5 fw-bold py-1">Profile</div>
+                      <div
+                        class="py-3 rounded-4"
+                        style="background-color: rgb(1, 75, 75)"
+                      >
+                        <div class="add-teacher-img-box position-relative">
+                          <img
+                            src="../Assets/Images/student_imgs/customer01.jpg"
+                            alt="Add profile  "
+                            srcset=""
+                          />
+                          <button type="button" class="btn btn-sm">
+                            <span style="font-size: 15px">Photo</span>
+                            <div class="camera-icon">
+                              <i class="fa fa-camera" aria-hidden="true"></i>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="my-3 mt-4">
+                      <div class="fs-5 fw-bold py-1">Bio Info</div>
+                      <div
+                        class="rounded-3 p-3 text-light"
+                        style="background: rgb(0, 44, 75)"
+                      >
+                        <div class="form-group mb-2">
+                          <label for="first name" class="form-label"
+                            >First name</label
+                          >
+                          <input
+                            type="text"
+                            name=""
+                            id=""
+                            class="form-control"
+                            placeholder="First name"
+                            aria-describedby="first name"
+                          />
+                        </div>
+                        <div class="form-group mb-2">
+                          <label for="last name" class="form-label"
+                            >Last name</label
+                          >
+                          <input
+                            type="text"
+                            name=""
+                            id=""
+                            class="form-control"
+                            placeholder="Last name"
+                            aria-describedby="last name"
+                          />
+                        </div>
+                        <div class="form-group mb-2">
+                          <label for="other names" class="form-label"
+                            >Other names <small>(optional)</small></label
+                          >
+                          <input
+                            type="text"
+                            name=""
+                            id=""
+                            class="form-control"
+                            placeholder="other names (optional)"
+                            aria-describedby="other names"
+                          />
+                        </div>
+                        <div class="form-group mb-2">
+                          <label for="gender">Gender</label>
+                          <select class="form-control" name="" id="">
+                            <option disabled selected>Select Gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Custom</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="my-3 mt-4">
+                      <div class="fs-5 fw-bold py-1">Security Details</div>
+                      <div
+                        class="rounded-3 p-3 text-light"
+                        style="background: rgb(0, 26, 44)"
+                      >
+                        <div class="form-group mb-2">
+                          <label for="email" class="form-label">Email</label>
+                          <input
+                            type="email"
+                            name=""
+                            id=""
+                            class="form-control"
+                            placeholder="Email"
+                            aria-describedby="email"
+                          />
+                        </div>
+                        <div class="form-group mb-2">
+                          <label for="mobile contact" class="form-label"
+                            >Mobile number</label
+                          >
+                          <input
+                            type="tel"
+                            name=""
+                            id=""
+                            class="form-control"
+                            placeholder="Mobile number"
+                            aria-describedby="Mobile number"
+                          />
+                        </div>
+                        <div class="form-group mb-2">
+                          <label for="password" class="form-label"
+                            >Create Password</label
+                          >
+                          <input
+                            type="password"
+                            name=""
+                            id=""
+                            class="form-control"
+                            placeholder="Create password..."
+                            aria-describedby="password"
+                          />
+                        </div>
+                        <div class="form-group mb-2">
+                          <label for="create password" class="form-label"
+                            >Confirm Password</label
+                          >
+                          <input
+                            type="password"
+                            name=""
+                            id=""
+                            class="form-control"
+                            placeholder="confirm Password"
+                            aria-describedby="password"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="course-details">
+                    <div>
+                      <div class="fs-5 fw-bold py-1">Course Details</div>
+                      <div>
+                        <div
+                          style="background-color: rgb(7, 45, 72) !important"
+                          class="rounded-4 text-light p-3"
+                        >
+                          <div class="form-group">
+                            <label
+                              for="Select title"
+                              class="form-label text-warning"
+                              >What to Teach?</label
+                            >
+                            <ul class="navbar-nav nav">
+                              <li class="nav-item">
+                                <input
+                                  type="checkbox"
+                                  name=""
+                                  id=""
+                                  value="course"
+                                />
+                                <span class="course-name">IPLE</span>
+                              </li>
+                              <li class="nav-item">
+                                <input
+                                  type="checkbox"
+                                  name=""
+                                  id=""
+                                  value="course"
+                                />
+                                <span class="course-name">Quran</span>
+                              </li>
+                              <li class="nav-item">
+                                <input
+                                  type="checkbox"
+                                  name=""
+                                  id=""
+                                  value="course"
+                                />
+                                <span class="course-name">Arabic Language</span>
+                              </li>
+                              <li class="nav-item">
+                                <input
+                                  type="checkbox"
+                                  name=""
+                                  id=""
+                                  value="course"
+                                />
+                                <span class="course-name">Idaad</span>
+                              </li>
+                              <li class="nav-item">
+                                <input
+                                  type="checkbox"
+                                  name=""
+                                  id=""
+                                  value="course"
+                                />
+                                <span class="course-name">Thanawi</span>
+                              </li>
+                              <li class="nav-item">
+                                <input
+                                  type="checkbox"
+                                  name=""
+                                  id=""
+                                  value="course"
+                                />
+                                <span class="course-name">Yasarunna</span>
+                              </li>
+                              <li class="nav-item">
+                                <input
+                                  type="checkbox"
+                                  name=""
+                                  id=""
+                                  value="course"
+                                />
+                                <span class="course-name"
+                                  >General Basics of Islam</span
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="form-group">
+                            <label
+                              for="Select class"
+                              class="form-label text-warning"
+                              >Who to Teach</label
+                            >
+                            <ul class="navbar-nav nav">
+                              <li class="nav-item">
+                                <input
+                                  type="checkbox"
+                                  name=""
+                                  id=""
+                                  value="course"
+                                />
+                                <span class="course-class-name"
+                                  >senior Five</span
+                                >
+                              </li>
+                              <li class="nav-item">
+                                <input
+                                  type="checkbox"
+                                  name=""
+                                  id=""
+                                  value="course"
+                                />
+                                <span class="course-class-name"
+                                  >Senior Six</span
+                                >
+                              </li>
+                              <li class="nav-item">
+                                <input
+                                  type="checkbox"
+                                  name=""
+                                  id=""
+                                  value="course"
+                                />
+                                <span class="course-class-name"
+                                  >Senior one</span
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="form-group">
+                            <label
+                              for="random id"
+                              class="form-label text-warning fw-light"
+                              >Certifications</label
+                            >
+                            <label for=""></label>
+                            <select class="form-control" name="" id="">
+                              <option value="Thanawi">Thanawi</option>
+                              <option value="Idaad">Idaad</option>
+                              <option value="University">University</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label
+                              for="type-of-university-certification"
+                              class="form-label text-info"
+                              >What type?</label
+                            >
+                            <input
+                              type="text"
+                              name=""
+                              id=""
+                              class="form-control"
+                              placeholder="University Certification"
+                              aria-describedby="helpId"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label for="title" class="form-label text-success"
+                              >Title</label
+                            >
+                            <input
+                              type="text"
+                              name=""
+                              id=""
+                              class="form-control"
+                              placeholder="How do you call this person?"
+                              aria-describedby="helpId"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label
+                              for="teacher id"
+                              class="form-label text-primary"
+                              >Teacher Id</label
+                            >
+                            <div class="input-group">
+                              <span
+                                class="input-group-text"
+                                id="inputGroupPrepend"
+                              >
+                                <span>Generate Id</span>
+                              </span>
+                              <input
+                                type="text"
+                                disabled
+                                class="form-control"
+                                placeholder="Log in Id"
+                                value="Sama002349743"
+                              />
+                            </div>
+                            <small class="text-danger help-text"
+                              >This id is given to the teacher for login.</small
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="form-group">
+                      <button
+                        type="button"
+                        class="d-block w-100 my-4 btn btn-warning add-student-btn"
+                      >
+                        Add teacher
+                      </button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- END TEACHER MANAGEMENT BOARD SECTION -->
+
+          <!-- FOOTER SECTION -->
+          <div class="container">
+            <footer class="" style="margin-top: 100px !important">
+              <div class="footer-bottom">
+                <p>
+                  &copy; 2024 Sama Islamic Digital Platform. All rights
+                  reserved.
+                </p>
+              </div>
+            </footer>
+          </div>
+          <div class="mb-5 pb-5"></div>
+        </section>
+        <!-- END DASH BOARD SECTION -->
+      </main>
+    </div>
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< END DASHBOARD SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+    <script src="../Assets/customs/Awesome_Icons/js/all.js"></script>
+    <script src="../Scripts/bootsrap/bootstrap.min.js"></script>
+    <script src="../Scripts/Jquery/"></script>
+    <script src="../Scripts/Js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/3acc367a10.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

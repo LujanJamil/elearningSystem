@@ -1,0 +1,631 @@
+@font-face {
+    font-family: "customsFonts";
+    src: url('../../Assets/customs/Fonts/Open_Sans/OpenSans-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.dashboard-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ASIDE */
+aside {
+    width: 20%;
+    min-height: 100vh;
+    background: rgb(231, 233, 234);
+    transition: all .5s ease;
+
+}
+
+.shrinkAside {
+    width: 5%;
+    transition: all .5s ease;
+}
+
+.expand-main {
+    width: 95% !important;
+}
+
+main {
+    width: 60%;
+}
+
+.recent-update-notifications {
+    width: 20%;
+    border-left: 1px solid lightblue;
+    background: rgb(234, 230, 223);
+    position: fixed;
+    right: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+aside .admin-logo-content{
+    width: 100%;
+    padding-block: 10px;
+    background-color: rgb(43, 24, 0);
+}
+
+aside .admin-logo-content .logo-img{
+    width: 70px;
+}
+
+aside .admin-logo-content .logo-name {
+    font-weight: bold;
+    color: rgb(228, 228, 228);
+    font-family: 'customsFonts', sans-serif;
+    
+}
+
+/* ASIDE MENU */
+
+aside .dashboard-menu {
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 10px 10px 30px rgb(214, 214, 216);
+}
+
+aside .dashboard-menu .nav-item {
+    padding: 10px 15px;
+    margin-block: 5px;
+    border-start-end-radius: 10px;
+    border-end-end-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-inline-start: 3px solid transparent;
+    user-select: none;
+    transition: all .2s ease-in-out;
+
+}
+
+aside .dashboard-menu .nav-item:hover {
+    font-weight: bold;
+    border-inline-start: 3px solid rgb(2, 245, 22);
+    cursor: pointer;
+    background:rgb(0, 44, 69);
+    color: white;
+}
+
+aside .dashboard-menu .nav-item span{
+    padding-inline-start: 15px;
+    font-size: large;
+}
+
+aside .dashboard-menu .nav-item i{
+    font-size: 17px;
+}
+
+
+/* NAVBAR IN MAIN SECTION */
+
+/* NAV */
+
+main .navbar {
+    width: 100%;
+    background: whitesmoke;
+}
+
+main .navbar .close-aside-btn {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+main .nav-action-center {
+    position: relative;
+    white-space: nowrap;
+}
+
+main .nav-action-center .navbar-search-wrapper {
+    position: relative;
+}
+
+main .nav-action-center .navbar-search-wrapper .search-input{
+    border-radius: 50px;
+    padding-inline-start: 35px !important;
+    padding-inline-end: 10px !important;
+    padding-block: 3px !important;
+    font-weight: 500;
+    border: thin solid rgb(6, 162, 252);
+}
+
+main .nav-action-center .navbar-search-wrapper .search-icon{
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    font-weight: 900;
+    bottom: 0;
+}
+
+.nav-action-center .action-btns {
+    margin-inline: 20px;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    color: rgb(1, 109, 109);
+    background: white;
+    box-shadow: 10px 10px 30px rgb(205, 205, 205);
+    
+}
+
+.nav-action-center .action-btns:hover {
+    background: rgb(237, 221, 189);
+}
+
+.nav-action-center  .admin-mode-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(2, 48, 75);
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 2px;
+    color: aliceblue;
+    font-size: small;
+    white-space: nowrap;
+}
+
+.nav-action-center  .admin-mode-box:hover {
+    background-color: rgb(3, 78, 81);
+    transition: all .3s ease-in-out;
+}
+.nav-action-center  .admin-mode-box .admin-img {
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 50px;
+    border: 1px solid rgb(252, 240, 6);
+    padding: 2px;
+}
+
+
+.admin-mode {
+    padding-inline: 10px;
+    font-weight: 500;
+    user-select: none;
+}
+
+/* DASHBOARD */
+
+.dashboard-section, nav{
+    background: white !important;
+}
+
+
+.dashboard-section  .quick-status-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.dashboard-section  .quick-status-wrapper .card-box{
+    border-radius: 20px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 15px 10px;
+    box-shadow: 10px 10px 30px rgba(202, 201, 201, 0.8);
+    margin: 10px;
+    flex-grow:3;
+    padding-inline: 20px !important;
+}
+
+.card-box-resize {
+    flex-grow: unset !important;
+}
+
+.card-box .card-icon {
+    font-size: 28px;
+    margin-left: 12px;
+    border-radius: 50px;
+    background-color: red;
+}
+
+.dashboard-section  .quick-status-wrapper .card-box .card-body{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.dashboard-section  .quick-status-wrapper .card-box .card-box-details{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard-section  .quick-status-wrapper .card-box .card-box-details .card-title{
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.dashboard-section  .quick-status-wrapper .card-box .card-box-details .total-number{
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.card-box .progress-status-bar {
+    width: 70px;
+    height: 70px;
+    border: 10px solid rgb(174, 39, 192);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-bottom: 10px solid rgb(205, 205, 205) !important;
+    border-left: 10px solid rgb(205, 205, 205) !important;
+    border-right: 10px solid rgb(205, 205, 205) !important;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.card-box .update-time {
+    margin-bottom: 0;
+    color: grey;
+    font-size: 12px;
+    padding-block: 4px;
+}
+
+.calender-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    border-radius: 20px;
+}
+
+.calender-container .calender-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.calender-header button {
+    background-color: transparent;
+    outline: none;
+    font-size: 30px;
+    font-weight: bolder;
+    border: none;
+    color: #ddd;
+}
+
+.week-days {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-around;
+}
+
+.days-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.day {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border: 50%;
+    cursor: pointer;
+}
+
+.top-students {
+    overflow-y: auto;
+    max-height: 300px;
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.top-students .top-student-email {
+    font-size: 10px;
+    color: rgb(1, 92, 183);
+}
+
+.top-students img {
+    max-width: 40px;
+    max-height: 40px;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 50px;
+    border: 2px solid rgb(2, 176, 245);
+    padding: 2px;
+    margin-right: 10px;
+    position: relative;
+}
+.top-students li {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    margin-block: 10px;
+    position: relative;
+}
+
+.top-students .active-status-ball {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 22%;
+    bottom: 4%;
+    display: block;
+    background: rgb(2, 190, 18);
+    border-radius: 50%;
+}
+
+.heading-text {
+    padding-block: 50px !important;
+}
+
+.time-table-container {
+    max-height: 800px;
+    max-width: 100%;
+}
+
+.time-table-container object {
+    width: 100%;
+    border-radius: 40px;
+}
+
+.teacher-details-container {
+    background-color: #f0f0f0 !important;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.teacher-details-container .heading {
+    padding-block: 15px;
+    font-size: large;
+    font-weight: bolder;
+    color: rgb(1, 62, 97);
+}
+
+table {
+    white-space: nowrap;
+}
+.last-payment-container {
+    background: #f0f0f0;
+    border-radius: 20px;
+}
+
+.last-payment-container .heading {
+    padding-block: 15px;
+    font-size: large;
+    font-weight: bolder;
+    color: rgb(1, 62, 97);
+}
+
+.payment-details-table {
+    border-radius: 10px;
+    background: r;
+}
+
+.recent-update-notifications .header{
+    padding: 15px;
+    color: rgb(1, 62, 97);
+}
+
+.recent-students, .messages{
+    padding: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 170px;
+    margin-bottom: 16px;
+    white-space: nowrap;
+}
+ 
+.recent-students ul li, .messages ul li{
+    margin-bottom: 10px;
+}
+
+.recent-students img, .message-user-img {
+    width: 35px;
+    height: 35px;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50px;
+    border: 1px solid rgb(2, 245, 22);
+}
+
+
+.recent-students .recent-student-name, .message-user-name {
+    color: rgb(3, 101, 162);
+}
+
+.recent-students .course-class-details , .messages .message-user-details{
+    font-size: 12px;
+}
+
+.recent-students .course-class-details span {
+    margin-right: 5px;
+}
+
+
+/* attendance */
+
+.teacher-container .teacher-attendance-list {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    overflow-y: auto;
+}
+
+.teacher-container .teacher-attendance-list .teacher-card{
+    position: relative;
+    border-radius: 50px 50px 30px 30px;
+    max-width: 250px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: rgb(0, 18, 44);
+    font-family: Arial, Helvetica, sans-serif;
+    align-self: self-start;
+}
+
+.teacher-container .teacher-attendance-list .teacher-card img {
+    border-radius: 50px 50px 30px 30px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    max-width: 250px;
+    max-height: 200px;
+    border-bottom: 5px solid rgb(175, 8, 122)
+}
+
+.teacher-attendance-list .attendance-status-icon {
+    position: absolute;
+    right: 0;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius:  0 50px 0 50px ;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9500ff;
+}
+
+.attendance-status-icon .no-atttendance {
+    background-color: rgb(179, 1, 1);
+    color: white;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius:  0 50px 0 50px ;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.attendance-status-icon .yes-atttendance {
+    background-color: rgb(7, 179, 1);
+    color: white;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius:  0 50px 0 50px ;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-lesson .card-body .icon-wrapper:hover {
+    transform: scale(.90);
+    transition: all .4s ease;
+}
+
+.card .card-upload-lesson {
+    width: 100%;
+    height: 200px;
+    font-size: larger;
+}
+
+.card .card-upload-lesson .upload-icon{
+    font-size: 50px;
+    color: rgb(1, 67, 160);
+    margin-bottom: 10px;
+}
+
+.card .upload-lesson-btn, .icon-wrapper{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0;
+    margin: 0;
+}
+
+.upload-header {
+    background-color: rgb(248, 248, 241);
+    padding: 10px;
+    border-radius: 15px 15px;
+    position: relative;
+}
+
+.upload-header form {
+    position: relative;
+}
+
+
+.upload-header .icon {
+    position: absolute;
+    top: 18% !important;
+    transform: translateY(25%);
+    bottom: 0 !important;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding-inline: 5px;
+    color: rgb(2, 53, 124);
+}
+
+.upload-header > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-inline: 10px;
+}
+
+.upload-header .seacrh-lesson-input {
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding-inline: 30px 15px;
+    width: 350px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.upload-header .action-btn-wrapper button {
+    margin-inline: 10px;
+    border-radius: 40px;
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+
+.course-intr-video-wrapper video {
+    /* max-width: 200px; */
+    border-radius: 10px;
+}
+
+.card  button {
+    white-space: nowrap  !important;
+}

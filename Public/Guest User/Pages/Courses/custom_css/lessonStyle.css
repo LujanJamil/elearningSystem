@@ -1,0 +1,111 @@
+.header .class-topic-name{
+    white-space: nowrap;
+    font-size: 24px !important;
+}
+
+.sub-header .total-number-of-lessons {
+    text-align: right;
+    padding-inline: 10px;
+    color: lightslategray;
+    color: rgb(6, 165, 1);
+}
+
+.sub-header .total-number-of-lessons .numberoflessons {
+    font-size: 20px;
+    color: #ffa500;
+}
+
+.sub-header input {
+    box-shadow: none !important;
+    outline: none !important;
+    border-radius: 40px;
+    padding-inline: 15px;
+}
+
+.main-content .lesson-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.main-content .lesson-list .nav-item{
+    max-width: 100%;
+    margin: 10px 5px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.main-content .lesson-list .nav-item:hover{
+    background: linen;
+}
+
+.main-content .lesson-content{
+    display: flex;
+    justify-content: safe;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.main-content .lesson-content .video-lesson-wrapper {
+    max-width: 150px;
+    max-height: 150px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    margin-right: 10px;
+
+}
+
+.main-content .lesson-content .video-lesson-wrapper video{
+    width: 100%;
+    height: 100%;
+    background-position: inherit;
+    background-size: inherit;
+    background-repeat: inherit;
+    object-fit: inherit;
+    object-position: inherit;
+    border-radius: inherit;
+    cursor: pointer;
+}
+
+.main-content .lesson-content .video-lesson-wrapper .video-lesson-content {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    flex-direction: column;
+    flex-wrap: nowrap;
+   position: relative;
+   width: 100%;
+}
+
+.main-content .lesson-content .video-lesson-wrapper .video-lesson-content > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    width: 100%;
+}
+.main-content .video-lesson-content .lesson-title{
+    word-wrap: normal;
+    /* white-space: nowrap !important; */
+    /* overflow: hidden !important; */
+    /* max-width: 50px !important; */
+    text-overflow: ellipsis !important;
+    font-weight: 400;
+    font-size: 19px;
+}
+
+.main-content .video-lesson-content .dropdown {
+    position: absolute;
+    bottom: 0%;
+    right: 5%;
+    font-size: 19px;
+    cursor: pointer;
+}

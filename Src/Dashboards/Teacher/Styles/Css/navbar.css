@@ -1,0 +1,928 @@
+@font-face {
+    font-family: "nav-font";
+    src: url('../../Assets/Fonts/Poppins/Poppins-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.dashboard-header {
+    background: rgb(0, 14, 45);
+    width: 100%;
+}
+
+.dashboard-header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: aliceblue;
+    padding-inline: 10px !important;
+}
+
+.dashboard-header nav .nav-heading {
+    font-size: 24px;
+    font-weight: 300;
+    font-family: "nav-font", sans-serif;
+    color: bisque;
+}
+
+.dashboard-header nav .nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+ .logout-list-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background: rgba(0, 104, 184, 0.637);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+ .logout-list-item .user-title{
+    padding-inline: 10px;
+}
+
+ .logout-list-item img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    border: 1px solid rgb(1, 193, 81);
+    padding: 2px;
+}
+
+ .logout-list-item span{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.logout-box {
+    background: rgb(1, 51, 78);
+}
+
+.dashboard-header nav .form-group{
+    margin-block: 10px;
+    width: 100%;
+}
+
+.dashboard-header nav .form-group  .search-input{
+    box-shadow: none;
+    outline: none;
+    border: none;
+    background: rgb(1, 51, 78);
+    color: #f0f8ff;
+    font-size: 18px;
+}
+
+.dashboard-header nav .form-group input::placeholder{
+    color: #f0f8ff;
+    font-size: 18px;
+}
+
+
+.navbar-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: none;
+    background: rgb(0, 14, 45);
+    color: antiquewhite;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+.navbar-bottom .navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
+
+.navbar-bottom .navbar ul li{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+.navbar-bottom .navbar ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    text-decoration: none;
+    font-weight: bolder;
+    color: antiquewhite;
+}
+
+
+@font-face {
+    font-family: "Customised-font";
+    src: url('../../../../Assets/Fonts/Poppins/Poppins-Regular.ttf');
+    /* src: url('../../../../Assets/Fonts/Roboto/Roboto-Thin.ttf'); */
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root, html, body {
+    min-height: 100vh;
+    width: 100%;
+    background: rgb(0, 24, 37);
+}
+
+.intructor-dashboard-wrapper {
+    /* border-radius: 20px 20px 0 0; */
+    background: rgb(0, 24, 37);
+    color: antiquewhite;
+    min-height: 100vh;
+    min-width: 100%;
+    font-weight: 100;
+}
+
+svg {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+ margin-inline-start: 10px;
+
+}
+
+.teacher-quick-actions-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.sticky {
+    background: rgba(0, 24, 37, 0.969);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    z-index: 10;
+}
+
+header .teacher-quick-actions-center .dropdown-menu, .other-actions .dropdown-menu{
+    background-color: rgb(1, 51, 78);
+    transition: all .5s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    border-radius: 10px;
+    margin-top: 20px !important;
+}
+
+header .teacher-quick-actions-center .dropdown-menu .dropdown-item, .other-actions .dropdown-item{
+    color: aliceblue;
+    background-color: transparent !important;
+}
+
+header .teacher-quick-actions-center .dropdown-menu li, .other-actions .dropdown-menu li{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    margin-block: 5px;
+    /* padding: 10px; */
+} 
+
+header .teacher-quick-actions-center .dropdown-menu li:hover, .other-actions .dropdown-menu li:hover{
+  background-color: rgb(6, 21, 45);
+} 
+header .teacher-quick-actions-center .dropdown-menu li svg, .other-actions .dropdown-menu li svg{
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+} 
+header .teacher-quick-actions-center .dropdown-menu li .fa, .other-actions .dropdown-menu li .fa{
+ font-size: 20px;
+ color: #f0f8ff;
+ padding-inline-start: 10px;
+} 
+
+
+.other-actions .dropmenu-header {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-weight: bolder;
+    padding-block: 10px;
+    color: bisque;
+    border-bottom: 1px solid ;
+}
+.more-btn {
+    user-select: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: rgb(1, 39, 59);
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    font-weight: bolder;
+}
+
+.other-actions .other-actions-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.other-actions-content li {
+    margin-inline: 10px;
+}
+
+.switch-content-header {
+    padding-inline: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: unset;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 15px;
+}
+
+.switch-content-header .switch-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+}
+
+.switch-content-header .switch-content-wrapper .switch-text {
+    font-size: 25px;
+}
+
+.switch-course-wrapper {
+    position: relative;
+    border-radius: 50px;
+    border: 1px solid rgb(6, 169, 190);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background: rgb(1, 96, 148);
+}
+
+.switch-course-btn {
+    border: none;
+    box-shadow: none;
+    background: none;
+    border-radius: 50px;
+    padding: 10px 15px;
+    background: rgb(1, 51, 78);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.switch-course-wrapper .current-course {
+    font-size: 14px;
+    font-weight: bolder;
+    padding-inline: 10px;
+    padding: 10px;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    color: rgb(248, 217, 177);
+}
+
+.search-dashboard-content-wrapper {
+    margin-block: 25px;
+}
+
+.search-dashboard-content-wrapper .form-group input{
+    box-shadow: none;
+    outline: none;
+    border: none;
+    background: rgb(1, 51, 78);
+    color: #f0f8ff;
+    font-size: 18px;
+}
+
+.search-dashboard-content-wrapper .form-group input::placeholder{
+    color: #f0f8ff;
+    font-size: 18px;
+}
+
+.class-courses-wrapper {
+    width: 100%;
+    background-color: rgb(1, 38, 58);
+    border-radius: 10px;
+    margin-block: 15px;
+    overflow-x: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.class-courses-wrapper:hover {
+    cursor: pointer;
+}
+
+.class-courses-wrapper::-webkit-scrollbar { 
+    width: 10px;
+    display: none;
+    scroll-behavior: auto;
+}
+  .class-courses-wrapper::-webkit-scrollbar-track { 
+    background-color: rgb(204, 206, 208);
+    border-radius: 100px;
+}
+  .class-courses-wrapper::-webkit-scrollbar-thumb { 
+  background-color: rgb(18, 81, 168);
+  border-radius: 100px;
+  
+}
+  .class-courses-wrapper::-webkit-scrollbar-thumb:hover { 
+    background-color: rgb(5, 97, 226);
+}
+
+.class-courses-wrapper ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap !important;
+    flex-direction: row;
+    width: 200%;
+    overflow-x: auto;
+}
+
+.class-courses-wrapper ul .nav-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+   overflow-x: auto;
+   word-break: keep-all;
+   border-radius: 50px;
+   padding: 5px;
+   background-color: rgb(1, 51, 67);
+   box-shadow: inset 10px 10px 30px rgb(0, 14, 22);
+   padding: 5px 10px;
+   margin-inline: 10px;
+   text-align: center;
+}
+
+.class-courses-wrapper .nav-list  span {
+    font-family: 'Customised-font', sans-serif;
+    word-break: keep-all;
+    width: 100%;
+    font-weight: lighter;
+    padding-inline: 10px;
+    cursor: pointer;
+
+}
+
+
+/* chat */
+
+main {
+    margin: 30px auto;
+    min-height: 100vh;
+    width: 100%;
+    background: rgb(0, 24, 37);
+}
+
+
+main  .chat-list-container{
+   display: flex;
+   align-items: stretch;
+   justify-content: stretch;
+   flex-direction: column;
+   flex-wrap:nowrap;
+   min-height: 100vh;
+   width: 100%;
+   background: rgb(0, 24, 37);
+}
+
+main  .chat-list-container .chat-list{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    min-height: 100vh;
+    width: 100%;
+    background: rgb(0, 24, 37);
+}
+main  .chat-list-container .chat-list .student-profile-content{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 15px 15px;
+    background: rgb(0, 29, 45);
+} 
+
+main  .chat-list-container .chat-list .student-profile-content:hover{
+    width: 100%;
+    background: rgb(1, 38, 58);
+    cursor: pointer;
+} 
+
+main  .chat-list-container .chat-list .student-profile-content .student-img{
+    width: 75px;
+    height: 75px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 50px;
+    border: 2px solid rgb(6, 169, 190);
+    padding: 2px;
+    margin-right: 15px;
+} 
+
+main  .chat-list-container .chat-list .student-profile-content .student-chat-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+main  .chat-list-container .chat-list .student-profile-content .chat-time-details{
+    display: flex;
+    justify-self: right !important;
+    align-items: center;
+}
+
+main  .chat-list-container .chat-list .student-profile-content .student-name-chat {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+main  .chat-list-container .chat-list .student-profile-content .student-name{
+    font-weight: ligh;
+    /* font-family: 'Customised-font', sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+}
+
+
+main  .chat-list-container .chat-list .student-profile-content .current-text{
+    color: grey;
+    font-size: 15px;
+    font-weight: 400;
+    text-overflow: clip;
+}
+
+main .chat-list-container .student-profile-content .chat-time-details {
+    display: flex;
+    align-items: end;
+    justify-content: right;
+    flex-direction: column;
+    padding-inline: 5px;
+}
+
+main .chat-list-container .student-profile-content .chat-time-details .unread-text{
+    border-radius: 50px;
+    background-color: rgba(26, 255, 0, 0.567);
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+}
+
+@media (min-width:800px) {
+    main {
+        padding-inline: 110px;
+    }
+}
+
+
+/* chat room */
+
+.teacher-chat-room {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+    min-height: 100vh;
+}
+    
+.teacher-chat-room header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgb(6, 21, 45);
+    border-bottom: 1pxs solid rgb(19, 55, 120);
+    border-radius: 0 0 10px 10px;
+    z-index: 100;
+}
+
+.stacked {
+  background: rgba(0, 24, 37, 0.969);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.student-profile-container {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px 3px;
+color: #f0f8ff;
+z-index: 100;
+}
+
+.back-btn {
+    margin-inline-end: 18px;
+  }
+  
+.student-profile-container .student-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+      .student-profile-container .student-profile .teaher-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        background-size: cover;
+        object-fit: cover;
+        background-position: center;
+        border: 2px solid rgb(2, 125, 249);
+        padding: 2px;
+        margin-right: 13px;
+    }
+
+    .student-profile-container .student-profile .student-details {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .student-profile-container .student-profile .student-details .student-name{
+        font-size: 16px;
+        font-weight: 400;
+        color: rgb(255, 255, 255);
+    }
+    .student-profile-container .student-profile .student-details .student-status{
+        font-size: 10px;
+        font-weight: 300;
+        color: rgb(123, 145, 145);
+    }
+
+    .student-profile-container .user-call-action-center{
+        margin-inline-end: 16px;
+        min-width: 25%;
+        z-index: 10;
+    } 
+
+    .student-profile-container .user-call-action-center .dropdown-menu {
+        background-color: rgb(2, 38, 58);
+        transition: all .5s ease-in-out;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+        border-radius: 10px;
+    }
+
+    .student-profile-container .user-call-action-center .dropdown-menu .dropdown-item{
+        color: aliceblue;
+        background-color: transparent !important;
+
+    } 
+    .student-profile-container .user-call-action-center .dropdown-menu li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-block: 5px;
+        padding: 10px;
+    } 
+
+    .student-profile-container .user-call-action-center .dropdown-menu li:hover{
+      background-color: rgb(6, 21, 45);
+    } 
+    .student-profile-container .user-call-action-center .dropdown-menu li svg{
+        width: 30px;
+        height: 30px;
+        filter: invert(1);
+     margin-inline-start: 10px;
+
+    } 
+    .student-profile-container .user-call-action-center .dropdown-menu li .fa{
+     font-size: 20px;
+     color: #f0f8ff;
+     padding-inline-start: 10px;
+  } 
+
+    .chat-area {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('../../Assets/customs/chat-bg.webp') center/cover no-repeat;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: 100vh;
+        object-fit: contain;
+        padding-block-start: 20%;
+        padding-inline: 15px;
+        display:flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        position: relative;
+        color: wheat;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto;
+    }
+
+    .chat-area .welcome-text {
+      background: rgba(1, 34, 49, 0.6);
+      width: 300px;
+      height: fit-content;
+      border-radius: 5px;
+      padding: 6px;
+      text-align: center;
+      font-weight: 300;
+      border: 1px solid rgb(123, 145, 145);
+      margin-block: 20px;
+    } 
+    .current-date{
+      position: absolute;
+      top: 70px;
+      background-color: rgb(2, 35, 32);
+      padding-inline: 7px;
+      border-radius: 50px;
+      color: aliceblue;
+    }
+    .send-info {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background-color: rgb(6, 21, 45);
+
+    }
+
+    .collapse-body {
+      position: fixed;
+      bottom: 13%;
+      left: 5%;
+    }
+
+    .collapse-body .card {
+      background-color: rgb(15, 47, 86);
+      width: 300px;
+      border-radius: 50px;
+      overflow: auto;
+    }
+    .collapse-body .card .file-btn-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .file-btn-container a {
+      padding: 10px;
+      text-decoration: none;
+      color: #f0f8ff;
+      margin: 10px;
+    }
+    .file-btn-container a span i{
+      background: rgb(1, 81, 112);
+      border-radius: 50px;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+    }
+    .collapse-body .card .file-btn-container a span{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+    .collapse-body .card .file-btn-container a span:hover{
+      transform: scale(.9);
+      transition: all .3s ease;
+    }
+    .collapse-body .card .file-btn-container a small{
+      margin-top: 12px;
+    }
+    .send-info textarea {
+      width: 100%;
+      height: 50px;
+      background-color: inherit;
+      margin-inline: 10px;
+      /* margin-right: 20px; */
+      color: aliceblue;
+      padding: 10px 20px;
+      border-radius: 60px;
+      box-shadow: none;
+      outline: none;
+      background: rgb(0, 46, 66);
+      box-sizing: border-box;
+      resize: none;
+    }
+
+    .send-text-btn {
+      background-color: rgb(3, 84, 124);
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+      text-align: center;
+      padding-inline-end: 0 !important;
+      display: none;
+      transition: all .10s ease-in-out;
+    }
+
+    .file-btn-group {
+      display: inline-flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+      margin-inline-start: 5px;
+    }
+
+    .toggle-styles {
+        display: none !important;
+        visibility: hidden;
+      transition: all .10s ease-in-out;
+
+    }
+    .show-send-btn {
+      display: flex;
+      visibility: visible;
+    }
+
+    .file-btn-group span{
+      padding-inline-end: 25px;
+    }
+
+       .file-btn-group span:last-child{
+      padding-inline-end: 10px;
+    }
+  
+    .send-info i {
+      font-size: 24px;
+      color: wheat;
+    }
+    .current-date.sticky {
+      position: fixed;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+#student-contact-container .card {
+  background: rgb(0, 26, 57);
+}
+
+.wrapper {
+  position: fixed;
+  top: 30%;
+}
+
+#student-contact-container .card button{
+  background: forestgreen;
+  margin-top: 20px;
+  box-shadow: none;
+}
+
+.profile-container {
+  position:  fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  background: rgb(10, 59, 78);
+}
+
+.student-profile-content .background-banner {
+  background-color: rgb(1, 28, 67);
+    width: 100%;
+    height: 150px;
+    top: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.profile-content {
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-top: 30px;
+}
+
+.profile-content .student-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  border: 2px solid rgb(2, 125, 249);
+  padding: 2px;
+  clear: both;
+}
+
+.profile-content .student-name {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: white;
+}
+
+
+.profile-container .card-wrap {
+  margin-bottom: 20px;
+  background-color: rgb(1, 18, 40);
+ border-radius: 20px;
+ padding: 15px;
+ font-weight: lighter !important;
+ font-size: large;
+ color: burlywood;
+}
+
+.profile-container .card-wrap .student-mobile-contact {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.profile-container .card-wrap .user-action-center ul{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.profile-container .card-wrap .user-action-center ul .nav-link{
+  border-radius: 50px;
+  margin-inline: 5px;
+  background-color: rgb(1, 103, 108);
+  color: #f0f8ff;
+}
+
+.profile-container .close-btn {
+  padding: 10px;
+  background-color: transparent !important;
+  border: none;
+  box-shadow: none !important;
+  outline: none !important;
+  font-weight: 900;
+  font-size: 18px;
+}

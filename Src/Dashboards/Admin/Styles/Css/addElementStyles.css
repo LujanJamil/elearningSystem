@@ -1,0 +1,215 @@
+.inputs-wrapper {
+    padding: 10px !important;
+    max-height: 200px;
+    overflow: auto;
+    margin-top: 15px;
+    border: 1px solid royalblue;
+    border-radius: 5px;
+}
+
+.inputs-wrapper::-webkit-scrollbar {
+    margin-block: 1px;
+}
+
+.inputs-wrapper .form-control {
+    margin-block: 10px;
+}
+
+.lessons-container {
+    border-inline: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-radius: 0 0 15px 15px;
+}
+
+.lessons-wrapper .all-lessons{
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-block:  5px;
+}
+
+.all-lessons .card {
+    max-width: 290px;
+    margin: 20px;
+    padding-bottom: 0 !important;
+    border: none;
+    background: transparent !important;
+    position: relative;
+}
+
+@media (max-width: 712px ) {
+    .all-lessons .card {
+        min-width: 310px;
+}
+}
+
+
+.delete-lesson-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(0, 20, 49) !important;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-inline: 19px;
+    border-radius: unset;
+    box-shadow: unset ;
+    border: none;
+    outline: none;
+    display: none;
+}
+
+.delete-lesson-btn input[type='checkbox'] {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.delete-lesson-btn .title-lesson {
+    color: #f5deb3;
+}
+
+.delete-lesson-btn .title-lesson {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.warning-msg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: 100;
+    flex-wrap: nowrap;
+    display: flex;
+    align-content: center !important;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9));
+    display: none ;
+    transform: scale(0);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s ease;
+}
+
+.display-Warning {
+    display: flex;
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+    transition: all .4s ease;
+}
+
+.warning-msg-container .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.delete-box {
+    max-width: 450px;
+}
+
+.all-lessons .card .card-body{
+    padding: 0;
+    /* height: 0px; */
+    position: relative;
+}
+
+.all-lessons .card .lessons-header {
+    background: rgb(0, 38, 81);
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    cursor: pointer;
+    color: aliceblue;
+    width: 100%;
+    position: relative;
+}
+
+
+.all-lessons .card .lessons-header .icons{
+    padding-inline: 10px;
+    color: bisque;
+}
+
+.lessons-header input[type="text"]:read-only {
+    /* background: red; */
+}
+
+
+.editting-title {
+    background-color: rgba(1, 183, 86, 0.495);
+    color: rgb(245, 246, 246);
+    padding: 3px !important;
+    border-radius: 5px !important;
+    cursor: text;
+}
+
+.error-editting::placeholder {
+    color: rgb(255, 0, 0) !important;
+    font-weight: lighter !important;
+}
+
+.all-lessons .card .lessons-header .edit-lesson-title:hover{
+    font-weight: bolder;
+    transform: scale(1.1);
+    transition: all .3s ease-in-out;
+}
+
+.all-lessons .card .lessons-header .lessons-title {
+    margin: 0 !important;
+    padding: 0 ;
+    border: none;
+    background: inherit;
+    color: aliceblue;
+    border-right: 1px solid;
+    border-radius: unset;
+    padding-inline: 10px !important;
+}
+
+
+
+.lessons-title::placeholder {
+    color: whitesmoke
+}
+
+.all-lessons .card .card-body .lesson-video {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0 0 5px 5px;
+}
+
+.all-lessons .card .card-body .lesson-video video {
+    width: 100%;
+    background-position: inherit;
+    background-size: inherit;
+    background-repeat: inherit;
+    object-fit: inherit;
+    object-position: inherit;
+    border-radius: inherit;
+    height: 100%;
+}
+
+.error::placeholder {
+    color: red;
+}

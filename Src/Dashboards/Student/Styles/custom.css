@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'custom-fonts';
+    src: url('../Assets/Fonts/Open_Sans/OpenSans-Regular.ttf');
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: 'custom-fonts';
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('../Assets/customs/chat-bg.webp') center/cover no-repeat;
+    min-height: 100vh;
+}
+
+
+.class-dashboard-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 10px;
+    background-color: rgb(1, 18, 40);
+    padding: 20px;
+}
+
+.class-dashboard-header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: aliceblue;
+}
+
+.class-dashboard-header nav button:hover {
+    transform: scale(.90);
+    transition: all .2s ease;
+}
+
+main {
+    min-height: 100vh;
+}
+
+.quick-student-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.quick-student-options .card {
+    /* width: 150px; */
+    /* height: 150px; */
+    /* margin: 10px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(0, 48, 50);
+    cursor: pointer; */
+}
+
+
+
+.quick-student-options .card:hover {
+    border: 1px solid royalblue;
+    transform: scale(1.1);
+    transition: all .3s ease;
+    font-weight: bold;
+    font-family: 'custom-fonts';
+}
+
+.quick-student-options .card .card-body {
+    display: inherit;
+    align-items: inherit;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.quick-student-options .card .card-body .card-icons {
+    font-size: 35px;
+    color: aqua;
+}
+
+.quick-student-options .card .card-body span {
+    /* color: #fff;
+    font-size: 21px;
+    white-space: nowrap;
+    text-overflow: ellipsis !important;
+    overflow: hidden;
+    max-width: 150px; */
+    color: #fff;
+    font-size: 18px;
+    /* text-wrap: nowrap; */
+}
+
+@media (max-width: 550px) {
+    .quick-student-options .card .card-body span {
+        font-size: 15px;
+    }
+}
+
+
+.assignment-container {
+    position: fixed;
+    min-height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0%;
+    bottom: 0;
+    height: 100vh;
+    z-index: 50;
+    overflow: hidden !important;
+    background-color: rgb(0, 22, 37);
+}
+
+.assigment-header a {
+    color: #fff;
+}
+
+#assignments {
+    z-index: 100;
+}
+
+.assigment-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 100;
+    background: rgb(0, 24, 66);
+    color: aliceblue !important;
+}
+
+.assigment-header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: aliceblue !important;
+
+}
+
+.listed-assigments {
+    display: flex;
+    align-items: center ;
+    justify-content: start;
+    width: 100% !important;
+}
+
+.listed-assigments ul {
+    display: flex !important;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row !important;
+    width: 100% !important;
+}
+
+.listed-assigments ul .list-group-item:last-child {
+    align-self: center !important;
+    margin-left: 24px;
+    justify-self: center !important;
+}
+
+.listed-assigments ul .list-group-item  {
+    width: unset;
+    border-radius: unset ;
+    border-radius: 50px !important;
+    padding: 0;
+    margin: 0;
+    padding: 5px 10px;
+    border: unset;
+    background: rgb(0, 67, 67);
+    color: aliceblue;
+}
+
+.listed-assigments ul .list-group-item.active {
+    background: rgb(0, 57, 13);
+    border: 1px solid rgb(255, 225, 0) !important;
+}
+
+
+.assigment-list li{
+    margin: 10px 2px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+    background: rgb(253, 253, 253);
+}
+
+.assigment-list li:hover{
+    background: rgb(0, 135, 140);
+    color: #e3ea03;
+}

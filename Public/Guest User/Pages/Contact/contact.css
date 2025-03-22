@@ -1,0 +1,118 @@
+
+.contact-us-section {
+    padding: 100px 0;
+    background-color: #f7f7f7;
+  }
+  
+  .contact-us-section h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .contact-us-section p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: start;
+    color: #666;
+  }
+  
+  .contact-us-section form {
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  
+  .contact-us-section form .form-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .contact-us-section form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+   
+  }
+
+  .contact-us-section form input[type="text"], .contact-us-section form input[type="email"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-us-section form textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-us-section form button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact-us-section form button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  
+  .contact-us-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact-us-section li {
+    margin-bottom: 10px;
+  }
+  .contact-us-section i {
+    font-size: 18px;
+  }
+  
+  .contact-us-section a {
+    color: #337ab7;
+    text-decoration: none;
+    font-size: 18px;
+    margin-inline-start: 10px;
+  }
+  
+  .contact-us-section a:hover {
+    color: #23527c;
+  }
+  
+  .contact-us-section .g-recaptcha {
+    margin-bottom: 20px;
+  }
+  
+  .contact-us-section .form-group:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-us-section form {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-us-section form {
+      padding: 5px;
+    }
+  }

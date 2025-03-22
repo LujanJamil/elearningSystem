@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../Assets/Images/Backgrounds/logo.png">
+    <title>Sama Islamic Digital College</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Assets/Styles/Boostrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Styles/main_styles.css">
+    <link rel="stylesheet" href="../Styles/main_styles">
+    <link rel="stylesheet" href="../Styles/responsive.css">
+    <link rel="stylesheet" href="../Assets/Icons/css/all.css">
+  </head>
+  <body>
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< START HEADER SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+     <div class="student-dashboard-wrapper">
+    <header class="container-fluid px-0">
+        <div class="nav-wrapper">
+           <!-- Start Navigation Menu -->
+           <div class="links-container">
+            <ul class="nav">
+              <li class="nav-item">
+                <a href="../../../../Public/Guest User/Pages/Home/home.html" aria-current="page">
+                  <i class="icon fa fa-solid fa-house-user"></i>
+                </a>
+                <span>Home</span>
+              </li>
+              <li class="nav-item">
+                <a href="./Default.html">
+                <i class="icon fa fa-box-open"></i>
+                </a>
+                <span>My class</span>
+              </li>
+              <li class="nav-item">
+                <a href="./myCourses.html">
+                  <i class="icon fa fa-graduation-cap" aria-hidden="true"></i>
+                </a>
+                <span>My courses</span>
+              </li>
+              <li class="nav-item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                <a href="./user_account.html">
+                <i class="icon fa fa-user-circle" aria-hidden="true"></i>
+                </a>
+                <span>Account</span>
+              </li>
+              <li class="nav-item" data-bs-toggle="offcanvas" data-bs-target="#notifications">
+                <a href="./notifications.html">
+                  <i class="icon fa fa-bell" aria-hidden="true"></i>
+                </a>
+                <span>Notifications</span>
+              </li>
+            </ul>
+           </div>
+          <!-- End Navigation Menu -->
+        </div>
+    </header>
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< END HEADER SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+    <div class="student-dasboard">
+      <div class="class-dashboard-header">
+          <nav>
+              <!-- <span>Dasboard</span> -->
+              <span>My Class</span>
+              <div></div>
+          </nav>
+      </div>
+      <main class="my-5 py-5">
+      <div class="container">
+          <div class="container quick-student-options">
+            <a href="./myCourses.html" class="text-decoration-none text-light">
+              <div class="card">
+                  <div class="card-body">
+                      <i class="fas fa-book-open card-icons text-warning"></i>
+                      <span>Enrolled Courses</span>
+                  </div>
+              </div>
+            </a>
+              <a href="./Teachers.html" class="text-decoration-none text-light">
+              <div class="card">
+                  <div class="card-body">
+                      <i class="fas fa-person-booth card-icons" style="color: cornflowerblue;"></i>
+                      <span>Teachers</span>
+                  </div>
+              </div>
+              </a>
+              <div class="card" data-bs-target="#assignments" data-bs-toggle="collapse" aria-expanded="false" aria-controls="assignments">
+                  <div class="card-body">
+                      <i class="fas fa-pencil-ruler card-icons" style="color: rgb(45, 181, 15);"></i>
+                      <span>Assignments</span>
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="card-body">
+                      <i class="fa fa-calendar card-icons" style="color: antiquewhite;" aria-hidden="true"></i>
+                      <span>My Time Table</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </main>
+  </div>
+
+
+  <div id="assignments" class="collapse">
+    <div class="assignment-container">
+    <div  class="assigment-header">
+      <nav class="container">
+        <a href="./Default.html" class="text-decoration-none text-light" >
+          <button type="button" class="btn p-0 m-0 border-0 text-light btn-sm border-0">
+            <i class="fa fa-arrow-left fs-5" aria-hidden="true"></i>
+          </button>
+        </a>
+        <span class="fs-5 ">Assigments</span>
+        <div></div>
+    </nav>
+    </div>
+    <section class="my-5 pt-5">
+      <div class="container">
+      <div class="listed-assigments container">
+        <ul class="list navbar p-0 list-group">
+          <li class="nav-item list-group-item list-group-item-action active" data-bs-toggle="list" href="#pdfassigments" role="tab">
+            <span class="assigment-name-type">Papers ( pdf )</span>
+          </li>
+          <li class="nav-item list-group-item list-group-item-action" data-bs-toggle="list" href="#questionsassigments" role="tab">
+            <span class="subject-name">Questions</span>
+          </li>
+        </ul>
+      </div>
+      </div>
+         <!-- Tab panes -->
+     <div class="container my-3">
+     <div class="tab-content">
+    <div class="tab-pane active" id="pdfassigments" role="tabpanel">
+      <ul class="assigment-list navbar-nav nav">
+        <li class="assigment-name">
+                        <span>Introduction To swalah</span>
+       </li>
+      <li class="assigment-name">
+        <span>Recite suraht Nasi</span>
+      </li>
+      </ul>
+    </div>
+    <div class="tab-pane" id="questionsassigments" role="tabpane2">
+      <ul class="assigment-list navbar-nav nav">
+      <li class="assigment-name">
+       <span>Introduction To Quran</span>
+      </li>
+       <li class="assigment-name">
+       <span>Complete this Quzi</span>
+       </li>
+      </ul>
+    </div>
+    </div>
+    </div>
+  </section>
+    </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="../Scripts/my_class.js"></script>
+  <script src="../Scripts/user_account.js"></script>
+  <script src="../Assets/Script/boostrap/bootstrap.min.js"></script>
+  <script src="../Assets/Script/Jquery/"></script>
+  <script src="../Assets/Script/js/main.js"></script>
+   <script src="../Assets/Icons/js/all.js"></script>
+  <script src="https://kit.fontawesome.com/3acc367a10.js"crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    </body>
+  </html>
+
+  
+
+
+
+
+
+
+  

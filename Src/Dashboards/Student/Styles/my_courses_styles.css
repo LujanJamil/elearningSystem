@@ -1,0 +1,181 @@
+.card-wrapper .card-img {
+  display: none !important;
+}
+
+.course-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)),
+    url("../Assets/Images/Backgrounds/chatroom-background.webp")
+      center/cover no-repeat;
+  min-height: 100vh;
+  padding-bottom: 30%;
+}
+
+.course-container .heading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  text-align: center;
+  z-index: 12;
+  color: aliceblue;
+}
+
+.course-container .heading span {
+  padding: 10px 25px;
+  background-color: rgb(0, 50, 112);
+  border-radius: 10px;
+  font-size: 18px;
+  box-shadow: 0 0 10px rgba(0, 13, 42, 0.9);
+}
+.course-header-list {
+  background-color: rgb(1, 23, 50);
+  box-shadow: 0 0 5px rgba(0, 31, 99, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 20px 10px;
+  overflow-x: auto;
+  width: 100%;
+  padding-top: 60px;
+}
+
+.course-section ul {
+  display: flex ;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+ 
+.course-section ul .list-group-item-action {
+  width: unset;
+}
+
+
+.course-header-list .list-group-item{
+  color: rgb(35, 190, 188);
+  border-radius: 5px;
+  border: thin solid rgb(1, 23, 50);
+  background: unset !important;
+  border: unset;
+  padding: 4px 10px !important;
+}
+
+.course-header-list .list-group-item.active{
+  background-color: rgb(0, 17, 38);
+  border: thin solid burlywood;
+  box-shadow: 0 0 20px rgba(6, 51, 107, 0.8);
+
+}
+
+.notify-logo-content {
+  color: rgb(110, 129, 154) !important;
+}
+
+.tab-wrapper {
+  min-height: 100vh;
+  padding-top: 10%;
+}
+
+.tab-container {
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+ .tab-container .card-course-content{
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  box-shadow: 0 0 10px rgba(0, 94, 110, 0.9);
+  background-color: rgb(254, 252, 250);
+  border-radius: 10px;
+  min-width: 300px;
+  margin: 30px;
+  cursor: pointer;
+}
+
+.card-course-content .card-course-text-img {
+  min-width: 30%;
+  align-self: stretch;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  background: linear-gradient(-200deg,#096c9d 20%,#44107a 47%,#ff1361 57%,#7a7606 100%);
+  font-size: 18px;
+  border-radius: 10px 0 0 10px;
+  text-transform: uppercase;
+  text-overflow: clip;
+  /* overflow-x: auto; */
+  /* scrollbar-color: transparent; */
+}
+.card-course-content .class-course-name {
+  font-weight: bolder;
+  font-size: 20px;
+  color: #025c8c;
+}
+
+.card-course-content .course-details {
+  margin-left: 10px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  min-width: 100%;
+  padding-inline: 5px;
+}
+
+.card-course-content .course-details > div {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.money-paid {
+  font-weight: bolder;
+  color: rgb(4, 180, 37);
+}
+
+.teacher-names {
+  font-size: 13px !important;
+  margin-right: 10px;
+  color: grey;
+}
+
+.card-course-content .course-details > div  span {
+ margin-block: 2px;
+}
+
+.card-course-content .course-details > div  span > span{
+  margin-left: 2px;
+  font-size: 14px;
+ }
+
+
+.card-course-content .course-details > div  span i{
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+
+.card-course-continue-btn {
+  margin-block: 10px;
+  width: 90%;
+  box-shadow: none;
+}

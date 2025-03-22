@@ -1,0 +1,384 @@
+i {
+    cursor: pointer;
+  }
+
+.class-dashboard header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgb(6, 21, 45);
+    border-bottom: 1pxs solid rgb(19, 55, 120);
+    border-radius: 0 0 10px 10px;
+
+
+}
+.teacher-profile-container {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px 3px;
+color: #f0f8ff;
+}
+
+.back-btn {
+    margin-inline-end: 18px;
+  }
+  
+.teacher-profile-container .teacher-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+      .teacher-profile-container .teacher-profile .teaher-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        background-size: cover;
+        object-fit: cover;
+        background-position: center;
+        border: 2px solid rgb(2, 125, 249);
+        padding: 2px;
+        margin-right: 13px;
+    }
+
+    .teacher-profile-container .teacher-profile .teacher-details {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .teacher-profile-container .teacher-profile .teacher-details .teacher-name{
+        font-size: 16px;
+        font-weight: 400;
+        color: rgb(255, 255, 255);
+    }
+    .teacher-profile-container .teacher-profile .teacher-details .teacher-status{
+        font-size: 10px;
+        font-weight: 300;
+        color: rgb(123, 145, 145);
+    }
+
+    .teacher-profile-container .user-call-action-center{
+        margin-inline-end: 16px;
+        min-width: 25%;
+        z-index: 10;
+    } 
+
+    .teacher-profile-container .user-call-action-center .dropdown-menu {
+        background-color: rgb(2, 38, 58);
+        transition: all .5s ease-in-out;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+        border-radius: 10px;
+    }
+
+    .teacher-profile-container .user-call-action-center .dropdown-menu .dropdown-item{
+        color: aliceblue;
+        background-color: transparent !important;
+
+    } 
+    .teacher-profile-container .user-call-action-center .dropdown-menu li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-block: 5px;
+        padding: 10px;
+    } 
+
+    .teacher-profile-container .user-call-action-center .dropdown-menu li:hover{
+      background-color: rgb(6, 21, 45);
+    } 
+    .teacher-profile-container .user-call-action-center .dropdown-menu li svg{
+        width: 30px;
+        height: 30px;
+        filter: invert(1);
+     margin-inline-start: 10px;
+
+    } 
+    .teacher-profile-container .user-call-action-center .dropdown-menu li .fa{
+     font-size: 20px;
+     color: #f0f8ff;
+     padding-inline-start: 10px;
+  } 
+
+    .chat-area {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('../Assets/customs/chat-bg.webp') center/cover no-repeat;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: 100vh;
+        object-fit: contain;
+        padding-block-start: 20%;
+        padding-inline: 15px;
+        display:flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        position: relative;
+        color: wheat;
+    }
+
+    .chat-area .welcome-text {
+      background: rgba(1, 34, 49, 0.6);
+      width: 300px;
+      height: fit-content;
+      border-radius: 5px;
+      padding: 6px;
+      text-align: center;
+      font-weight: 300;
+      border: 1px solid rgb(123, 145, 145);
+      margin-block: 20px;
+    } 
+    .current-date{
+      position: absolute;
+      top: 70px;
+      background-color: rgb(2, 35, 32);
+      padding-inline: 7px;
+      border-radius: 50px;
+      color: aliceblue;
+    }
+    .send-info {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background-color: rgb(6, 21, 45);
+
+    }
+
+    .collapse-body {
+      position: fixed;
+      bottom: 13%;
+      left: 5%;
+    }
+
+    .collapse-body .card {
+      background-color: rgb(15, 47, 86);
+      width: 300px;
+      border-radius: 50px;
+      overflow: auto;
+    }
+    .collapse-body .card .file-btn-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .file-btn-container a {
+      padding: 10px;
+      text-decoration: none;
+      color: #f0f8ff;
+      margin: 10px;
+    }
+    .file-btn-container a span i{
+      background: rgb(1, 81, 112);
+      border-radius: 50px;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+    }
+    .collapse-body .card .file-btn-container a span{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+    .collapse-body .card .file-btn-container a span:hover{
+      transform: scale(.9);
+      transition: all .3s ease;
+    }
+    .collapse-body .card .file-btn-container a small{
+      margin-top: 12px;
+    }
+    .send-info textarea {
+      width: 100%;
+      height: 50px;
+      background-color: inherit;
+      margin-inline: 10px;
+      /* margin-right: 20px; */
+      color: aliceblue;
+      padding: 10px 20px;
+      border-radius: 60px;
+      box-shadow: none;
+      outline: none;
+      background: rgb(0, 46, 66);
+      box-sizing: border-box;
+      resize: none;
+    }
+
+    .send-text-btn {
+      background-color: rgb(3, 84, 124);
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+      text-align: center;
+      padding-inline-end: 0 !important;
+      display: none;
+      transition: all .10s ease-in-out;
+    }
+
+    .file-btn-group {
+      display: inline-flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+      margin-inline-start: 5px;
+    }
+
+    .toggle-styles {
+        display: none !important;
+        visibility: hidden;
+      transition: all .10s ease-in-out;
+
+    }
+    .show-send-btn {
+      display: flex;
+      visibility: visible;
+    }
+
+    .file-btn-group span{
+      padding-inline-end: 25px;
+    }
+
+       .file-btn-group span:last-child{
+      padding-inline-end: 10px;
+    }
+  
+    .send-info i {
+      font-size: 24px;
+      color: wheat;
+    }
+    .current-date.sticky {
+      position: fixed;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+#teacher-contact-container .card {
+  background: rgb(0, 26, 57);
+}
+
+.wrapper {
+  position: fixed;
+  top: 30%;
+
+}
+
+
+#teacher-contact-container .card button{
+  background: forestgreen;
+  margin-top: 20px;
+  box-shadow: none;
+}
+
+.profile-container {
+  border-radius: 30px 30px 0 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  background: rgb(10, 59, 78);
+}
+
+.teacher-profile-content .background-banner {
+  background-color: rgb(1, 28, 67);
+  border-radius: 30px 30px 0 0;
+    width: 100%;
+    height: 150px;
+    top: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.profile-content {
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-top: 30px;
+}
+
+.profile-content .teacher-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  border: 2px solid rgb(2, 125, 249);
+  padding: 2px;
+  clear: both;
+}
+
+.profile-content .teacher-name {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: white;
+}
+
+
+.profile-container .card-wrap {
+  margin-bottom: 20px;
+  background-color: rgb(1, 18, 40);
+ border-radius: 20px;
+ padding: 15px;
+ font-weight: lighter !important;
+ font-size: large;
+ color: burlywood;
+}
+
+.profile-container .card-wrap .teacher-mobile-contact {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.profile-container .card-wrap .user-action-center ul{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.profile-container .card-wrap .user-action-center ul .nav-link{
+  border-radius: 50px;
+  margin-inline: 5px;
+  background-color: rgb(1, 103, 108);
+  color: #f0f8ff;
+}
+
+.profile-container .close-btn {
+  padding: 10px;
+  background-color: transparent !important;
+  border: none;
+  box-shadow: none !important;
+  outline: none !important;
+  font-weight: 900;
+  font-size: 18px;
+}
+

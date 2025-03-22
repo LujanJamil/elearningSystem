@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../Assets/Images/Backgrounds/logo.png" />
+    <title>Sama Islamic Digital College | Admin</title>
+    <link rel="stylesheet" href="../Styles/Boostrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Styles/Css/custom_Styles.css" />
+    <link rel="stylesheet" href="../Styles/Css/customizedCourseStyles.css" />
+    <link rel="stylesheet" href="../Assets/customs/Awesome_Icons/css/" />
+  </head>
+  <body>
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< START DASHBOARD SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <div class="dashboard-wrapper">
+      <aside>
+        <div class="admin-logo-content">
+          <div class="d-flex align-items-center justify-content-start">
+            <img
+              class="img-fluid logo-img"
+              width="60px"
+              src="../Assets/customs/logo.png"
+              alt="logo Image loading....."
+              srcset=""
+            />
+            <div class="logo-name">Sama Islamic Digital College</div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="fs-5 fw-bolder pt-4 pb-3">Menu</div>
+          <ul class="navbar-nav nav dashboard-menu">
+            <li class="nav-item">
+              <i class="fa fa-dashboard" aria-hidden="true"></i>
+              <span class="icon-text">Dashboard</span>
+            </li>
+            <li class="nav-item">
+              <i class="fa fa-dashboard" aria-hidden="true"></i>
+              <span class="icon-text">Course Management</span>
+            </li>
+            <li class="nav-item">
+              <i class="fa fa-dashboard" aria-hidden="true"></i>
+              <span class="icon-text">Students</span>
+            </li>
+            <li class="nav-item">
+              <i class="fa fa-dashboard" aria-hidden="true"></i>
+              <span class="icon-text">Teachers</span>
+            </li>
+            <li class="nav-item">
+              <i class="fa fa-dashboard" aria-hidden="true"></i>
+              <span class="icon-text">Attendance</span>
+            </li>
+            <li class="nav-item">
+              <i class="fa fa-dashboard" aria-hidden="true"></i>
+              <span class="icon-text">Report Cards</span>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <main>
+        <!-- START NAVBAR SECTION -->
+        <nav class="navbar nav py-3">
+          <div class="container d-flex align-items-center">
+            <!-- START CLOSE ASIDE BAR BUTTON -->
+            <div class="close-aside-btn">
+              <button
+                type="button"
+                class="btn p-0 rounded-3 px-2"
+                id="closeSidebarNav"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <!-- END CLOSE ASIDE BAR BUTTON -->
+
+            <!-- QUICK ACCESS CENTER -->
+            <div
+              class="nav-action-center d-flex align-items-center justify-content-center px-3"
+            >
+              <form class="navbar-search-wrapper">
+                <input
+                  class="form-control search-input shadow-none border-none m-0 p-0"
+                  type="search"
+                  placeholder="Search...."
+                />
+                <i class="fa fa-search search-icon" aria-hidden="true"></i>
+              </form>
+              <!-- FULL SCREEN BUTTON  -->
+              <div>
+                <button
+                  id="ViewFullScreen"
+                  type="button"
+                  class="btn action-btns"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Full Screen View"
+                >
+                  <i class="fa fa-square" aria-hidden="true"></i>
+                </button>
+              </div>
+              <!-- NOTIFICATION BUTTON -->
+              <div>
+                <button
+                  type="button"
+                  class="btn action-btns notification-btn"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Notifications"
+                >
+                  <i class="fa fa-bell" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <div>
+                <button
+                  type="button"
+                  class="btn action-btns settings-btn"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="settings"
+                >
+                  <i class="fa fa-gear" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="admin-mode-box">
+                <div class="admin-mode">Admin</div>
+                <img
+                  class="img-fluid admin-img"
+                  src="../Assets/Images/admin/customer01.jpg"
+                  alt="admin img loading"
+                />
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- END NAVBAR SECTION-->
+
+        <!-- START TEACHER MANAGEMENT BOARD SECTION -->
+        <section class="dashboard-section mb-5 pb-5">
+          <!-- QUICK CHOICES CONTAINER -->
+          <div class="block-page-info-choices" style="user-select: none">
+            <!-- WELCOME INSTRUCTION BOX -->
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 p-5">
+                  <h1>Attendance Management</h1>
+                  <p>
+                    <i class="text-info"
+                      > View, track the presence, attendance of students and teachers......</i
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- QUICK CHOICES -->
+            <div class="container quick-choices ps-5">
+              <div
+                class="student_attendance card d-flex align-items-center justify-content-center flex-column"
+              >
+                <i class="fa fa-users fs-1 icon" aria-hidden="true"></i>
+                <span class="fs-5">Students</span>
+              </div>
+              <div
+                class="teacher_attendance card d-flex align-items-center justify-content-center flex-column"
+              >
+              <i class="fas fa-address-book fs-1 icon"></i>
+                <span class="fs-5">Teachers</span>
+              </div>
+            </div>
+          </div>
+
+          <!--  START TEACHERS ATTENDANCE CONTAINER -->
+          <div class="TeachersAttendanceContainer">
+            <div class="container">
+              <div class="container p-4">
+                <button
+                  type="button"
+                  class="backattendacebtn btn btn-light fw-bold border-0 outline-none"
+                >
+                  <i class="fa fa-arrow-left pe-2" aria-hidden="true"></i> Back
+                </button>
+              </div>
+              <div class="row justify-content-center">
+                <div
+                  class="col-md-12 px-5 py-3 d-flex align-items-center justify-content-between"
+                >
+                  <div class="header">
+                    <span>Teacher's Attendance</span>
+                    <small>Check for teacher's attendance...</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container p-5">
+                <nav
+                  class="navbar nav justify-content-start px-4 rounded-top"
+                  style="background: rgb(0, 7, 20) !important"
+                >
+                  <div
+                    class="nav-header d-flex align-items-center justify-content-start"
+                  >
+                    <span>
+                      <span
+                        class="text-light navbar-toggler btn btn-sm d-flex align-items-center justify-content-center flex-column border-0"
+                      >
+                        <span
+                          class="navbar-toggler-icon"
+                          style="filter: invert(1)"
+                        ></span>
+                        <small style="font-size: 10px"
+                          >Find <br />
+                          course</small
+                        >
+                      </span>
+                    </span>
+                  </div>
+                  <div
+                    class="class-select-row d-flex align-items-center justify-content-center"
+                  >
+                    <span class="row-header" style="color: rgb(0, 0, 0)"
+                      >select</span
+                    >
+                    <ul class="navbar-nav">
+                      <li class="nav-item">Senior Five</li>
+                      <li class="nav-item">Senior Five</li>
+                      <li class="nav-item">Senior Five</li>
+                      <li class="nav-item">Senior Five</li>
+                      <li class="nav-item">Senior Five</li>
+                      <li class="nav-item">Senior Five</li>
+                      <li class="nav-item">Senior Five</li>
+                    </ul>
+                  </div>
+                </nav>
+                <div class="all-teachers-container">
+                  <div
+                    class="course-aside-bar"
+                    style="background: rgb(0, 13, 22)"
+                  >
+                    <div class="fs-5 fw-bolder pb-3 text-warning">
+                      Find courses
+                    </div>
+                    <ul class="navbar-nav nav text-light">
+                      <li class="nav-item">IPLE</li>
+                      <li class="nav-item">Quran</li>
+                      <li class="nav-item">Idaad</li>
+                      <li class="nav-item">Thanawi</li>
+                      <li class="nav-item">Yasaruna</li>
+                      <li class="nav-item">Arabic Language</li>
+                      <li class="nav-item">General Basics of Islam</li>
+                    </ul>
+                  </div>
+                  <div class="teacher-container w-100">
+                    <div class="teacher-attendance-list">
+                  <div class="card teacher-card">
+                    <div class="attendance-status-icon">
+                        <div class="status-icons">
+                            <!-- <div class="no-atttendance"><i class="fa fa-times" aria-hidden="true"></i></div> -->
+                            <div class="yes-atttendance"><i class="fa fa-check" aria-hidden="true"></i></div>
+                        </div>
+                    </div>
+                    <div class="teacher-attendace-img-box">
+                        <img class="card-img-top student-img" src="../Assets/Images/student_imgs/customer01.jpg"  alt="student image loading....">
+                    </div>
+                    <div class="text-center d-flex align-items-center justify-content-center flex-column">
+                        <span class="teacher-name">Lucjan Jamil</span>
+                    </div>
+                    <div class="attendance-summary-box">
+                        <ul class="navbar-nav p-3">
+                            <li class="nav-item">
+                                <span>
+                                    <span class="text-warning">Status:</span>
+                                    <span class="text-success">
+                                        <span class="attendance-status">Checked in
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                    </span>
+                                </span>
+                                </span>
+                            </li>
+                            <li class="nav-item">
+                                <span>
+                                    <span style="color: purple;" >Time:</span>
+                                    <span style="color: bisque; font-size: 13px;">
+                                        <span class="attendance-date">Today &dotsquare; <span>at<span class="attendance-time small">12: 30pm</span></span></span>
+                                    </span>
+                                </span>
+                            </li>
+                            <li class="nav-item ">
+                                <span>
+                                    <span  class="text-info">State:</span>
+                                    <span class="small text-primary">
+                                        <span class="attendance-state">online</span>
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                     </div>
+                     <div class="card teacher-card">
+                        <div class="attendance-status-icon">
+                            <div class="status-icons">
+                                <div class="no-atttendance"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                <!-- <div class="yes-atttendance"><i class="fa fa-check" aria-hidden="true"></i></div> -->
+                            </div>
+                        </div>
+                        <div class="teacher-attendace-img-box">
+                            <img class="card-img-top student-img" src="../Assets/Images/student_imgs/customer01.jpg"  alt="student image loading....">
+                        </div>
+                        <div class="text-center d-flex align-items-center justify-content-center flex-column">
+                            <span class="teacher-name">Lucjan Jamil</span>
+                        </div>
+                        <div class="attendance-summary-box">
+                            <ul class="navbar-nav p-3">
+                                <li class="nav-item">
+                                    <span>
+                                        <span class="text-warning">Status:</span>
+                                        <span class="text-danger">
+                                            <span class="attendance-status">Negative
+                                                <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                        </span>
+                                    </span>
+                                    </span>
+                                </li>
+                                <li class="nav-item">
+                                    <span>
+                                        <span style="color: purple;" >Time:</span>
+                                        <span style="color: bisque; font-size: 13px;">
+                                            <span class="attendance-date">yesterday &dotsquare; <span>at<span class="attendance-time small">12: 30pm</span></span></span>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li class="nav-item ">
+                                    <span>
+                                        <span  class="text-info">State:</span>
+                                        <span class="small text-secondary">
+                                            <span class="attendance-state">offline</span>
+                                        </span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                         </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  END TEACHERS ATTENDANCE CONTAINER -->
+
+           <!--  START STUDENTS ATTENDANCE CONTAINER -->
+           <div class="studentsAttendanceContainer">
+            <div class="container">
+              <div class="container p-4">
+                <button
+                  type="button"
+                  id="backattendace" class="btn btn-light fw-bold border-0 outline-none"
+                >
+                  <i class="fa fa-arrow-left pe-2" aria-hidden="true"></i> Back
+                </button>
+              </div>
+              <div class="row justify-content-center">
+                <div
+                  class="col-md-12 px-5 py-3 d-flex align-items-center justify-content-between"
+                >
+                  <div class="header">
+                    <span>Student's Attendance</span>
+                    <small>Check for student's attendance...</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container p-5">
+                <nav
+                  class="navbar nav justify-content-start px-4 rounded-top"
+                  style="background: rgb(0, 7, 20) !important"
+                >
+                  <div
+                    class="nav-header d-flex align-items-center justify-content-start"
+                  >
+                    <span>
+                      <span
+                        class="text-light navbar-toggler btn btn-sm d-flex align-items-center justify-content-center flex-column border-0"
+                      >
+                        <span
+                          class="navbar-toggler-icon"
+                          style="filter: invert(1)"
+                        ></span>
+                        <small style="font-size: 10px"
+                          >Find <br />
+                          course</small
+                        >
+                      </span>
+                    </span>
+                  </div>
+                  <div
+                    class="class-select-row d-flex align-items-center justify-content-center"
+                  >
+                    <span class="row-header" style="color: rgb(0, 0, 0)"
+                      >select</span
+                    >
+                    <ul class="navbar-nav">
+                      <li class="nav-item">Senior Five</li>
+                      <li class="nav-item">Senior Five</li>
+                      <li class="nav-item">Senior Five</li>
+                      <li class="nav-item">Senior Five</li>
+                      <li class="nav-item">Senior Five</li>
+                      <li class="nav-item">Senior Five</li>
+                      <li class="nav-item">Senior Five</li>
+                    </ul>
+                  </div>
+                </nav>
+                <div class="all-teachers-container">
+                  <div
+                    class="course-aside-bar"
+                    style="background: rgb(0, 13, 22)"
+                  >
+                    <div class="fs-5 fw-bolder pb-3 text-warning">
+                      Find courses
+                    </div>
+                    <ul class="navbar-nav nav text-light">
+                      <li class="nav-item">IPLE</li>
+                      <li class="nav-item">Quran</li>
+                      <li class="nav-item">Idaad</li>
+                      <li class="nav-item">Thanawi</li>
+                      <li class="nav-item">Yasaruna</li>
+                      <li class="nav-item">Arabic Language</li>
+                      <li class="nav-item">General Basics of Islam</li>
+                    </ul>
+                  </div>
+                  <div class="teacher-container w-100">
+                    <div class="teacher-attendance-list">
+                  <div class="card teacher-card">
+                    <div class="attendance-status-icon">
+                        <div class="status-icons">
+                            <!-- <div class="no-atttendance"><i class="fa fa-times" aria-hidden="true"></i></div> -->
+                            <div class="yes-atttendance"><i class="fa fa-check" aria-hidden="true"></i></div>
+                        </div>
+                    </div>
+                    <div class="teacher-attendace-img-box">
+                        <img class="card-img-top student-img" src="../Assets/Images/student_imgs/customer01.jpg"  alt="student image loading....">
+                    </div>
+                    <div class="text-center d-flex align-items-center justify-content-center flex-column">
+                        <span class="teacher-name">Lucjan Jamil</span>
+                    </div>
+                    <div class="attendance-summary-box">
+                        <ul class="navbar-nav p-3">
+                            <li class="nav-item">
+                                <span>
+                                    <span class="text-warning">Status:</span>
+                                    <span class="text-success">
+                                        <span class="attendance-status">Attended
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                    </span>
+                                </span>
+                                </span>
+                            </li>
+                            <li class="nav-item">
+                                <span>
+                                    <span style="color: purple;" >Time:</span>
+                                    <span style="color: bisque; font-size: 13px;">
+                                        <span class="attendance-date">now &dotsquare; <span>at<span class="attendance-time small">12: 30pm</span></span></span>
+                                    </span>
+                                </span>
+                            </li>
+                            <li class="nav-item ">
+                                <span>
+                                    <span  class="text-info">State:</span>
+                                    <span class="small text-primary">
+                                        <span class="attendance-state">Active</span>
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                     </div>
+                     <div class="card teacher-card">
+                        <div class="attendance-status-icon">
+                            <div class="status-icons">
+                                <div class="no-atttendance"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                <!-- <div class="yes-atttendance"><i class="fa fa-check" aria-hidden="true"></i></div> -->
+                            </div>
+                        </div>
+                        <div class="teacher-attendace-img-box">
+                            <img class="card-img-top student-img" src="../Assets/Images/student_imgs/customer01.jpg"  alt="student image loading....">
+                        </div>
+                        <div class="text-center d-flex align-items-center justify-content-center flex-column">
+                            <span class="teacher-name">Lucjan Jamil</span>
+                        </div>
+                        <div class="attendance-summary-box">
+                            <ul class="navbar-nav p-3">
+                                <li class="nav-item">
+                                    <span>
+                                        <span class="text-warning">Status:</span>
+                                        <span class="text-danger">
+                                            <span class="attendance-status">not attended
+                                                <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                        </span>
+                                    </span>
+                                    </span>
+                                </li>
+                                <li class="nav-item d-none">
+                                    <span>
+                                        <span style="color: purple;" >Time:</span>
+                                        <span style="color: bisque; font-size: 13px;">
+                                            <span class="attendance-date">yesterday &dotsquare; <span>at<span class="attendance-time small">12: 30pm</span></span></span>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li class="nav-item ">
+                                    <span>
+                                        <span  class="text-info">State:</span>
+                                        <span class="small text-secondary">
+                                            <span class="attendance-state">inactive</span>
+                                        </span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                         </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+           <!--  End STUDENTS ATTENDANCE CONTAINER -->
+
+
+          <!-- END ATTENDANCE MANAGEMENT BOARD SECTION -->
+
+          <!-- FOOTER SECTION -->
+          <div class="container">
+            <footer class="" style="margin-top: 100px !important">
+              <div class="footer-bottom">
+                <p>
+                  &copy; 2024 Sama Islamic Digital Platform. All rights
+                  reserved.
+                </p>
+              </div>
+            </footer>
+          </div>
+          <div class="mb-5 pb-5"></div>
+        </section>
+        <!-- END DASH BOARD SECTION -->
+      </main>
+    </div>
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< END DASHBOARD SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+    <script src="../Assets/customs/Awesome_Icons/js/all.js"></script>
+    <script src="../Scripts/bootsrap/bootstrap.min.js"></script>
+    <script src="../Scripts/Jquery/"></script>
+    <script src="../Scripts/Js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/3acc367a10.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
