@@ -1,0 +1,779 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221.2 83.2% 53.3%;
+  --radius: 0.5rem;
+
+  /* Islamic College Theme Colors */
+  --islamic-primary: 210 100% 25%;
+  --islamic-secondary: 220 70% 15%;
+  --islamic-accent: 140 60% 35%;
+  --islamic-highlight: 45 100% 50%;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 217.2 91.2% 59.8%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 224.3 76.3% 48%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), url("/chat-bg.webp") center / cover no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+}
+
+/* Islamic College Theme */
+.bg-islamic-primary {
+  background-color: #003366 !important;
+}
+
+.bg-islamic-secondary {
+  background-color: #001a33 !important;
+}
+
+.bg-islamic-accent {
+  background-color: #006633 !important;
+}
+
+.text-islamic-highlight {
+  color: #ffcc00 !important;
+}
+
+.border-islamic-primary {
+  border-color: #003366 !important;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+  background-color: #001428;
+  transition: all 0.3s ease;
+  height: 150px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border-color: #3b82f6;
+}
+
+.card-icons {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Course Cards */
+.card-course-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #001428;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+@media (min-width: 768px) {
+  .card-course-content {
+    flex-direction: row;
+  }
+}
+
+.card-course-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.card-course-text-img {
+  background: linear-gradient(135deg, #003366 0%, #004080 50%, #0059b3 100%);
+  color: white;
+  padding: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .card-course-text-img {
+    min-width: 30%;
+    border-radius: 12px 0 0 12px;
+  }
+}
+
+/* Progress Cards */
+.progress-text-img {
+  background: linear-gradient(135deg, #003366 0%, #004080 50%, #0059b3 100%);
+  color: white;
+  padding: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .progress-text-img {
+    min-width: 30%;
+    border-radius: 12px 0 0 12px;
+  }
+}
+
+/* Chat Room */
+.chat-area {
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), url("/chat-bg.webp") center / cover no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  padding: 70px 15px 80px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #f5f5f5;
+}
+
+/* Typing indicator */
+.typing-indicator {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+}
+
+.typing-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.typing-dots span {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  display: inline-block;
+  animation: typingAnimation 1.4s infinite ease-in-out both;
+}
+
+.typing-dots span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.typing-dots span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes typingAnimation {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.6);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+.message-bubble {
+  max-width: 80%;
+  padding: 10px 15px;
+  border-radius: 18px;
+  margin-bottom: 8px;
+  position: relative;
+  word-wrap: break-word;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.message-bubble.sent {
+  background-color: #0084ff;
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+
+.message-bubble.received {
+  background-color: #001a33;
+  color: white;
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+}
+
+/* Improve attachment styling */
+.message-bubble img {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Add a nice transition for the attachment menu */
+.attachment-menu {
+  transition: all 0.3s ease;
+}
+
+/* Improve file attachment display */
+.message-bubble .file-attachment {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.file-attachment .file-icon {
+  flex-shrink: 0;
+}
+
+.file-attachment .file-name {
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+.message-time {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  margin-top: 4px;
+  text-align: right;
+}
+
+.message-input {
+  background-color: #001a33 !important;
+  color: white !important;
+  border-radius: 24px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  resize: none !important;
+  padding: 12px 15px !important;
+  transition: all 0.3s ease !important;
+  z-index: 1000 !important;
+  height: 50px !important;
+  min-height: 50px !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+.message-input:focus {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5) !important;
+  outline: none !important;
+}
+
+/* Account Page */
+.account-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), url("/chat-bg.webp") center / cover no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+.user-img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 2px solid #3b82f6;
+  padding: 2px;
+  object-fit: cover;
+}
+
+.edit-btn {
+  width: 45px;
+  height: 45px;
+  background: #001a33;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #3b82f6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn:hover {
+  background: #002952;
+  transform: scale(1.05);
+}
+
+/* Custom Bootstrap Overrides */
+.bg-dark-blue {
+  background-color: #001428 !important;
+}
+
+.bg-darker-blue {
+  background-color: #00101e !important;
+}
+
+.bg-medium-blue {
+  background-color: #001e3c !important;
+}
+
+.bg-light-blue {
+  background-color: #002850 !important;
+}
+
+.text-beige {
+  color: #f5f5dc !important;
+}
+
+.text-bisque {
+  color: #ffe4c4 !important;
+}
+
+.rounded-custom {
+  border-radius: 12px !important;
+}
+
+.icon-blue {
+  color: #3b82f6 !important;
+}
+
+.icon-yellow {
+  color: #f59e0b !important;
+}
+
+.icon-green {
+  color: #10b981 !important;
+}
+
+.icon-purple {
+  color: #8b5cf6 !important;
+}
+
+/* Navbar styles */
+.navbar-bottom {
+  background: #00101e;
+  color: #f5f5dc;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 20;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+  padding: 8px 0;
+}
+
+.navbar-bottom .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.navbar-bottom .nav-item {
+  text-align: center;
+  flex: 1;
+}
+
+.navbar-bottom .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f5f5dc;
+  transition: all 0.3s ease;
+  padding: 8px 0;
+  text-decoration: none;
+}
+
+.navbar-bottom .nav-link:hover {
+  transform: translateY(-2px);
+}
+
+.navbar-bottom .nav-link .icon {
+  font-size: 22px;
+  margin-bottom: 4px;
+  color: #3b82f6;
+}
+
+.navbar-bottom .nav-link.active {
+  color: white;
+}
+
+.navbar-bottom .nav-link.active .icon {
+  color: #60a5fa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .navbar-bottom .nav-link {
+    font-size: 0.75rem;
+  }
+
+  .navbar-bottom .nav-link .icon {
+    font-size: 18px;
+  }
+
+  .dashboard-card {
+    height: 120px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
+/* Form controls */
+.form-control {
+  background-color: #001a33 !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.form-control:focus {
+  background-color: #001a33 !important;
+  color: white !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25) !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #0059b3 !important;
+  border-color: #0059b3 !important;
+}
+
+.btn-primary:hover {
+  background-color: #004080 !important;
+  border-color: #004080 !important;
+}
+
+.btn-outline-primary {
+  color: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: #3b82f6 !important;
+  color: white !important;
+}
+
+/* Dropdown menus */
+.dropdown-menu {
+  background-color: #001428 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.dropdown-item {
+  color: white !important;
+}
+
+.dropdown-item:hover {
+  background-color: #002952 !important;
+}
+
+/* Modal styling */
+.modal-content {
+  background-color: #001428 !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.modal-header,
+.modal-footer {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* List groups */
+.list-group-item {
+  background-color: transparent !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+}
+
+.list-group-item:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Accordion */
+.accordion-button {
+  background-color: #001a33 !important;
+  color: white !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #002952 !important;
+  color: white !important;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25) !important;
+}
+
+.accordion-item {
+  background-color: #001a33 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Badges */
+.badge {
+  font-weight: 500 !important;
+}
+
+/* Offcanvas */
+.offcanvas {
+  background-color: #001428 !important;
+  color: white !important;
+}
+
+.offcanvas-header,
+.offcanvas-footer {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Tabs */
+.nav-tabs {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.nav-tabs .nav-link {
+  color: rgba(255, 255, 255, 0.7) !important;
+  border: none !important;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: transparent !important;
+  color: white !important;
+  border-bottom: 2px solid #3b82f6 !important;
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: transparent !important;
+  color: white !important;
+}
+
+/* Fix for sticky headers */
+.sticky-top {
+  top: 0;
+  z-index: 1020;
+}
+
+/* Fix for bottom padding to account for navbar */
+.pb-navbar {
+  padding-bottom: 80px !important;
+}
+
+/* Fix for top padding to account for headers */
+.pt-header {
+  padding-top: 70px !important;
+}
+
+/* Utility classes */
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.transition-all {
+  transition: all 0.3s ease !important;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05) !important;
+}
+
+.hover-translate-y:hover {
+  transform: translateY(-5px) !important;
+}
+
+/* Fix for Bootstrap form check inputs */
+.form-check-input:checked {
+  background-color: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+}
+
+.form-check-input:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25) !important;
+}
+
+/* Chat Input Container */
+.chat-input-container {
+  background-color: #001428 !important;
+  padding: 10px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  z-index: 1030 !important;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Custom Textarea */
+.custom-textarea {
+  background-color: #001a33 !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 20px !important;
+  padding: 10px 15px !important;
+  resize: none !important;
+  min-height: 50px !important;
+  transition: all 0.3s ease !important;
+  margin: 0 10px !important;
+}
+
+.custom-textarea:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25) !important;
+  outline: none !important;
+}
+
+/* Attachment Menu */
+.attachment-menu {
+  z-index: 1040 !important;
+  bottom: 70px !important;
+  transition: all 0.3s ease;
+}
+
+/* Fix for Bootstrap fixed positioning */
+.fixed-top {
+  z-index: 1030 !important;
+}
+
+.fixed-bottom {
+  z-index: 1030 !important;
+}
+
+/* Ensure chat area has proper padding */
+.chat-area {
+  padding-top: 70px !important;
+  padding-bottom: 80px !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), url("/chat-bg.webp") center / cover no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #f5f5f5;
+}
+
+/* Make message bubbles more visible */
+.message-bubble {
+  max-width: 80% !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+}
+
+.message-bubble.sent {
+  background-color: #0084ff !important;
+}
+
+.message-bubble.received {
+  background-color: #001a33 !important;
+}
+
+/* Improve attachment styling */
+.message-bubble img {
+  max-width: 100% !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Ensure buttons are visible */
+.btn-outline-primary {
+  color: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-primary:hover {
+  color: white !important;
+  background-color: #3b82f6 !important;
+}
+
+.btn-primary {
+  background-color: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb !important;
+  border-color: #2563eb !important;
+}
+
+/* Fix for navbar overlapping content */
+.navbar-bottom {
+  z-index: 1020 !important;
+}
