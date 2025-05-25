@@ -4,7 +4,19 @@ import type React from "react"
 
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
-import { ArrowLeft, Phone, Video, MoreVertical, Plus, Send, Camera, FileText, FileVideo, Mic } from "lucide-react"
+import {
+  ArrowLeft,
+  Phone,
+  Video,
+  MoreVertical,
+  Plus,
+  Send,
+  Camera,
+  ImageIcon,
+  FileText,
+  FileVideo,
+  Mic,
+} from "lucide-react"
 import { useRouter } from "next/navigation"
 import { useApp } from "@/contexts/app-context"
 import type { ChatMessage } from "@/lib/storage"
@@ -566,7 +578,7 @@ export default function ChatRoom({ params }: { params: { id: string } }) {
                 className="btn btn-link text-white d-flex flex-column align-items-center p-3"
                 onClick={() => handleAttachmentClick("photos")}
               >
-                <Image size={32} className="text-warning mb-2" />
+                <ImageIcon size={32} className="text-warning mb-2" />
                 <span className="small">Photos</span>
               </button>
               <button
